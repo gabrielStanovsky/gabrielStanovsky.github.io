@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>  
+<html lang="en">  
+<!-- NEW VERSION -->
+<head>
+<title>PropS -- Syntax Based Proposition Extraction</title>  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+<script>
+toogleValue = true;
+</script>
+
+<script language="javascript" type="text/javascript">
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+</script>
+
+<style>
+
+.pub {
+	display: block;
+	padding-bottom: 7px;
+	display: 
+}
+
+.pubauthor {
+	font-style:italic;
+	margin-left: 30px;
+	display: block;
+}
+
+.pubmisc {
+	margin-left: 30px;
+	display:block;
+	text-transform: uppercase;
+	font-size: 80%;
+}
+
+.session_type {
+	font-variant:small-caps;
+	text-transform: lowercase;
+}
+
+.session_author {
+	font-style: italic;
+	margin-left: 30px;
+}
+
+body { padding-top: 70px; }
+
+
+</style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="70" onload="load()">
+<div class="container">
+
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">PropS</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-scrollspy" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+		<li style="display:none;"><a href="#top">Top</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#online">Online Demo</a></li>
+        <li><a href="#publications">Publications</a></li>
+		<li><a href="#contact">Contact</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</div>
+
+
+<h1 id="top">PropS: Syntax Based Proposition Extraction</h1>
+
+
+<p>Semantic NLP applications often rely on dependency trees to recognize major elements of the proposition structure of sentences. Yet, while much semantic structure is indeed expressed by syntax, many phenomena are not easily read out of dependency trees, often leading to further ad-hoc heuristic post-processing or to information loss. To directly address the needs of semantic applications, we present PropS - an output representation designed to explicitly and uniformly express much of the proposition structure which
+is implied from syntax, and an associated tool for extracting it from dependency trees</p>  
+  
+
+<a name="download" ></a>
+<h2 id="download">Download</h2>
+<p> <a href="https://github.com/gabrielStanovsky/props">Download the latest version from github</a>.
+  </p>
+
+<a name="online" ></a>
+<h2 id="online">Online Demo</h2>
+<p>Enter a sentence below to try PropS online (avoid non-ascii characters) <br>
+
+<form method="get" action="gparse" target="B">
+         <textarea name="text" style="position: relative; width: 100%;" id='inputForm'>Mr Pratt, head of marketing, thinks that lower wine prices have come about because producers don't like to see a hit wine increase in price</textarea>
+         <input type="submit" value="submit">
+
+      </form>
+<br>
+
+<iframe name="B" src="blank.html" style="position: relative; width: 100%;" height="200" id="iframe1" marginheight="0" frameborder="0"  onload="resizeIframe(this)"></iframe>
+<h3>Examples</h3>
+<br>
+  <ul>
+    <li>
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=Barack+Obama%2C+the+young+candidate%2C+was+elected+president  
+	onclick="document.getElementById('inputForm').value = 'Barack Obama, the young candidate, was elected president';$('#ex1').toggle();"
+	target="B" >
+	<b>Barack Obama, the young candidate, was elected president</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex1').toggle();"><span class="session_title">details</a>)
+	
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex1">
+	<ul>
+	<li>PropS </li>
+	<ul>
+		<li> Two types of nodes: predicates (marked with blue background) and non-predicates (arguments or modifiers, marked with white background) </li>
+		<li> Each node consists of an arbitrary number of words (e.g., <i>Barack Obama</i>) and features (<i>elect</i> in past tense and passive voice). </li>
+		<li> Words in the graph don't have to come from the sentence (for example: <b>SameAs</b>, indicating apposition). </li>
+		<li> Not all words from the sentence participate in the graph - for example <i>the</i>, which is delegated as a <b>definite</b> feature on  <i>candidate</i>. </li>
+		<li> Each predicate node heads its direct arguments, this can break the tree structure, e.g, the multiple heads for <i>Barack Obama</i> </li>
+	</ul>
+	 
+	<li> OIE-like tuples </li>
+	<ul>
+		<li>These are obtained by simple traversal from all the predicate nodes in the graph, omitting inner structure of their arguments.</li>
+
+	</ul>
+	</ul>
+	
+	</div>
+	
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=She+said+that+the+boy+is+tall  
+	onclick="document.getElementById('inputForm').value = 'She said that the boy is tall';$('#ex2').toggle();"
+	target="B");>
+	<b>She said that the boy is tall</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex2').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex2">
+	<ul>
+		<li> Dependency trees are great for verbal predications, as each verb directly heads its arguments. This doesn't hold for other types of predicates. 
+		We rearrange the tree structure so that this is true for other types of predications.
+		</li>
+		<li> <i>tall</i> (adjectival modifier) directly heads <i>boy</i> and marked as a predicate. </li>
+	</ul>
+	 
+	</div>
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=If+you+build+it%2C+they+will+come 
+	onclick="document.getElementById('inputForm').value = 'If you build it, they will come';$('#ex3').toggle();"
+	target="B");>
+	<b>If you build it, they will come</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex3').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex3">
+	<ul>
+		<li> For conditionals, we consider the marker word (e.g, <i>because</i>, <i>although</i>, <i>unless</i>, etc.) as a predicate, taking as argument both clauses, using the <b>condition</b> and <b>outcome</b> labels, as it introduces the logical relation between them.
+		</li>
+		<li> Dependency, on the other hand, marks <i>come</i> as root, on which <i>build</i> is dependent, which, finding the conditional only as a daughter node of <i>build</i>, which requires the application to perform a multiple passes over the tree to recover the logical relation between the two clauses.  </li>
+	</ul>
+	 
+	</div>
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=John%2C+who+is+a+nice+man
+	onclick="document.getElementById('inputForm').value = 'John, who is a nice man';$('#ex4').toggle();"
+	target="B");>
+	<b>John, who is a nice man</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex4').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex4">
+	<ul>
+		<li> 
+		Different syntactic realizations may evoke the same proposition structure (e.g., passive versus active voice). We aim to present a unified proposition structure when applicable.
+		</li>
+		<li> 
+		For example, note that this and the following example receive identical PropS structure, while the dependency trees diverge significantly
+		</li>
+	</ul>
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=John+is+a+nice+man
+	onclick="document.getElementById('inputForm').value = 'John is a nice man';$('#ex5').toggle();"	
+	target="B");>
+	<b>John is a nice man</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex5').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex5">
+	<ul>
+		<li> 
+		Different syntactic realizations may evoke the same proposition structure (e.g., passive versus active voice). We aim to present a unified proposition structure when applicable.
+		</li>
+		<li> 
+		For example, note that this and the previous example receive identical PropS structure, while the dependency trees diverge significantly
+		</li>
+	</ul>
+	
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=You+are+impatient 
+	onclick="document.getElementById('inputForm').value = 'You are impatient';$('#ex6').toggle();"
+	target="B");>
+	<b>You are impatient</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex6').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex6">
+	<ul>
+		<li>
+		Similarly to the previous examples, cases of raising-to-subject (you looked impatient) which we represent similarly to the semantically similar adjectival predication (you are impatient). Demoting the verbs (look, seem, etc.) to modifier status.
+		</li>
+	</ul>
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=You+looked+very+impatient
+	onclick="document.getElementById('inputForm').value = 'You looked very impatient';$('#ex7').toggle();"
+	target="B");>
+	<b>You looked very impatient</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex7').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex7">
+	<ul>
+		<li> 
+		Similarly to the previous examples, cases of raising-to-subject (you looked impatient) which we represent similarly to the semantically similar adjectival predication (you are impatient). Demoting the verbs (look, seem, etc.) to modifier status.
+		</li>
+	</ul>
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=The+director+who+edited+%22Rear+Window%22+released+Psycho
+	onclick="document.getElementById('inputForm').value = 'The director who edited &quot;Rear Window released&quot Psycho';$('#ex8').toggle();"
+	target="B");>
+	<b>The director who edited "Rear Window" released Psycho</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex8').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex8">
+	<ul>
+		<li> 
+		We take special care in minimizing arguments scope where possible. This creates more salient entities, which can then be more easily used in various semantic tasks (OIE, knowledge base population, entailment, etc.).
+		</li>
+	</ul>
+	
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=Hitchcock%2C+who+edited+%22Rear+Window%22%2C+released+Psycho
+	onclick="document.getElementById('inputForm').value = 'Hitchcock, who edited &quot;Rear Window&quot, released Psycho';$('#ex9').toggle();"
+	target="B");>
+	<b>Hitchcock, who edited "Rear Window", released Psycho</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex9').toggle();"><span class="session_title">details</a>)
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex9">
+	<ul>
+		<li> 
+		We take special care in minimizing arguments scope where possible. This creates more salient entities, which can then be more easily used in various semantic tasks (OIE, knowledge base population, entailment, etc.).
+		</li>
+	</ul>
+	
+	
+	</li>
+	
+	<li> 
+	<a href=http://u.cs.biu.ac.il/~stanovg/gparse?text=Barack+Obama%2C+the+US+president%2C+lives+in+Washington
+	onclick="document.getElementById('inputForm').value = 'Barack Obama, the US president, lives in Washington';$('#ex10').toggle();"
+	target="B");>
+	<b>Barack Obama, the US president, lives in Washington</b></a>
+	
+	(<a style="cursor:pointer;" onclick="$('#ex10').toggle();"><span class="session_title">details</a>)
+	</li>
+	
+	<div style="max-width: 600px; display: none;" class="well well-sm" id="ex10">
+	<ul>
+		<li> 
+		Dependency introduces a special <i>appos</i> node from <i>Obama</i> to comma, which require delicate handling - identifying the two entities which stand in the apposition relation, and propagating the relations.
+		</li>
+		<li> 
+		In PropS this is trivially extractable from the structure (as can be seen in the OIE clauses below), without introducing new types of edges.  
+		</li>
+	</ul>
+	 
+	</div>
+
+	
+  </ul>
+</p> 
+
+<a name="publications" ></a>
+<h2 id="publications">Publications</h2>
+<ul>
+<li> <a href = "http://arxiv.org/abs/1603.01648"> Getting more out of syntax with PropS </a>, Gabriel Stanovsky, Jessica Ficler, Ido Dagan, Yoav Goldberg, arXiv preprint 2016
+ </ul>
+
+
+<a name="contact" ></a>
+<h2 id="contact">Contact</h2>
+<ul>
+<li> gabriel (dot) satanovsky (at) gmail (dot) com
+ </ul>
+
+ 
+<hr>
+
+<br/>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+var shiftWindow = function() { scrollBy(0, -50) };
+window.addEventListener("hashchange", shiftWindow);
+function load() {if (location.hash) shiftWindow();}
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45796726-1', 'sp14.ws');
+  ga('send', 'pageview');
+
+</script>
+
+</body>  
+</html>  
