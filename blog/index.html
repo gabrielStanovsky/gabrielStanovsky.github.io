@@ -6,7 +6,7 @@ layout: nopic
 <!-- Main -->
 	<div id="main">
 	  <div id="content" class="container">
-			{% for post in site.posts offset: 0 limit: 4 %}
+			{% for post in site.posts offset: 0 %}
 			<div class="row">
 				<section class="8u -2u">
 					<header>
@@ -18,6 +18,10 @@ layout: nopic
 					  <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">PDF</a>&nbsp;&nbsp;
 					  {% endunless %}
 
+					  {% unless post.pdf-ext == 'NONE' %}
+					  <a href="{{ post.pdf-ext }}" target="_blank">PDF</a>&nbsp;&nbsp;
+					  {% endunless %}
+
 					  {% unless post.code == 'NONE' %}
 					  <a href="{{ post.code }}" target="_blank">CODE</a>&nbsp;&nbsp;
 					  {% endunless %}
@@ -25,9 +29,11 @@ layout: nopic
 					  {% unless post.bib == 'NONE' %}
 					  <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank">BIB</a>&nbsp;&nbsp;
 					  {% endunless %}
+
+					  {% unless post.bib-ext == 'NONE' %}
+					  <a href="{{ post.bib-ext }}" target="_blank">BIB</a>&nbsp;&nbsp;
+					  {% endunless %}
 					  </b>
-
-
 					</header>
 
 					{{ post.excerpt }}
@@ -36,5 +42,14 @@ layout: nopic
 				</section>
 			</div>
 			{% endfor %}
+
+			<div class="row">
+			  <section class="8u -2u">
+			    <span title="Yosemite Valley, CA">
+			      <a href="" class="image full" alt="Smiley face"><img src="/assets/images/yosemite.jpg"></a>
+			    </span>
+			  </section>
+			</div>
+
 		</div>
 	</div>

@@ -4,7 +4,9 @@ authors: Gabriel Stanovsky, Ido Dagan
 venue: EMNLP 2016
 base: emnlp16a
 pdf: paper.pdf
+pdf-ext: NONE
 bib: bib.txt
+bib-ext: NONE
 code: https://github.com/gabrielStanovsky/oie-benchmark
 layout: post
 ---
