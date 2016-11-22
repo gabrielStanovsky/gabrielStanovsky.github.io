@@ -6,10 +6,9 @@ layout: nopic
 <!-- Main -->
 	<div id="main">
 	  <div id="content" class="container">
-			{% for post in site.posts offset: 0 %}
-			<div class="row">
-				<section>
-					<header>
+	    <section>
+	      {% for post in site.posts offset: 0 %}
+	      <p>
 					  <h3>{{ post.title }}</h3>
 					  <i>{{ post.authors }}</i> <br>
 					  <b>
@@ -34,13 +33,10 @@ layout: nopic
 					  <a href="{{ post.bib-ext }}" target="_blank">BIB</a>&nbsp;&nbsp;
 					  {% endunless %}
 					  </b>
-					</header>
-
-					{{ post.excerpt }}
 					
 					<!-- <a href="{{ site.prefix }}{{ post.url }}" class="button button-style1">Read More</a> -->
-				</section>
-			</div>
+
+	      </p>
 			{% endfor %}
 
 			<div class="row">
