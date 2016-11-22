@@ -12,11 +12,20 @@
 /* Basic                                                                         */
 /*********************************************************************************/
 
-	body
-	{
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
 		margin: 0;
 		padding: 0;
 		background: #FEFEFE;
+		position: relative;
+		width: 100%;
+		display: block;
 	}
 
 	body,input,textarea,select
@@ -182,8 +191,8 @@
 			
 			.image.full
 			{
-				display: block;
-				width: 100%;
+				display: 1block;
+				width: 50%;
 				margin-bottom: 2em;
 			}
 			
