@@ -29,6 +29,15 @@ layout: nopic
 					  {% unless post.talk == 'NONE' %}
 					  <a href="{{ post.talk }}" target="_blank">TALK</a>&nbsp;&nbsp;
 					  {% endunless %}
+						  
+					  {% unless post.slides == 'NONE' %}
+					  <a href="/assets/papers/{{ post.base }}/{{ post.slides }}" target="_blank">SLIDES</a>&nbsp;&nbsp;
+					  {% endunless %}
+				
+					  {% unless post.poster == 'NONE' %}
+					  <a href="/assets/papers/{{ post.base }}/{{ post.poster }}" target="_blank">POSTER</a>&nbsp;&nbsp;
+					  {% endunless %}
+
 
 					  {% unless post.bib == 'NONE' %}
 					  <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank">BIB</a>&nbsp;&nbsp;

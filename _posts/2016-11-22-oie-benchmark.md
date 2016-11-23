@@ -8,5 +8,8 @@ pdf-ext: NONE
 bib: bib.txt
 bib-ext: NONE
 code: https://github.com/gabrielStanovsky/oie-benchmark
+slides: slides.pdf
+talk: NONE
+poster: NONE
 layout: post
 ---
