@@ -10,9 +10,9 @@ layout: nopic
 			<div class="row">
 				<section class="8u -2u">
 					<header>
-					  {{ post.title }}
-					  <i><h3 style="color:DimGray;">{{ post.authors }}</h3></i>
-					  <b>
+					  {{ post.title }} <br>
+					  <i><font style="color:DimGray;">{{ post.authors }}</font></i> <br>
+					  
 					  {{ post.venue }} <br>
 					  {% unless post.pdf == 'NONE' %}
 					  <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">PDF</a>&nbsp;&nbsp;
@@ -46,7 +46,7 @@ layout: nopic
 					  {% unless post.bib-ext == 'NONE' %}
 					  <a href="{{ post.bib-ext }}" target="_blank">BIB</a>&nbsp;&nbsp;
 					  {% endunless %}
-					  </b>
+					  
 					</header>
 
 					{{ post.excerpt }}
