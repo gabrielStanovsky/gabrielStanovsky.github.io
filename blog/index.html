@@ -4,6 +4,12 @@ layout: nopic
 ---
 
 <!-- Main -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 	<div id="main">
 	  <div id="content" class="container">
 			{% for post in site.posts offset: 0 %}
@@ -15,35 +21,35 @@ layout: nopic
 					  
 					  {{ post.venue }} <br>
 					  {% unless post.pdf == 'NONE' %}
-					  <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">PDF</a>&nbsp;&nbsp;
+					  <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank"><span class="label label-success">PDF</span></a>
 					  {% endunless %}
 
 					  {% unless post.pdf-ext == 'NONE' %}
-					  <a href="{{ post.pdf-ext }}" target="_blank">PDF</a>&nbsp;&nbsp;
+					  <a href="{{ post.pdf-ext }}" target="_blank"><span class="label label-success">PDF</span></a>
 					  {% endunless %}
 
 					  {% unless post.code == 'NONE' %}
-					  <a href="{{ post.code }}" target="_blank">CODE</a>&nbsp;&nbsp;
+					  <a href="{{ post.code }}" target="_blank"><span class="label label-primary">CODE</span></a>
 					  {% endunless %}
 
 					  {% unless post.talk == 'NONE' %}
-					  <a href="{{ post.talk }}" target="_blank">TALK</a>&nbsp;&nbsp;
+					  <a href="{{ post.talk }}" target="_blank"><span class="label label-warning">TALK</span></a>
 					  {% endunless %}
 						  
 					  {% unless post.slides == 'NONE' %}
-					  <a href="/assets/papers/{{ post.base }}/{{ post.slides }}" target="_blank">SLIDES</a>&nbsp;&nbsp;
+					  <a href="/assets/papers/{{ post.base }}/{{ post.slides }}" target="_blank"><span class="label label-danger">SLIDES</span></a>
 					  {% endunless %}
 				
 					  {% unless post.poster == 'NONE' %}
-					  <a href="/assets/papers/{{ post.base }}/{{ post.poster }}" target="_blank">POSTER</a>&nbsp;&nbsp;
+					  <a href="/assets/papers/{{ post.base }}/{{ post.poster }}" target="_blank"><span class="label label-info">POSTER</span></a>
 					  {% endunless %}
 
 					  {% unless post.bib == 'NONE' %}
-					  <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank">BIB</a>&nbsp;&nbsp;
+					  <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank"><span class="label label-default">BIB</span></a>
 					  {% endunless %}
 
 					  {% unless post.bib-ext == 'NONE' %}
-					  <a href="{{ post.bib-ext }}" target="_blank">BIB</a>&nbsp;&nbsp;
+					  <a href="{{ post.bib-ext }}" target="_blank"><span class="label label-default">BIB</span></a>
 					  {% endunless %}
 					  
 					</header>
@@ -58,7 +64,7 @@ layout: nopic
 			<div class="row">
 			  <section class="8u -2u">
 			    <span title="Yosemite Valley, CA">
-			      <a href="" class="image full" alt="Smiley face"><img src="/assets/images/yosemite.jpg"></a>
+			      <img class="img-responsive" src="/assets/images/yosemite.jpg">
 			    </span>
 			  </section>
 			</div>
