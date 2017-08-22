@@ -5,3 +5,5 @@ collections:
     workshops:
     tech:
     dissertation:
+
+theme: jekyll-theme-minimal
