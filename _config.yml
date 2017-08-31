@@ -6,3 +6,5 @@ collections:
     tech:
     dissertation:
     invited:
+
+theme: jekyll-theme-minimal
