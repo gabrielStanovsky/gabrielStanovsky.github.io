@@ -9,10 +9,18 @@ layout: nopic
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <center>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#publications" class="w3-bar-item w3-button">Publications</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="#invited" class="w3-bar-item w3-button">Invited Talks</a><br>
+  </center>
+
 </head>
+
 <div id="main">
   <div id="content" class="container">
-    <h2> Conferences </h2>
+    <h1> <a name="publications"></a>Publications </h1>
+    <h3> Conferences </h3>
     <br>
     {% for post in site.posts offset: 0 %}
     <!-- 			<div class="row"> -->
@@ -76,7 +84,7 @@ layout: nopic
     <!--			</div> > -->
     {% endfor %}
     <hr style='margin-bottom:-5em' />
-    <h2>Workshops</h2>
+    <h3>Workshops</h3>
     <br>
     {% for post in site.workshops offset: 0 | reverse %}
     <!-- 			<div class="row"> -->
@@ -133,7 +141,7 @@ layout: nopic
 
 
     <hr style='margin-bottom:-5em' />
-    <h2>Technical Reports</h2>
+    <h3>Technical Reports</h3>
     <br>
     {% for post in site.tech offset: 0 %}
     <!-- 			<div class="row"> -->
@@ -191,7 +199,61 @@ layout: nopic
 
 
     <hr style='margin-bottom:-5em' />
-    <h2>Dissertations</h2>
+    
+<!--     {% for post in site.invited offset: 0 %} -->
+<!--     <\!-- 			<div class="row"> -\-> -->
+<!--     <\!--				<section class="8u -2u"> -\-> -->
+<!--     <header> -->
+<!-- <font style="font-weight:500;"> -->
+<!--         {% unless post.pdf == 'NONE' %} -->
+<!--         <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">{{ post.title }}</a> -->
+<!--         {% endunless %} -->
+<!--         {% unless post.pdf-ext == 'NONE' %} -->
+<!--         <a href="{{ post.pdf-ext }}" target="_blank">{{ post.title }}</a> -->
+<!--         {% endunless %} -->
+
+<!--       </font> <br> -->
+<!--       <i><font style="color:DimGray;">{{ post.authors }}</font></i> <br> -->
+
+<!--       {{ post.venue }} <br> -->
+<!--       {% unless post.pdf == 'NONE' %} -->
+<!--       <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank"><span class="label label-success">PDF</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.pdf-ext == 'NONE' %} -->
+<!--       <a href="{{ post.pdf-ext }}" target="_blank"><span class="label label-success">PDF</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.code == 'NONE' %} -->
+<!--       <a href="{{ post.code }}" target="_blank"><span class="label label-primary">CODE</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.talk == 'NONE' %} -->
+<!--       <a href="{{ post.talk }}" target="_blank"><span class="label label-warning">TALK</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.slides == 'NONE' %} -->
+<!--       <a href="/assets/papers/{{ post.base }}/{{ post.slides }}" target="_blank"><span class="label label-danger">SLIDES</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.poster == 'NONE' %} -->
+<!--       <a href="/assets/papers/{{ post.base }}/{{ post.poster }}" target="_blank"><span class="label label-info">POSTER</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.bib == 'NONE' %} -->
+<!--       <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank"><span class="label label-default">BIB</span></a> -->
+<!--       {% endunless %} -->
+
+<!--       {% unless post.bib-ext == 'NONE' %} -->
+<!--       <a href="{{ post.bib-ext }}" target="_blank"><span class="label label-default">BIB</span></a> -->
+<!--       {% endunless %} -->
+<!--     </header> -->
+<!--     <\!-- <a href="{{ site.prefix }}{{ post.url }}" class="button button-style1">Read More</a> -\-> -->
+<!--     <\!--				</section> -\-> -->
+<!--     <\!--			</div> > -\-> -->
+<!--     {% endfor %} -->
+
+    <h3>Dissertations</h3>
     <br>
     {% for post in site.dissertation offset: 0 %}
     <!-- 			<div class="row"> -->
@@ -248,15 +310,72 @@ layout: nopic
 
     <hr style='margin-bottom:-5em' />
 
+    
 
+<h1><a name="invited"></a>Invited Talks</h1>
+   
+<br>
+    {% for post in site.invited offset: 0 %}
+    <!-- 			<div class="row"> -->
+    <!--				<section class="8u -2u"> -->
+    <header>
+<font style="font-weight:500;">
+        {% unless post.pdf == 'NONE' %}
+        <a href="/assets/invited_talks/{{ post.base }}/{{ post.pdf }}" target="_blank">{{ post.title }}</a>
+        {% endunless %}
+        {% unless post.pdf-ext == 'NONE' %}
+        <a href="{{ post.pdf-ext }}" target="_blank">{{ post.title }}</a>
+        {% endunless %}
+
+      </font> <br>
+      <i><font style="color:DimGray;">{{ post.authors }}</font></i> <br>
+
+      <!-- {{ post.venue }} <br> -->
+      {% unless post.pdf == 'NONE' %}
+      <a href="/assets/invited_talks/{{ post.base }}/{{ post.pdf }}" target="_blank"><span class="label label-danger">SLIDES</span></a>
+      {% endunless %}
+
+      {% unless post.pdf-ext == 'NONE' %}
+      <a href="{{ post.pdf-ext }}" target="_blank"><span class="label label-success">PDF</span></a>
+      {% endunless %}
+
+      {% unless post.code == 'NONE' %}
+      <a href="{{ post.code }}" target="_blank"><span class="label label-primary">CODE</span></a>
+      {% endunless %}
+
+      {% unless post.talk == 'NONE' %}
+      <a href="{{ post.talk }}" target="_blank"><span class="label label-warning">TALK</span></a>
+      {% endunless %}
+
+      {% unless post.slides == 'NONE' %}
+      <a href="/assets/invited_talks/{{ post.base }}/{{ post.slides }}" target="_blank"><span class="label label-danger">SLIDES</span></a>
+      {% endunless %}
+
+      {% unless post.poster == 'NONE' %}
+      <a href="/assets/invited_talks/{{ post.base }}/{{ post.poster }}" target="_blank"><span class="label label-info">POSTER</span></a>
+      {% endunless %}
+
+      {% unless post.bib == 'NONE' %}
+      <a href="/assets/invited_talks/{{ post.base }}/{{ post.bib }}" target="_blank"><span class="label label-default">BIB</span></a>
+      {% endunless %}
+
+      {% unless post.bib-ext == 'NONE' %}
+      <a href="{{ post.bib-ext }}" target="_blank"><span class="label label-default">BIB</span></a>
+      {% endunless %}
+    </header>
+    <!-- <a href="{{ site.prefix }}{{ post.url }}" class="button button-style1">Read More</a> -->
+    <!--				</section> -->
+    <!--			</div> > -->
+    {% endfor %}
+
+    <hr style='margin-bottom:-5em' />
 
     <div class="row">
       <section class="8u -2u">
-	<span title="Yosemite Valley, CA">
-	  <img class="img-responsive" src="/assets/images/yosemite.jpg">
+	<span title="Mount Edith Cavell, Jasper National Park, Canada">
+	  <img class="img-responsive" src="/assets/images/edith_cavell.jpg">
 	</span>
       </section>
     </div>
-
   </div>
 </div>
