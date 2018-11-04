@@ -10,7 +10,7 @@ bib-ext: NONE
 slides: NONE
 code: NONE
 data: NONE
-poster: NONE
+poster: poster.pdf
 talk: NONE
 layout: post
 ---
