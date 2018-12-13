@@ -8,7 +8,7 @@ pdf-ext: NONE
 bib: bib.txt
 bib-ext: NONE
 slides: NONE
-code: NONE
+code: https://github.com/gabrielStanovsky/odd-man-out
 data: NONE
 poster: poster.pdf
 talk: NONE
