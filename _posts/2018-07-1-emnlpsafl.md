@@ -7,10 +7,10 @@ pdf: paper.pdf
 pdf-ext: NONE
 bib: bib.txt
 bib-ext: NONE
-slides: NONE
+slides: presentation.pdf
 code: NONE
 data: NONE
 poster: NONE
-talk: NONE
+talk: https://vimeo.com/306045906
 layout: post
 ---
