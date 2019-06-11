@@ -1,6 +1,6 @@
 ---
 title: Creating a Large Benchmark for Open Information Extraction
-authors: Gabriel Stanovsky, Ido Dagan
+authors: <b>Gabriel Stanovsky</b>, Ido Dagan
 venue: EMNLP 2016
 base: emnlp16a
 pdf: paper.pdf

@@ -1,6 +1,6 @@
 ---
 title: Spot the Odd Man Out; Exploring the Associative Power of Lexical Resources
-authors: Gabriel Stanovsky, Mark Hopkins
+authors: <b>Gabriel Stanovsky</b>, Mark Hopkins
 venue: EMNLP 2018
 base: emnlp18odd
 pdf: paper.pdf

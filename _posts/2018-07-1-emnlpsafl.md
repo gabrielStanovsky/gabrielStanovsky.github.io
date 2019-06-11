@@ -1,6 +1,6 @@
 ---
 title: Semantics as a Foreign Language
-authors: Gabriel Stanovsky, Ido Dagan
+authors: <b>Gabriel Stanovsky</b>, Ido Dagan
 venue: EMNLP 2018
 base: emnlp18safl
 pdf: paper.pdf
