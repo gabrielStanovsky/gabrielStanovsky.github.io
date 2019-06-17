@@ -13,4 +13,5 @@ data: NONE
 poster: NONE
 talk: https://vimeo.com/306045906
 layout: post
+categories: [semrep, model]
 ---
