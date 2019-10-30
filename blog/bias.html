@@ -15,7 +15,7 @@ layout: nopic
 <div id="main">
   <div id="content" class="container">
     <h1> <a name="publications"></a>Publications </h1>
-        Filter: <b><a href="index.html"> All </a></b> - <b><a href="bias.html">Model Analysis</a></b> - <b>Semantic Representations</b> - <b><a href="downstream">Downstream Applications</a></b>
+        Filter: <b><a href="index.html"> All </a></b> - <b>Model Analysis</b> - <b><a href="sem_rep">Semantic Representations</b></a> - <b><a href="downstream">Downstream Applications</a></b>
     <br> 
 
 
@@ -23,7 +23,7 @@ layout: nopic
     <br>
     {% for post in site.posts offset: 0 %}
 
-    {% if post.categories contains 'semrep' %}
+    {% if post.categories contains 'bias' %}
 
 
 

@@ -13,5 +13,5 @@ data: NONE
 poster: poster.pdf
 talk: NONE
 layout: post
-categories: [dataset]
+categories: [dataset, bias]
 ---

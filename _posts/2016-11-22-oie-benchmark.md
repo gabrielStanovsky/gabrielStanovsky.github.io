@@ -12,5 +12,5 @@ slides: slides.pdf
 talk: "http://techtalks.tv/talks/creating-a-large-benchmark-for-open-information-extraction/63358/"
 poster: NONE
 layout: post
-categories: [downstream, dataset]
+categories: [semrep, dataset]
 ---
