@@ -14,38 +14,40 @@
 	<li> The relation should be a <b>valid English sentence</b> (see examples below).
 </ul>
 
-For example, the following examples should be marked as <font color="green"><b>correct</b></font>:
+<h4>Correct Relations</h4>
+
+The following examples should be marked as <b>correct</b>:
 <ul>
   <li>
-    Sentence: Chicago schools went on a strike last week
+    Sentence: <font color="purple"><b><i>Chicago</i></b></font> <font color="green"><b><i>schools</i></b></font> went on a strike last week
   </li>
   <li>
-    Relation:<font color="green"> Chicago schools <i><b>are based in</b></i>	Chicago.  </font>
+    Relation: <font color="purple"><b><i>Chicago</i></b></font> <font color="green"><b><i>schools</i></b></font> <i><b>are based in</b></i> <font color="purple"><b><i>Chicago</i></b></font>.  </font>
   </li>
 </ul>
 
 
 <ul>
   <li>
-    Sentence: "A Coke spokesman asked to adress the matter."
+    Sentence: "A <font color="purple"><b><i>Coke</i></b></font> <font color="green"><b><i>spokesman</i></b></font> was asked to address the matter."
   </li>
   <li>
-    Relation: <font color="green">Coke Spokesman <i><b>is a worker of</i></b> Coke.</font>
+    Relation: <font color="purple"><b><i>Coke</i></b></font> <font color="green"><b><i>spokesman</i></b></font> <i><b>is a worker of</i></b> <font color="purple"><b><i>Coke</i></b></font>.
   </li>
 </ul>
 
 <ul>
   <li>
-    Sentence: "The Leake government reassembled after the elections."
+    Sentence: "The <font color="purple"><b><i>Leake</i></b></font> <font color="green"><b><i> government</i></b></font> reassembled after the failed elections."
   </li>
   <li>
-    Relation: <font color="green">Leake government <i><b>is located in</b></i> Leake.</font>
+    Relation: <font color="purple"><b><i>Leake</i></b></font> <font color="green"><b><i> government</i></b></font> <i><b>is located in</b></i> <font color="purple"><b><i>Leake</i></b></font>.
   </li>
 </ul>
 
+<h4>Incorrect Relations</h4>
 
-
-While the following relations should be marked as <font color="red"><b>incorrect</b></font>:
+The following relations should be marked as <font color="red"><i>incorrect</i></font>:
 <ul>
 	<font color="red">
 	<li>
@@ -56,29 +58,39 @@ While the following relations should be marked as <font color="red"><b>incorrect
 		</font>
 	</li>
 	<li>
-		Leake government <i><b>politics</b></i> Leake.
-		<br>
-		<font color="black">
-			>> <i>The relation should form a valid English sentence.</i>
-		</font>
-	</li>
-	<li>
 		Leake government <i><b>has a failed</b></i> goverment.
 		<br>
 		<font color="black">
-			>> <i>The relation should be infered by the
-				words themselves and not by additional context from the sentence.</i>
+			>> <i>The relation should be infered by the pair of 
+				words (<i>Leake</i>, <i>government</i> and not by additional context from the sentence.</i>
 			</thead>
 		</font>
 	</li>
 </font>
 </ul>
 
-<u>Pricing</u>: <br/>
+<h4>Non-Compositional Expressions</h4>
 
-<b> Our target hourly pay is 9 USD. </b> <br/>
-This is calculated by conducting anntoation experiments
-which indicated an average time of 20 seconds on each word pair. <br />
+Finally, Some pairs of words can be <i>non-compositional</i>, meaning that they are a single unit without an internal structure: <br/>
+<ul>
+  <li>
+    Names of places: <font color="purple"><b><i>San</i></b></font> <font color="green"><b><i>Fransisco</i></b></font>,
+    <font color="purple"><b><i>New</i></b></font> <font color="green"><b><i>York</i></b></font>
+  </li>
+  <li>
+    Colloquial expressions: <font color="purple"><b><i>private</i></b></font> <font color="green"><b><i>eye</i></b></font>, <font color="purple"><b><i>red</i></b></font> <font color="green"><b><i>tape</i></b></font>
+  </li>
+</ul>
+All of these cases should appear as <b>No relation</b>, in which case, you should mark the annotation as <i>correct</i>. <br/>
+Otherwise, you should mark it as <i>incorrect</i>.
+
+
+
+<!-- <h4>Pricing<h4>: <br/> -->
+
+<!-- <b> Our target hourly pay is 9 USD. </b> <br/> -->
+<!-- This is calculated by conducting anntoation experiments -->
+<!-- which indicated an average time of 20 seconds on each word pair. <br /> -->
 
 
 </div>
@@ -97,22 +109,21 @@ which indicated an average time of 20 seconds on each word pair. <br />
 <div class="panel panel-default">
   <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-  <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> &nbsp;
-  is the evening of 
-<font color="purple">&nbsp;<b><i>Friday</i></b></font> &nbsp;
+<font color="purple"><b><i>Friday</i></b></font> <font color="green"><b><i>night</i></b></font> &nbsp; <b>is the evening of</b> &nbsp; <font color="purple"><b><i>Friday</i></b></font> &nbsp; <b></b>
 
+<!--   <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> &nbsp; -->
+<!--   ${answer11} ${answer12} ${answer13} ${answer14} ${answer15} -->
+<!-- <font color="purple">&nbsp;<b><i>Friday</i></b></font> &nbsp; -->
+<!-- ${answer16} -->
 
 <br /><br />
 
+Is this relation correct?
 <select type="text" id="dropBox" onchange="changeSelect()">
-    <option value="1">Is this realtion correct?</option>
-    <option value="2">Correct</option>
-    <option value="3">Incorrect</option>
+    <option value="1">Choose your answer</option>
+    <option value="2">Yes</option>
+    <option value="3">No</option>
 </select>
-
-
-Comment (optional) <br />
-<input id="whynorel1" name="whynorel1" size="100%" type="text" />
 
 
 </div>
@@ -133,21 +144,22 @@ Comment (optional) <br />
 <div class="panel panel-default">
   <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-  <font color="purple"><b><i>NFL </font><font color="green">career</i></b></font> &nbsp;
-  is a profession in the
-<font color="purple">&nbsp;<b><i>NFL</i></b></font> &nbsp;
 
+<font color="purple"><b><i>NFL</i></b></font> <font color="green"><b><i>career</i></b></font> &nbsp; <b>is a profession in the</b> &nbsp; <font color="purple"><b><i>NFL</i></b></font> &nbsp; <b></b>
+  <!--   <font color="purple"><b><i>NFL </font><font color="green">career</i></b></font> &nbsp; -->
+<!--   ${answer21} ${answer22} ${answer23} ${answer24} ${answer25} -->
+<!-- <font color="purple">&nbsp;<b><i>NFL</i></b></font> &nbsp; -->
+<!-- ${answer26} -->
 
 <br /><br />
 
+Is this relation correct?
 <select type="text" id="dropBox" onchange="changeSelect()">
-    <option value="1">Is this realtion correct?</option>
-    <option value="2">Correct</option>
-    <option value="3">Incorrect</option>
+    <option value="1">Choose your answer</option>
+    <option value="2">Yes</option>
+    <option value="3">No</option>
 </select>
 
-Comment (optional) <br />
-<input id="whynorel1" name="whynorel1" size="100%" type="text" />
 
 
 </div>
@@ -168,23 +180,22 @@ Comment (optional) <br />
 <div class="panel panel-default">
   <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-  <font color="purple"><b><i>Master </font><font color="green">classes</i></b></font> &nbsp;
-  is a course for a
-<font color="purple">&nbsp;<b><i>Master</i></b></font> &nbsp;
+<font color="purple"><b><i>Master</i></b></font> <font color="green"><b><i>classes</i></b></font> &nbsp; <b>is a course for a</b> &nbsp; <font color="purple"><b><i>Master</i></b></font> &nbsp; <b></b>
 
+  <!--   <font color="purple"><b><i>Master </font><font color="green">classes</i></b></font> &nbsp; -->
+<!--   ${answer31} ${answer32} ${answer33} ${answer34} ${answer35} -->
+<!-- <font color="purple">&nbsp;<b><i>Master</i></b></font> &nbsp; -->
+<!-- ${answer36} -->
 
 <br /><br />
 
+Is this relation correct?
 <select type="text" id="dropBox" onchange="changeSelect()">
-    <option value="1">Is this realtion correct?</option>
-    <option value="2">Correct</option>
-    <option value="3">Incorrect</option>
+    <option value="1">Choose your answer</option>
+    <option value="2">Yes</option>
+    <option value="3">No</option>
 </select>
 
-
-
-Comment (optional) <br />
-<input id="whynorel1" name="whynorel1" size="100%" type="text" />
 
 
 </div>
@@ -209,23 +220,23 @@ Comment (optional) <br />
 <div class="panel panel-default">
   <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-  <font color="purple"><b><i>Union </font><font color="green">concerns</i></b></font> &nbsp;
-      
-<font color="purple">&nbsp;<b><i>Union</i></b></font> &nbsp;
 
+
+    <b>No relation conveyed by</b> <font color="purple"><b><i>Union</i></b></font> <font color="green"><b><i>concerns</i></b></font> <br/> (e.g., it's a name, like New York)
+    
+  <!--   <font color="purple"><b><i>Union </font><font color="green">concerns</i></b></font> &nbsp; -->
+<!--   ${answer41} ${answer42} ${answer43} ${answer44} ${answer45} -->
+<!-- <font color="purple">&nbsp;<b><i>Union</i></b></font> &nbsp; -->
+<!-- ${answer46} -->
 
 <br /><br />
 
+Is this relation correct?
 <select type="text" id="dropBox" onchange="changeSelect()">
-    <option value="1">Is this realtion correct?</option>
-    <option value="2">Correct</option>
-    <option value="3">Incorrect</option>
+    <option value="1">Choose your answer</option>
+    <option value="2">Yes</option>
+    <option value="3">No</option>
 </select>
-
-
-
-Comment (optional) <br />
-<input id="whynorel1" name="whynorel1" size="100%" type="text" />
 
 
 </div>
@@ -250,23 +261,21 @@ Comment (optional) <br />
 <div class="panel panel-default">
   <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-  <font color="purple"><b><i>Baptist </font><font color="green">minister</i></b></font> &nbsp;
-  is a priest that is
-<font color="purple">&nbsp;<b><i>Baptist</i></b></font> &nbsp;
+<font color="purple"><b><i>Baptist</i></b></font> <font color="green"><b><i>minister</i></b></font> &nbsp; <b>is a priest that is</b> &nbsp; <font color="purple"><b><i>Baptist</i></b></font> &nbsp; <b></b>
 
+  <!--   <font color="purple"><b><i>Baptist </font><font color="green">minister</i></b></font> &nbsp; -->
+<!--   ${answer51} ${answer52} ${answer53} ${answer54} ${answer55} -->
+<!-- <font color="purple">&nbsp;<b><i>Baptist</i></b></font> &nbsp; -->
+<!-- ${answer56} -->
 
 <br /><br />
 
+Is this relation correct?
 <select type="text" id="dropBox" onchange="changeSelect()">
-    <option value="1">Is this relation correct?</option>
-    <option value="2">Correct</option>
-    <option value="3">Incorrect</option>
+    <option value="1">Choose your answer</option>
+    <option value="2">Yes</option>
+    <option value="3">No</option>
 </select>
-
-
-
-Comment (optional) <br />
-<input id="whynorel1" name="whynorel1" size="100%" type="text" />
 
 
 </div>
@@ -276,13 +285,14 @@ Comment (optional) <br />
 </center>
 </div>
 
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
 <!----->
-
-
-
+<div>
+  <center>
+Please direct any comments, feedback, issues or questions to: <a href="generative-leaderboard-mturk@googlegroups.com">generative-leaderboard-mturk@googlegroups.com</a>
+</div>
 <!-- COMMENTS -->
-
-
 
 <!-- <div class="panel-body"><i>Optional:</i> Any comments?<br />
 <input class="form-control" id="comment" name="comment" type="text" /></div> -->
