@@ -1,4 +1,3 @@
-
 <!-- HIT template: Survey-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
 <meta content="width=device-width,initial-scale=1" name="viewport" />
 <section class="container" id="Survey"><!-- Instructions -->
@@ -6,53 +5,61 @@
 <div class="col-xs-12 col-md-12">
 <div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Survey Instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
 <div class="panel-body" id="instructionBody">
-<p>You will be presented five pairs of words.</p>
+  <p>You will be presented five sentences. In each, you'll find an highlighted pair of words.
+  Following, there will be a sentence describing the <i>relation</i> between the two words.</p>
 
 <ul>
-	<li><b>Your goal is to describe the relation between the two words</b>
-		by filling in the blanks in each HIT. <br>
-		You can write <b>up to five words</b> (but can also write less!).</li><br>
-	<li> The resulting relation should be a <b>valid English sentence</b> (see examples below).
-	<li> In addition, you can consult an example sentence as additional context, but
-		the relation you write should be inferred only from the two words, and not by additional information in the sentence.
-	<li>If you can't describe the relation between the words, please <b>check the "No relation" checkbox</b>, and write a short comment explaining why you think there's no relation.</li>
+	<li><b>Your goal is to assess if the relation between the two words is <i>correct</i> or <i>incorrect</i>  </b>
+		<!-- by filling in the blanks in each HIT. <br> -->
+	<li> The relation should be a <b>valid English sentence</b> (see examples below).
 </ul>
 
-For example:
+For example, the following examples should be marked as <font color="green"><b>correct</b></font>:
 <ul>
-	<font color="green">
-	<li>
-	Chicago schools <i><b>are based in</b></i>	Chicago.
-</li>
-<li>
-	Coke Spokesman <i><b>is a worker of</i></b> Coke.
-	</li>
-	<li>
-	Leake government <i><b>is located in</b></i> Leake.
-	</li>
-	<li>
-	<font color="black">
-		"Capitol hill"
-	</font>
-	<br>
-	Leave a <b>blank relation</b> for names, entities, or locations (i.e., <i>non-compositional</i> expressions).
-	</li>
-</font>
+  <li>
+    Sentence: Chicago schools went on a strike last week
+  </li>
+  <li>
+    Relation:<font color="green"> Chicago schools <i><b>are based in</b></i>	Chicago.  </font>
+  </li>
 </ul>
 
 
-Please avoid these common pitfalls:
+<ul>
+  <li>
+    Sentence: "A Coke spokesman asked to adress the matter."
+  </li>
+  <li>
+    Relation: <font color="green">Coke Spokesman <i><b>is a worker of</i></b> Coke.</font>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    Sentence: "The Leake government reassembled after the elections."
+  </li>
+  <li>
+    Relation: <font color="green">Leake government <i><b>is located in</b></i> Leake.</font>
+  </li>
+</ul>
+
+
+
+While the following relations should be marked as <font color="red"><b>incorrect</b></font>:
 <ul>
 	<font color="red">
 	<li>
 		Coke Spokesman <i><b>employment</i></b> Coke.
+		<br />
+		<font color="black">
+			>> <i>The relation should form a valid English sentence.</i>
+		</font>
 	</li>
 	<li>
 		Leake government <i><b>politics</b></i> Leake.
 		<br>
 		<font color="black">
 			>> <i>The relation should form a valid English sentence.</i>
-			</thead>
 		</font>
 	</li>
 	<li>
@@ -67,43 +74,119 @@ Please avoid these common pitfalls:
 </font>
 </ul>
 
+<u>Pricing</u>: <br/>
+
+<b> Our target hourly pay is 9 USD. </b> <br/>
+This is calculated by conducting anntoation experiments
+which indicated an average time of 20 seconds on each word pair. <br />
+
 
 </div>
 </div>
 </div>
 </div>
+<!------>
 
 <div class="row" id="workContent">
 <p>&nbsp;</p>
 
-<center><font color="purple"><b><i>Frankfurt </font><font color="green">loss</i></b></font>
+<center> On a <font color="purple"><b>Friday</b></font> <font color="green"><b>night</b></font> in Nottingham , Russell attends a house party with friends .
 <p>&nbsp;</p>
 
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-default">
-<div class="panel-body">What is the relation between <font color="purple"><b><i>Frankfurt</i></b></font> and <font color="purple"><b><i>Frankfurt </font><font color="green">loss</i></b></font> ?<br />
-<font color="purple"><b><i>Frankfurt </font><font color="green">loss</i></b></font> &nbsp;
-<input id="answer11" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer12'))" size="1" type="text" /> &nbsp;
-<input id="answer12" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer13'))" size="1" type="text" /> &nbsp;
-<input id="answer13" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer14'))" size="1" type="text" /> &nbsp;
-<input id="answer14" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer15'))" size="1" type="text" /> &nbsp;
-<input id="answer15" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, this)" size="1" type="text" /> &nbsp; <font color="purple">&nbsp;<b><i>Frankfurt</i></b></font><br />
-<br />
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-<button type="button" onclick="javascript:reveal('seeSentence1');document.getElementById('sentenceNeeded1').value ='yes';"\>
-	Show an example sentence!
-</button>
+  <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> &nbsp;
+  is the evening of 
+<font color="purple">&nbsp;<b><i>Friday</i></b></font> &nbsp;
 
-<div id="seeSentence1" style="visibility:hidden">
-	 According to individuals familiar with the situation , the <font color=purple><b><i>Frankfurt</i></b></font> <font color=green><b><i>loss</i></b></font> stemmed from a computer program for calculating prices on forward - rate agreements that failed to envision an interest - rate environment where short - term rates were equal to or higher than long - term rates .<br><br>
 
-	<button type="button" onclick="javascript:reveal('norel1');"/>
-		Still no relation?
-	</button>
+<br /><br />
 
-	<div id="norel1" style="visibility:hidden">
-		Please explain why you think there's no relation between the two words: <input id="whynorel1" name="whynorel1" size="100%" type="text" />
-	</div>
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+<!----->
+
+<center> Daniels played his entire <font color="purple"><b>NFL</b></font> <font color="green"><b>career</b></font> under the tutelage of Kubiak ( head coach in Houston and Denver , offensive coordinator in Baltimore ) and tight ends coach Brian Pariani .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>NFL </font><font color="green">career</i></b></font> &nbsp;
+  is a profession in the
+<font color="purple">&nbsp;<b><i>NFL</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+<!----->
+
+<center> During the Saturday and Sunday daytimes , International and well - respected domestic salsa instructors teach workshops at all levels from beginner to " <font color="purple"><b>Master</b></font> <font color="green"><b>classes</b></font> " for the most advanced dancers .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>Master </font><font color="green">classes</i></b></font> &nbsp;
+  is a course for a
+<font color="purple">&nbsp;<b><i>Master</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
 </div>
 </div>
 </div>
@@ -116,37 +199,35 @@ Please avoid these common pitfalls:
 
 <!----->
 
-<div class="row" id="workContent">
-<p>&nbsp;</p>
 
-<center><font color="purple"><b><i>Chrysler </font><font color="green">plants</i></b></font>
+<!----->
+
+<center> On April 20 , 1861 , a secessionist mob seized the Liberty Arsenal , increasing <font color="purple"><b>Union</b></font> <font color="green"><b>concerns</b></font> in the state .
 <p>&nbsp;</p>
 
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-default">
-<div class="panel-body">What is the relation between <font color="purple"><b><i>Chrysler</i></b></font> and <font color="purple"><b><i>Chrysler </font><font color="green">plants</i></b></font> ?<br />
-<font color="purple"><b><i>Chrysler </font><font color="green">plants</i></b></font> &nbsp;
-<input id="answer21" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer22'))" size="1" type="text" /> &nbsp;
-<input id="answer22" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer23'))" size="1" type="text" /> &nbsp;
-<input id="answer23" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer24'))" size="1" type="text" /> &nbsp;
-<input id="answer24" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer25'))" size="1" type="text" /> &nbsp;
-<input id="answer25" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, this)" size="1" type="text" /> &nbsp; <font color="purple">&nbsp;<b><i>Chrysler</i></b></font><br />
-<br />
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-<button type="button" onclick="javascript:reveal('seeSentence2');document.getElementById('sentenceNeeded2').value ='yes';"\>
-Show an example sentence!
-</button>
+  <font color="purple"><b><i>Union </font><font color="green">concerns</i></b></font> &nbsp;
+      
+<font color="purple">&nbsp;<b><i>Union</i></b></font> &nbsp;
 
-<div id="seeSentence2" style="visibility:hidden">
-According to industry analysts , <font color=purple><b><i>Chrysler</i></b></font> <font color=green><b><i>plants</i></b></font> most likely to close are the St. Louis No . 1 facility , which builds Chrysler LeBaron and Dodge Daytona models ; the Toledo , Ohio , Jeep plant , which dates back to the early 1900s ; and two Canadian plants that build the Jeep Wrangler and Chrysler 's full - sized vans .<br><br>
 
-<button type="button" onclick="javascript:reveal('norel2');"/>
-Still no relation?
-</button>
+<br /><br />
 
-<div id="norel2" style="visibility:hidden">
-Please explain why you think there's no relation between the two words: <input id="whynorel2" name="whynorel2" size="100%" type="text" />
-</div>
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
 </div>
 </div>
 </div>
@@ -154,159 +235,57 @@ Please explain why you think there's no relation between the two words: <input i
 </center>
 </div>
 
-<input id="sentenceNeeded2" name="sentenceNeeded2" size="0%" type="text" style="visibility:hidden"/>
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
 
+<!----->
 
-
-<!---->
 
 
 <!----->
 
-<div class="row" id="workContent">
-<p>&nbsp;</p>
-
-<center><font color="purple"><b><i>Coke </font><font color="green">spokesman</i></b></font>
+<center> She was married to a well - known <font color="purple"><b>Baptist</b></font> <font color="green"><b>minister</b></font> , the Rev. Harvey Johnson , whom she met after moving to Boston in the United States .
 <p>&nbsp;</p>
 
 <div class="col-sm-10 col-sm-offset-1">
 <div class="panel panel-default">
-<div class="panel-body">What is the relation between <font color="purple"><b><i>Coke</i></b></font> and <font color="purple"><b><i>Coke </font><font color="green">spokesman</i></b></font> ?<br />
-<font color="purple"><b><i>Coke </font><font color="green">spokesman</i></b></font> &nbsp;
-<input id="answer31" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer32'))" size="1" type="text" /> &nbsp;
-<input id="answer32" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer33'))" size="1" type="text" /> &nbsp;
-<input id="answer33" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer34'))" size="1" type="text" /> &nbsp;
-<input id="answer34" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer35'))" size="1" type="text" /> &nbsp;
-<input id="answer35" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, this)" size="1" type="text" /> &nbsp; <font color="purple">&nbsp;<b><i>Coke</i></b></font><br />
-<br />
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
 
-<button type="button" onclick="javascript:reveal('seeSentence3');document.getElementById('sentenceNeeded3').value ='yes';"\>
-Show an example sentence!
-</button>
+  <font color="purple"><b><i>Baptist </font><font color="green">minister</i></b></font> &nbsp;
+  is a priest that is
+<font color="purple">&nbsp;<b><i>Baptist</i></b></font> &nbsp;
 
-<div id="seeSentence3" style="visibility:hidden">
-A <font color=purple><b><i>Coke</i></b></font> <font color=green><b><i>spokesman</i></b></font> said he could n't say whether that is the direction of the talks .<br><br>
 
-<button type="button" onclick="javascript:reveal('norel3');"/>
-Still no relation?
-</button>
+<br /><br />
 
-<div id="norel3" style="visibility:hidden">
-Please explain why you think there's no relation between the two words: <input id="whynorel3" name="whynorel3" size="100%" type="text" />
-</div>
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this relation correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
 </div>
 </div>
 </div>
 </div>
 </center>
 </div>
-
-<input id="sentenceNeeded3" name="sentenceNeeded3" size="0%" type="text" style="visibility:hidden"/>
-
-
-
-<!---->
-
 
 <!----->
 
-<div class="row" id="workContent">
-<p>&nbsp;</p>
 
-<center><font color="purple"><b><i>TV8 </font><font color="green">network</i></b></font>
-<p>&nbsp;</p>
-
-<div class="col-sm-10 col-sm-offset-1">
-<div class="panel panel-default">
-<div class="panel-body">What is the relation between <font color="purple"><b><i>TV8</i></b></font> and <font color="purple"><b><i>TV8 </font><font color="green">network</i></b></font> ?<br />
-<font color="purple"><b><i>TV8 </font><font color="green">network</i></b></font> &nbsp;
-<input id="answer41" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer42'))" size="1" type="text" /> &nbsp;
-<input id="answer42" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer43'))" size="1" type="text" /> &nbsp;
-<input id="answer43" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer44'))" size="1" type="text" /> &nbsp;
-<input id="answer44" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer45'))" size="1" type="text" /> &nbsp;
-<input id="answer45" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, this)" size="1" type="text" /> &nbsp; <font color="purple">&nbsp;<b><i>TV8</i></b></font><br />
-<br />
-
-<button type="button" onclick="javascript:reveal('seeSentence4');document.getElementById('sentenceNeeded4').value ='yes';"\>
-Show an example sentence!
-</button>
-
-<div id="seeSentence4" style="visibility:hidden">
-A common name , logo , and programming schedule followed in 1982 , with the establishment of the `` <font color=purple><b><i>TV8</i></b></font> '' <font color=green><b><i>network</i></b></font> between the three stations , changed to the `` Southern Cross Network '' seven years later .<br><br>
-
-<button type="button" onclick="javascript:reveal('norel4');"/>
-Still no relation?
-</button>
-
-<div id="norel4" style="visibility:hidden">
-Please explain why you think there's no relation between the two words: <input id="whynorel4" name="whynorel4" size="100%" type="text" />
-</div>
-</div>
-</div>
-</div>
-</div>
-</center>
-</div>
-
-<input id="sentenceNeeded4" name="sentenceNeeded4" size="0%" type="text" style="visibility:hidden"/>
-
-
-
-<!---->
-
-
-<!----->
-
-<div class="row" id="workContent">
-<p>&nbsp;</p>
-
-<center><font color="purple"><b><i>Olekha </font><font color="green">speakers</i></b></font>
-<p>&nbsp;</p>
-
-<div class="col-sm-10 col-sm-offset-1">
-<div class="panel panel-default">
-<div class="panel-body">What is the relation between <font color="purple"><b><i>Olekha</i></b></font> and <font color="purple"><b><i>Olekha </font><font color="green">speakers</i></b></font> ?<br />
-<font color="purple"><b><i>Olekha </font><font color="green">speakers</i></b></font> &nbsp;
-<input id="answer51" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer52'))" size="1" type="text" /> &nbsp;
-<input id="answer52" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer53'))" size="1" type="text" /> &nbsp;
-<input id="answer53" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer54'))" size="1" type="text" /> &nbsp;
-<input id="answer54" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, document.getElementById('answer55'))" size="1" type="text" /> &nbsp;
-<input id="answer55" type="text" style="border: none; border-bottom: 1px solid black;" name="answer" onkeyup="singleWordInput(this, this)" size="1" type="text" /> &nbsp; <font color="purple">&nbsp;<b><i>Olekha</i></b></font><br />
-<br />
-
-<button type="button" onclick="javascript:reveal('seeSentence5');document.getElementById('sentenceNeeded5').value ='yes';"\>
-Show an example sentence!
-</button>
-
-<div id="seeSentence5" style="visibility:hidden">
-Across the mid - south , tiny communities of autochthonous ` <font color=purple><b><i>Olekha</i></b></font> <font color=green><b><i>speakers</i></b></font> have all but disappeared .<br><br>
-
-<button type="button" onclick="javascript:reveal('norel5');"/>
-Still no relation?
-</button>
-
-<div id="norel5" style="visibility:hidden">
-Please explain why you think there's no relation between the two words: <input id="whynorel5" name="whynorel5" size="100%" type="text" />
-</div>
-</div>
-</div>
-</div>
-</div>
-</center>
-</div>
-
-<input id="sentenceNeeded5" name="sentenceNeeded5" size="0%" type="text" style="visibility:hidden"/>
-
-
-
-<!---->
 
 <!-- COMMENTS -->
 
 
 
-<div class="panel-body"><i>Optional:</i> Any comments?<br />
-<input class="form-control" id="comment" name="comment" type="text" /></div>
+<!-- <div class="panel-body"><i>Optional:</i> Any comments?<br />
+<input class="form-control" id="comment" name="comment" type="text" /></div> -->
 <!-- End Survey Layout --></section>
 <!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
 <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet" /><!-- Open internal style sheet -->
@@ -327,14 +306,37 @@ span
 }
 </style>
 <!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
-function singleWordInput(cur, next){
+function singleWordInput(cur, prev, next){
+	prev = document.getElementById(prev);
+	next = document.getElementById(next);
 	if (cur.value[cur.value.length - 1] == ' '){
 		next.focus();
 	}
+	/*
+	if (cur.value == ''){
+			prev.focus();
+	}
+*/
 	cur.value = cur.value.replace(/[^a-zA-Z]/, '');
 	cur.setAttribute("size", Math.max(cur.value.length, 1));
 };
 </script><script>
+
+
+function doalert(checkboxElem, assocTextElem, hiddenValidText) {
+	assocTextElem = document.getElementById(assocTextElem);
+	hiddenValidText = document.getElementById(hiddenValidText);
+  if (checkboxElem.checked) {
+		checkboxElem.value = "invalid";
+		hiddenValidText.value = "invalid";
+    assocTextElem.value = "--";
+  } else {
+		checkboxElem.value = "valid";
+		hiddenValidText.value = "valid";
+    assocTextElem.value = "";
+  }
+}
+
 
 function reveal(element) {
 	var elem = document.getElementById(element);
