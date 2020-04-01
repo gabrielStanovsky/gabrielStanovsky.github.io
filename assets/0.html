@@ -1,0 +1,363 @@
+<!-- HIT template: Survey-v3.0 --><!-- The following snippet enables the 'responsive' behavior on smaller screens -->
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<section class="container" id="Survey"><!-- Instructions -->
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<div class="panel panel-primary"><!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature --><a class="panel-heading" href="javascript:void(0);" id="collapseTrigger"><strong>Survey Instructions</strong> <span class="collapse-text">(Click to expand)</span> </a>
+<div class="panel-body" id="instructionBody">
+  <p>You will be presented five sentences. In each, you'll find an highlighted pair of words.
+  Following, there will be a sentence describing the <i>relation</i> between the two words.</p>
+
+<ul>
+	<li><b>Your goal is to assess if the relation between the two words is <i>correct</i> or <i>incorrect</i>  </b>
+		<!-- by filling in the blanks in each HIT. <br> -->
+	<li> The relation should be a <b>valid English sentence</b> (see examples below).
+</ul>
+
+For example, the following examples should be marked as <font color="green"><b>correct</b></font>:
+<ul>
+  <li>
+    Sentence: Chicago schools went on a strike last week
+  </li>
+  <li>
+    Relation:<font color="green"> Chicago schools <i><b>are based in</b></i>	Chicago.  </font>
+  </li>
+</ul>
+
+
+<ul>
+  <li>
+    Sentence: "A Coke spokesman asked to adress the matter."
+  </li>
+  <li>
+    Relation: <font color="green">Coke Spokesman <i><b>is a worker of</i></b> Coke.</font>
+  </li>
+</ul>
+
+<ul>
+  <li>
+    Sentence: "The Leake government reassembled after the elections."
+  </li>
+  <li>
+    Relation: <font color="green">Leake government <i><b>is located in</b></i> Leake.</font>
+  </li>
+</ul>
+
+
+
+While the following relations should be marked as <font color="red"><b>incorrect</b></font>:
+<ul>
+	<font color="red">
+	<li>
+		Coke Spokesman <i><b>employment</i></b> Coke.
+		<br />
+		<font color="black">
+			>> <i>The relation should form a valid English sentence.</i>
+		</font>
+	</li>
+	<li>
+		Leake government <i><b>politics</b></i> Leake.
+		<br>
+		<font color="black">
+			>> <i>The relation should form a valid English sentence.</i>
+		</font>
+	</li>
+	<li>
+		Leake government <i><b>has a failed</b></i> goverment.
+		<br>
+		<font color="black">
+			>> <i>The relation should be infered by the
+				words themselves and not by additional context from the sentence.</i>
+			</thead>
+		</font>
+	</li>
+</font>
+</ul>
+
+<u>Pricing</u>: <br/>
+
+<b> Our target hourly pay is 9 USD. </b> <br/>
+This is calculated by conducting anntoation experiments
+which indicated an average time of 20 seconds on each word pair. <br />
+
+
+</div>
+</div>
+</div>
+</div>
+<!------>
+
+<div class="row" id="workContent">
+<p>&nbsp;</p>
+
+<center> On a <font color="purple"><b>Friday</b></font> <font color="green"><b>night</b></font> in Nottingham , Russell attends a house party with friends .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> &nbsp;
+  is the evening of 
+<font color="purple">&nbsp;<b><i>Friday</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+<!----->
+
+<center> Daniels played his entire <font color="purple"><b>NFL</b></font> <font color="green"><b>career</b></font> under the tutelage of Kubiak ( head coach in Houston and Denver , offensive coordinator in Baltimore ) and tight ends coach Brian Pariani .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>NFL </font><font color="green">career</i></b></font> &nbsp;
+  is a profession in the
+<font color="purple">&nbsp;<b><i>NFL</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+<!----->
+
+<center> During the Saturday and Sunday daytimes , International and well - respected domestic salsa instructors teach workshops at all levels from beginner to " <font color="purple"><b>Master</b></font> <font color="green"><b>classes</b></font> " for the most advanced dancers .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>Master </font><font color="green">classes</i></b></font> &nbsp;
+  is a course for a
+<font color="purple">&nbsp;<b><i>Master</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+
+<!----->
+
+
+<!----->
+
+<center> On April 20 , 1861 , a secessionist mob seized the Liberty Arsenal , increasing <font color="purple"><b>Union</b></font> <font color="green"><b>concerns</b></font> in the state .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>Union </font><font color="green">concerns</i></b></font> &nbsp;
+      
+<font color="purple">&nbsp;<b><i>Union</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this realtion correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<input id="sentenceNeeded1" name="sentenceNeeded1" size="0%" type="text" style="visibility:hidden"/>
+
+<!----->
+
+
+
+<!----->
+
+<center> She was married to a well - known <font color="purple"><b>Baptist</b></font> <font color="green"><b>minister</b></font> , the Rev. Harvey Johnson , whom she met after moving to Boston in the United States .
+<p>&nbsp;</p>
+
+<div class="col-sm-10 col-sm-offset-1">
+<div class="panel panel-default">
+  <!-- What is the relation between <font color="purple"><b><i>Friday</i></b></font> and <font color="purple"><b><i>Friday </font><font color="green">night</i></b></font> ?<br /> -->
+
+  <font color="purple"><b><i>Baptist </font><font color="green">minister</i></b></font> &nbsp;
+  is a priest that is
+<font color="purple">&nbsp;<b><i>Baptist</i></b></font> &nbsp;
+
+
+<br /><br />
+
+<select type="text" id="dropBox" onchange="changeSelect()">
+    <option value="1">Is this relation correct?</option>
+    <option value="2">Correct</option>
+    <option value="3">Incorrect</option>
+</select>
+
+
+
+Comment (optional) <br />
+<input id="whynorel1" name="whynorel1" size="100%" type="text" />
+
+
+</div>
+</div>
+</div>
+</div>
+</center>
+</div>
+
+<!----->
+
+
+
+<!-- COMMENTS -->
+
+
+
+<!-- <div class="panel-body"><i>Optional:</i> Any comments?<br />
+<input class="form-control" id="comment" name="comment" type="text" /></div> -->
+<!-- End Survey Layout --></section>
+<!-- Please note that Bootstrap CSS/JS and JQuery are 3rd party libraries that may update their url/code at any time. Amazon Mechanical Turk (MTurk) is including these libraries as a default option for you, but is not responsible for any changes to the external libraries --><!-- External CSS references -->
+<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet" /><!-- Open internal style sheet -->
+<style type="text/css">#collapseTrigger{
+  color:#fff;
+  display: block;
+  text-decoration: none;
+}
+#submitButton{
+  white-space: normal;
+}
+.image{
+  margin-bottom: 15px;
+}
+span
+{
+    border: solid 1px black;
+}
+</style>
+<!-- Close internal style sheet --><!-- External JS references --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" integrity="sha384-s1ITto93iSMDxlp/79qhWHi+LsIi9Gx6yL+cOKDuymvihkfol83TYbLbOw+W/wv4" crossorigin="anonymous"></script><!-- Open internal javascript --><script>
+function singleWordInput(cur, prev, next){
+	prev = document.getElementById(prev);
+	next = document.getElementById(next);
+	if (cur.value[cur.value.length - 1] == ' '){
+		next.focus();
+	}
+	/*
+	if (cur.value == ''){
+			prev.focus();
+	}
+*/
+	cur.value = cur.value.replace(/[^a-zA-Z]/, '');
+	cur.setAttribute("size", Math.max(cur.value.length, 1));
+};
+</script><script>
+
+
+function doalert(checkboxElem, assocTextElem, hiddenValidText) {
+	assocTextElem = document.getElementById(assocTextElem);
+	hiddenValidText = document.getElementById(hiddenValidText);
+  if (checkboxElem.checked) {
+		checkboxElem.value = "invalid";
+		hiddenValidText.value = "invalid";
+    assocTextElem.value = "--";
+  } else {
+		checkboxElem.value = "valid";
+		hiddenValidText.value = "valid";
+    assocTextElem.value = "";
+  }
+}
+
+
+function reveal(element) {
+	var elem = document.getElementById(element);
+	elem.style.visibility = 'visible';
+}
+
+  $(document).ready(function() {
+    // Instructions expand/collapse
+    var content = $('#instructionBody');
+    var trigger = $('#collapseTrigger');
+    content.hide();
+    $('.collapse-text').text('(Click to expand)');
+    trigger.click(function(){
+      content.toggle();
+      var isVisible = content.is(':visible');
+      if(isVisible){
+        $('.collapse-text').text('(Click to collapse)');
+      }else{
+        $('.collapse-text').text('(Click to expand)');
+      }
+    });
+    // end expand/collapse
+  });
+</script><!-- CLose internal javascript -->
