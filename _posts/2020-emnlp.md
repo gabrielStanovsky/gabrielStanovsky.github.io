@@ -1,0 +1,19 @@
+---
+title: MOCHA
+authors: Anthony Chen, <b>Gabriel Stanovsky</b>, Sameer Singh, Matt Gardner 
+venue: EMNLP 2020
+base: NONE
+pdf: NONE
+pdf-ext: https://arxiv.org/pdf/2010.03636.pdf
+bib: NONE
+bib-ext: data:application/octet-stream;charset=utf-16le;base64,QGFydGljbGV7Q2hlbjIwMjBNT0NIQUFELAogIHRpdGxlPXtNT0NIQTogQSBEYXRhc2V0IGZvciBUcmFpbmluZyBhbmQgRXZhbHVhdGluZyBHZW5lcmF0aXZlIFJlYWRpbmcgQ29tcHJlaGVuc2lvbiBNZXRyaWNzfSwKICBhdXRob3I9e0FudGhvbnkgQ2hlbiBhbmQgR2FicmllbCBTdGFub3Zza3kgYW5kIFMuIFNpbmdoIGFuZCBNYXR0IEdhcmRuZXJ9LAogIGpvdXJuYWw9e0FyWGl2fSwKICB5ZWFyPXsyMDIwfSwKICB2b2x1bWU9e2Ficy8yMDEwLjAzNjM2fQp9
+code: NONE
+data: NONE
+data-name: Annotation-interface
+slides: NONE
+poster: NONE
+talk: NONE
+layout: post
+date: 01-10-2020
+categories: [downstream]
+---

@@ -10,7 +10,7 @@ bib-ext: NONE
 code: https://github.com/allenai/sledgehammer
 slides: NONE
 poster: NONE
-talk: NONE
+talk: https://slideslive.com/38929251/the-right-tool-for-the-job-matching-model-and-instance-complexities
 layout: post
 date: 01-02-2020
 categories: [bias]

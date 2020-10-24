@@ -12,7 +12,7 @@ data: https://belindal.github.io/timing_experiments
 data-name: Annotation-interface
 slides: NONE
 poster: NONE
-talk: NONE
+talk: https://slideslive.com/38928722/active-learning-for-coreference-resolution-using-discrete-selection
 layout: post
 date: 01-02-2020
 categories: [downstream]
