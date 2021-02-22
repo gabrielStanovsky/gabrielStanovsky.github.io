@@ -1,0 +1,79 @@
+(a23 / tl-default-enum
+     :name (n23 / name
+                :op1 "proceed")
+     :tl-usage-of-enum (a3 / rg
+                           :name (n3 / name
+                                     :op1 "quick-ligation-kit"))
+     :succ (a16 / tl-temp-treat-enum
+                :name (n16 / name
+                           :op1 "heating")
+                :tl-setting-of-enum (a0 / tl-s
+                                        :name (n0 / name
+                                                  :op1 "10-minutes"))
+                :tl-setting-of-enum (a15 / tl-s
+                                         :name (n15 / name
+                                                    :op1 "70-c"))
+                :succ (a21 / tl-located-at-enum
+                           :ARG0 (a8 / rg
+                                     :name (n8 / name
+                                               :op1 "enzyme"))
+                           :succ (a22 / tl-mix-enum
+                                      :succ (a2 / tl-temp-treat-enum
+                                                :name (n2 / name
+                                                          :op1 "s1-w16-incubated")
+                                                :ARG0 a5
+                                                :tl-setting-of-enum (a11 / tl-s
+                                                                         :name (n11 / name
+                                                                                    :op1 "15-minutes"))
+                                                :tl-setting-of-enum (a19 / tl-s
+                                                                         :name (n19 / name
+                                                                                    :op1 "s1-w19-room-temperature")))
+                                      :ARG0 (a5 / rg
+                                                :name (n5 / name
+                                                          :op1 "restriction-enzyme-digested-dna"))
+                                      :ARG3 a7
+                                      :succ (a14 / tl-temp-treat-enum
+                                                 :name (n14 / name
+                                                            :op1 "s2-w8-incubated")
+                                                 :ARG1 a1
+                                                 :tl-setting-of-enum (a9 / tl-s
+                                                                         :name (n9 / name
+                                                                                   :op1 "30-minutes"))
+                                                 :tl-setting-of-enum (a13 / tl-s
+                                                                          :name (n13 / name
+                                                                                     :op1 "s2-w11-room-temperature"))
+                                                 :ARG0 a20)
+                                      :ARG1 (a20 / rg
+                                                 :name (n20 / name
+                                                            :op1 "sheared-nebulized-dna"))
+                                      :ARG2 (a1 / rg
+                                                :name (n1 / name
+                                                          :op1 "pcr-products"))
+                                      :name (n22 / name
+                                                 :op1 "mix"))
+                           :ARG1 a7
+                           :name (n21 / name
+                                      :op1 "event")
+                           :succ-of (a10 / tl-default-enum
+                                         :ARG0 a8
+                                         :name (n10 / name
+                                                    :op1 "inactivate")
+                                         :tl-modifier-of-enum (a4 / tl-mod
+                                                                  :name (n4 / name
+                                                                            :op1 "immediately"))
+                                         :tl-usage-of-enum (a6 / tl-mth
+                                                               :name (n6 / name
+                                                                         :op1 "blunting-reaction"))))
+                :ARG0 a7)
+     :ARG0 (a7 / tl-loc
+               :name (n7 / name
+                         :op1 "microfuge-tube")
+               :tl-modifier-of-enum (a12 / tl-mod
+                                         :name (n12 / name
+                                                    :op1 "sterile")))
+     :tl-modifier-of-enum (a17 / tl-mod
+                               :name (n17 / name
+                                          :op1 "directly"))
+     :tl-usage-of-enum (a18 / tl-mth
+                            :name (n18 / name
+                                       :op1 "ligation-step")))
