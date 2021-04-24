@@ -9,7 +9,7 @@ bib: bib.txt
 bib-ext: NONE
 code: https://github.com/gabrielStanovsky/oie-benchmark
 slides: slides.pdf
-talk: "http://techtalks.tv/talks/creating-a-large-benchmark-for-open-information-extraction/63358/"
+talk: NONE
 poster: NONE
 layout: post
 categories: [semrep, dataset]
