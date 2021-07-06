@@ -1,7 +1,7 @@
 ---
 title: MOCHA
 authors: Anthony Chen, <b>Gabriel Stanovsky</b>, Sameer Singh, Matt Gardner 
-venue: EMNLP 2020
+venue: EMNLP
 base: NONE
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2010.03636.pdf

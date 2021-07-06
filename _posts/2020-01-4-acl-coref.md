@@ -1,7 +1,7 @@
 ---
 title: Active Learning for Coreference Resolution using Discrete Annotation
 authors: Belinda Li, <b>Gabriel Stanovsky</b>, Luke Zettlemoyer
-venue: ACL 2020
+venue: ACL
 base: acl-coref
 pdf: NONE
 pdf-ext: https://arxiv.org/abs/2004.13671
