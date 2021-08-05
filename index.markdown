@@ -7,7 +7,6 @@ author_profile: true
 header:
   image: /assets/images/pano_crop.png
 ---
-# About me 
 I do research in computational linguistics at the Hebrew University of Jerusalem.
 
 I did my postdoc with [Prof. Luke Zettlemoyer]("https://www.cs.washington.edu/people/faculty/lsz") at the University of Washington and with [Prof. Noah Smith]("https://homes.cs.washington.edu/~nasmith/") at the
