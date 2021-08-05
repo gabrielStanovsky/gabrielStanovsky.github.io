@@ -1,6 +1,0 @@
-@inproceedings{koshorek2019active,
-author = {Omri Koshorek and Gabriel Stanovsky and Yichu Zhou and Vivek Srikumar and Jonathan Berant},
-booktitle = {Computational Natural Language Learning (CoNLL)},
-title = {On the Limits of Learning to Actively Learn Semantic Representations},
-year = {2019}
-}

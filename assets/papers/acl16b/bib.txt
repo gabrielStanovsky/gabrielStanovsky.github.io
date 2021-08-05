@@ -1,6 +1,0 @@
-@inproceedings{2016stanovskyAnnotating,
-  title = {Specifying and Annotating Reduced Argument Span Via QA-SRL},
-  author = {Gabriel Stanovsky and Meni Adler and Ido Dagan},
-  booktitle = {Proceedings of the 54rd Annual Meeting of the Association for Computational Linguistics (ACL 2016)},
-  year = {2016}
-}

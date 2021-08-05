@@ -1,6 +1,0 @@
-@inproceedings{2015stanovsky,
-  title = {Open IE as an Intermediate Structure for Semantic Tasks},
-  author = {Gabriel Stanovsky and Ido Dagan and Mausam},
-  booktitle = {Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics (ACL 2015)},
-  year = {2015}
-}

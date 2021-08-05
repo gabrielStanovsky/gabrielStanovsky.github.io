@@ -1,8 +1,0 @@
-@misc{wang2019gender,
-title={Gender trends in computer science authorship},
-author={Lucy Lu Wang and Gabriel Stanovsky and Luca Weihs and Oren Etzioni},
-year={2019},
-eprint={1906.07883},
-archivePrefix={arXiv},
-primaryClass={cs.DL}
-}

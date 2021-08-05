@@ -1,8 +1,0 @@
-@InProceedings{wities2017okr,
-  author    = {Wities, Rachel and Shwartz, Vered and Stanovsky, Gabriel and Adler, Meni and Shapira, Ori and Upadhyay, Shyam and Roth, Dan and Martinez Camara, Eugenio and Gurevych, Iryna and Dagan, Ido},
-  title     = {A Consolidated Open Knowledge Representation for Multiple Texts},
-  booktitle = {Proceedings of the 2nd Workshop on Linking Models of Lexical, Sentential and Discourse-level Semantics (LSDSem), in EACL},
-  month     = {April},
-  year      = {2017},
-  address   = {Valencia, Spain}
-}

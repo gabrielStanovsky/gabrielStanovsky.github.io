@@ -1,7 +1,0 @@
-@article{stanovsky2014intermediary,
-  title={Intermediary semantic representation through proposition structures},
-  author={Stanovsky, Gabriel and Ficler, Jessica and Dagan, Ido and Goldberg, Yoav},
-  journal={Semantic Parsing Workshop, ACL 2014},
-  pages={66},
-  year={2014}
-}

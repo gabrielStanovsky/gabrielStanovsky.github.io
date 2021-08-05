@@ -1,9 +1,0 @@
-@InProceedings{Stanovsky2016EMNLP,
-  author    = {Gabriel Stanovsky and Ido Dagan},
-  title     = {Semantics as a Foreign Langauge},
-  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
-  month     = {November},
-  year      = {2018},
-  address   = {Brussels, Belgium},
-  publisher = {Association for Computational Linguistics}
-}

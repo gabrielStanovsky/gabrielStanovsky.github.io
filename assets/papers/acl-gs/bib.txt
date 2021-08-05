@@ -1,8 +1,0 @@
-@misc{roit2019crowdsourcing,
-    title={Crowdsourcing a High-Quality Gold Standard for QA-SRL},
-    author={Paul Roit and Ayal Klein and Daniela Stepanov and Jonathan Mamou and Julian Michael and Gabriel Stanovsky and Luke Zettlemoyer and Ido Dagan},
-    year={2019},
-    eprint={1911.03243},
-    archivePrefix={arXiv},
-    primaryClass={cs.CL}
-}

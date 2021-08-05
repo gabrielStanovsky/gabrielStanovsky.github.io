@@ -1,0 +1,14 @@
+# main links
+main:
+  - title: "CV"
+    url: assets/docs/cv.pdf
+  - title: "Publications"
+    url: Publications
+  #- title: "Team"
+  #  url: Team
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/

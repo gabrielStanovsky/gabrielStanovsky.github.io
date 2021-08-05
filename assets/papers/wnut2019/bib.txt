@@ -1,7 +1,0 @@
-@inproceedings{stanovskywnut2019,
-author = {Gabriel Stanovsky and Ronen Tamari},
-title = {Y’all should read this! Identifying Plurality in Second-Person Personal Pronouns in English Texts},
-booktitle = {Workshop on Noisy User-Generated Text at EMNLP 2019},
-year = {2019},
-address = {Hong Kong},
-}

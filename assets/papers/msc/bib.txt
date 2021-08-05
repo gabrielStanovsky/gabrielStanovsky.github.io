@@ -1,6 +1,0 @@
-@phdthesis{stanovsky2012study,
-  title={A study in Hebrew Paraphrase Identification},
-  author={Stanovsky, Gabriel},
-  year={2012},
-  school={Ben-Gurion University of the Negev}
-}

@@ -1,8 +1,0 @@
-@InProceedings{stanovsky2017fact,
-  author    = {Stanovsky, Gabriel and Eckle-Kohler, Judith and Puzikov, Yevgeniy and Dagan, Ido and Gurevych, Iryna},
-  title     = {Integrating Deep Linguistic Features in Factuality Prediction over Unified Datasets},
-  booktitle = {Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017)},
-  month     = {August},
-  year      = {2017},
-  address   = {Vancouver, Canada}
-}

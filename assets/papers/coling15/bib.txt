@@ -1,7 +1,0 @@
-@article{stanovsky2014proposition,
-  title={Proposition Knowledge Graphs},
-  author={Stanovsky, Gabriel and Levy, Omer and Dagan, Ido},
-  journal={Proceedings of the First AHA Workshop, Dublin, 2014},
-  pages={19--24},
-  year={2014}
-}

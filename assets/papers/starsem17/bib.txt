@@ -1,8 +1,0 @@
-@InProceedings{shwartz2017twitter,
-  author    = {Shwartz, Vered  and  Stanovsky, Gabriel and  Dagan, Ido},
-  title     = {Acquiring Predicate Paraphrases from News Tweets},
-  booktitle = {*SEM},
-  month     = {August},
-  year      = {2017},
-  address   = {Vancouver, Canada}
-}
