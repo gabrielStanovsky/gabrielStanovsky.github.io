@@ -2,6 +2,8 @@
 title: Invited Talks
 layout: single
 permalink: /talks/
+header:
+  image: /assets/images/pano_3.jpeg
 ---
 
 <!-- Main -->
