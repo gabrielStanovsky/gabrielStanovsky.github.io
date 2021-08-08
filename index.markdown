@@ -4,6 +4,7 @@
 
 layout: single
 author_profile: true
+title: About me
 header:
   image: /assets/images/pano_crop.png
 ---
