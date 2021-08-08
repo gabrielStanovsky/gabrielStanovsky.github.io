@@ -1,0 +1,71 @@
+- title: Meaning Representation in Natural Language Tasks
+  base: job
+  image: img.png
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  authors: January 2020, Haifa University, Israel.<br> January 2020, Technion, Israel.<br> January 2020, Hebrew University, Israel. <br> January 2020, Weizmann institute, Israel. <br> January 2020, Ben-Gurion University, Israel. <br> January 2020, Bar-Ilan University, Israel.
+  talk: NONE
+  layout: post
+
+- title: Proposition Extraction (Formulation, Crowdsourcing and Prediction)
+  authors: November 2017, Advanced Topics NLP Seminar, Tel-Aviv University, Israel.<br>August 2017, AI2, Seattle, Washington.
+  base: propextraction
+  image: img.png
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: "https://youtu.be/0oc3MfQ-x28"
+  poster: NONE
+  layout: post
+
+- title: Leveraging External Knowledge in Different Tasks and Various Domains
+  authors: August 2017, University of Washington NLP seminar, Seattle, Washington.
+  base: external
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: NONE
+  poster: NONE
+  layout: post
+
+- title: Recognizing Mentions of Adverse Drug Reaction in Social Media Using Knowledge-Infused Recurrent Models
+  authors: June 2017, The Bar-Ilan Symposium on Foundations of Artificial Intelligence (BISFAI), Bar-Ilan University, Israel.
+  base: adr
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: NONE
+  layout: post
+
+- title: Natural Language Knowledge Representation
+  authors: August 2016, Nuance lab seminar, Sunnyvale, California.
+  base: nlkr
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: NONE
+  layout: post
+
+- title: Finding Better Argument Spans
+  authors: August 2016, UKP lab, Darmstadt University, Germany.<br> July 2016, University of Washington NLP seminar, Seattle, Washington.<br> July 2016, IBM Research Almaden, San Jose, California.
+  base: span
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: NONE
+  layout: post
+
+- title: Open Information Extraction as Intermediate Structure for Semantic Tasks
+  authors: August 2015, AI2 seminar, Seattle, Washington.
+  base: oie
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  talk: NONE
+  layout: post
+
+
+
+
+
+
+
+
+
+
+
+
