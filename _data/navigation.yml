@@ -4,11 +4,7 @@ main:
     url: assets/docs/cv.pdf
   - title: "Publications"
     url: publications
-  #- title: "Team"
-  #  url: Team
-  # - title: "Sample Posts"
-  #   url: /year-archive/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "Group"
+    url: group
+  - title: "Talks"
+    url: talks
