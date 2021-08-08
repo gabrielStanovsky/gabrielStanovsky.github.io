@@ -3,10 +3,10 @@ title: "SLAB"
 layout: single
 excerpt: "Slab: Team"
 sitemap: false
-permalink: /team/
+permalink: /group/
 ---
 
-Our team focuses on ...
+<!--Our team focuses on ... -->
 
 <table style="border:0px solid black;">
 <tr>

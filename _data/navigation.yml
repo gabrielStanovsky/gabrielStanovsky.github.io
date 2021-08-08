@@ -1,10 +1,10 @@
 # main links
 main:
-  - title: "CV"
-    url: assets/docs/cv.pdf
-  - title: "Publications"
-    url: publications
   - title: "Group"
     url: group
+  - title: "Publications"
+    url: publications
   - title: "Talks"
     url: talks
+  - title: "CV"
+    url: assets/docs/cv.pdf
