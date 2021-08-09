@@ -37,7 +37,7 @@ header:
 <table style="border:0px solid black;">
 <tr>
 <td style="border-bottom: 0;">
-<h2> Ph.D </h2>
+<h2> Ph.D. </h2>
 </td>
 </tr>
 {% for member in site.data.phd_students %}
@@ -83,14 +83,16 @@ header:
 </tr>
 {% for member in site.data.bsc_students %}
 <tr>
-<td style="vertical-align:top; border-bottom: 0;width:30%;">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="90%" style="float: left; margin-right: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
+<td style="vertical-align:top; border-bottom: 0; width:5%;">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="60%" style="float: left; margin-right: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
 </td>
-<td style="vertical-align:top; border-bottom: 0;width:70%;">
-  <h5> {{ member.name }} </h5>
-  {{ member.info }}
+<td style="vertical-align:top; border-bottom: 0;width:85%;">
+  <h3> {{ member.name }} </h3>
+  <p style="font-size:16px;">
+    {{ member.info }}
+  </p>
 </td>
-
+<td></td>
 </tr>
 {% endfor %}
 
