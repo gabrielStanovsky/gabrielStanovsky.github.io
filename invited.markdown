@@ -3,7 +3,8 @@ title: Invited Talks
 layout: single
 permalink: /talks/
 header:
-  image: /assets/images/pano_3.jpeg
+  image: /assets/images/pano_3_crop.png
+
 ---
 
 <!-- Main -->
@@ -12,6 +13,25 @@ header:
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style>
+        body {
+           font-size: 16px !important;
+           color: #2020131;
+           font-family: Nunito, sans-serif;
+         }
+         h3 {
+           font-size: 20px;                   
+         }
+         h2 {
+           font-size: 22px;
+         }
+         h1 {
+           font-size: 24px;
+         }
+  </style>
+         
+         
 
 </head>
 
@@ -24,7 +44,7 @@ header:
     <!--				<section class="8u -2u"> -->
           <br/>
     <header>
-<font style="font-weight:500;">
+<font style="font-weight:500;font-size:15px">
 
 <div>
 <p>
@@ -36,7 +56,7 @@ header:
         {% endunless %}
 
        <br>
-      <i><font style="color:DimGray;">{{ post.authors }}</font></i> <br>
+      <i><font style="color:DimGray;font-size:15px;">{{ post.authors }}</font></i> <br>
 
       <!-- {{ post.venue }} <br> -->
       {% unless post.talk == 'NONE' %}

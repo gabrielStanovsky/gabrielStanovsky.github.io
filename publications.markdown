@@ -3,7 +3,7 @@ layout: single
 title: Publications
 permalink: /publications/
 header:
-  image: /assets/images/pano_4.jpeg
+  image: /assets/images/pano_4_crop.png
 ---
 
 <head>
@@ -11,6 +11,22 @@ header:
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+        body {
+           font-size: 16px !important;
+           color: #2020131;
+           font-family: Nunito, sans-serif;
+         }
+         h3 {
+           font-size: 20px;                   
+         }
+         h2 {
+           font-size: 22px;
+         }
+         h1 {
+           font-size: 24px;
+         }
+  </style>
 
 </head>
 
@@ -37,7 +53,7 @@ header:
     <!-- 			<div class="row"> -->
     <!--				<section class="8u -2u"> -->
     <header>
-      <font style="font-weight:500;">
+      <font style="font-weight:500;font-size:15px">
         {% unless post.pdf == 'NONE' %}
         <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">{{ post.title }}</a>
         {% endunless %}
@@ -49,9 +65,9 @@ header:
         {% endif %}
 
       </font> <br>
-      <i><font style="color:DimGray;">{{ post.authors }}</font></i> <br>
-
-      {{ post.venue }} <br>
+      <i><font style="color:DimGray;font-size:15px">{{ post.authors }}</font></i> <br>
+      <font style = "font-size:15px">
+      {{ post.venue }} </font><br>
       {% unless post.pdf == 'NONE' %}
 <!--      <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank"><span class="label label-success">PDF</span></a> -->
       {% endunless %}
