@@ -1,6 +1,15 @@
+- name: Bar Eluz
+  photo: bar_eluz.png
+  info: Reducing gender bias in machine translation.
+
+- name: Koren Lazar
+  photo: koren_lazar.png
+  info: Filling the Gaps in Akkadian Texts.
+
 - name: Saifun Naveh
   photo: saifun_naveh.jpeg
   info: Multilingual semantic representations.
+
 
 
 

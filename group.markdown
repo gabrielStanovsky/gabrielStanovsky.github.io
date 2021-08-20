@@ -27,6 +27,11 @@ header:
          h1 {
            font-size: 22px;
          }
+
+table {
+        border-collapse: separate;
+                border-spacing: 10px 10px;
+        }
   </style>
 
 </head>
@@ -34,7 +39,7 @@ header:
 
 <!--Our team focuses on ... -->
 
-<table style="border:0px solid black;">
+<table>
 <tr>
 <td style="border-bottom: 0;">
 <h2> Ph.D. </h2>
@@ -53,6 +58,7 @@ header:
 </td>
 <td></td>
 </tr>
+<tr></tr>
 {% endfor %}
 
 <tr>
