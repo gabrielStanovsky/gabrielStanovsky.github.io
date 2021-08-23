@@ -4,11 +4,19 @@
 
 - name: Koren Lazar
   photo: koren_lazar.png
-  info: Filling the Gaps in Akkadian Texts.
+  info: Filling gaps in Akkadian texts.
+
+- name: Dan Malkin
+  photo: dan_malkin.png
+  info: Multilingual language models.
 
 - name: Saifun Naveh
   photo: saifun_naveh.jpeg
   info: Multilingual semantic representations.
+
+- name: Bar Tamir
+  photo: bar_tamir.png
+  info: Compression and abstraction in graph-based meaning representations.
 
 
 
