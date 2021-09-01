@@ -1,5 +1,5 @@
 ---
-title: "SLAB"
+title: "SLAB ⛰️"
 layout: single
 excerpt: "Slab: Team"
 sitemap: false
@@ -36,13 +36,22 @@ table {
 
 </head>
 
+<div>
+We develop NLP models which deal with real-world texts and help answer multi-disciplanry research questions in various domains and langauges. We always welcome collaboration, please <a href="mailto:gabriel.stanovsky@mail.huji.ac.il" target="_blank">reach out</a> if interested! <br><br>
 
-<!--Our team focuses on ... -->
+Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> for a complete list of open source projects.
+</div>
 
 <table>
 <tr>
 <td style="border-bottom: 0;">
-<h2> Ph.D. </h2>
+<h2> Current Members</h2>
+</td>
+</tr>
+
+<tr>
+<td style="border-bottom: 0;">
+<h3> Ph.D. </h3>
 </td>
 </tr>
 {% for member in site.data.phd_students %}
@@ -63,7 +72,7 @@ table {
 
 <tr>
 <td style="border-bottom: 0;">
-<h2> M.Sc. </h2>
+<h3> M.Sc. </h3>
 </td>
 </tr>
 {% for member in site.data.msc_students %}
@@ -84,7 +93,7 @@ table {
 
 <tr>
 <td style="border-bottom: 0;">
-<h2> B.Sc. </h2>
+<h3> B.Sc. </h3>
 </td>
 </tr>
 {% for member in site.data.bsc_students %}
@@ -102,6 +111,8 @@ table {
 </tr>
 {% endfor %}
 
+
+<br/>
 
 <tr>
         <td style="vertical-align:top; border-bottom: 0;">
