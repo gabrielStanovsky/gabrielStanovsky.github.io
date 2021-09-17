@@ -1,3 +1,13 @@
+- title: NLP in the Wild From Akkadian to Biochemistry
+  base: akk
+  image: img.png
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  authors: 2021, Georgia Tech, USA <br> 2021, TU Darmstadt, Germany <br> 2021, Bar-Ilan University, Israel
+  talk: https://youtu.be/rv98-uWmYaY
+  layout: post
+
+
 - title: Meaning Representation in Natural Language Tasks
   base: job
   image: img.png
