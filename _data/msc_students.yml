@@ -14,6 +14,10 @@
   photo: saifun_naveh.jpeg
   info: Multilingual semantic representations.
 
+- name: Eran Nussinovitch
+  photo: eran_nussinovitch.png
+  info: Data augmentaions duality across Vision and NLP.
+
 - name: Bar Tamir
   photo: bar_tamir.png
   info: Compression and abstraction in graph-based meaning representations.
