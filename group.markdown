@@ -139,6 +139,12 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         <b>Msc:</b>
         </font>
         </td>
+        <td style="vertical-align:top; border-bottom: 0;width:30%;">
+             <font style="font-size:16px">
+               Koren Lazar (2021)
+            </font>
+        </td>
+
 </tr>
 
 <tr>
