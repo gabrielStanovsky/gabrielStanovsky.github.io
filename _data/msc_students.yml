@@ -2,6 +2,10 @@
   photo: bar_eluz.png
   info: Reducing gender bias in machine translation.
 
+- name: Eliya Habba
+  photo: eliya_habba_cropped.png
+  info: NLP for the Hebrew legal domain.
+
 - name: Dan Malkin
   photo: dan_malkin.png
   info: Multilingual language models.
@@ -18,9 +22,6 @@
   photo: bar_tamir.png
   info: Compression and abstraction in graph-based meaning representations.
 
-- name: Eliya Habba
-  photo: eliya_habba.jpeg
-  info: Natural language in Hebrew legal domain.
 
 
 
