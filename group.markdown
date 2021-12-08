@@ -90,7 +90,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 </tr>
 {% endfor %}
 
-
+<!--
 <tr>
 <td style="border-bottom: 0;">
 <h3> B.Sc. </h3>
@@ -110,7 +110,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 <td></td>
 </tr>
 {% endfor %}
-
+-->
 
 <br/>
 
@@ -128,7 +128,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Shahar Levy (2021)
+               Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)
             </font>
         </td>
 </tr>
