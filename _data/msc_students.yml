@@ -4,7 +4,7 @@
 
 - name: Eliya Habba
   photo: eliya_habba_cropped.png
-  info: NLP for the Hebrew legal domain.
+  info: NLP for the Hebrew legal domain. <br/> Coadvised with <a href="https://renanakeydar.huji.ac.il">Renana Keydar</a>.
 
 - name: Gili Lior
   photo: gili_lior.png
@@ -27,8 +27,8 @@
   info: Compression and abstraction in graph-based meaning representations.
 
 - name: Sapir Weissbuch
-  photo: sapir_headshot.jpeg
-  info: Introducing interactivity to question answering models
+  photo: sapir_headshot_cropped.png
+  info: Introducing interactivity to question answering models.
 
 
 
