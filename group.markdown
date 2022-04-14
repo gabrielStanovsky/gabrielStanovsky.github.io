@@ -141,7 +141,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Koren Lazar (2021)
+               Koren Lazar (2021), Eran Nussinovitch (2022), Sapir Weissbuch (2022)
             </font>
         </td>
 
