@@ -36,7 +36,7 @@ header:
 
 
 I’m interested in developing natural language processing models which deal with real-world texts and
-help answer multi-disciplinary research questions, including in archeology, law, medicine, and more.
+help answer multi-disciplinary research questions, e.g., in archeology, law, medicine, and more.
 See my [group page](group) and [publications](publications) for more details.
 
 I did my postdoc with <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Prof. Luke Zettlemoyer</a> at the University of Washington and with <a href="https://homes.cs.washington.edu/~nasmith/" target="_blank">Prof. Noah Smith</a> at the

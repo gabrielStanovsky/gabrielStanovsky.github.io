@@ -1,0 +1,214 @@
+<h1 id="instructions">Instructions</h1>
+<br>
+
+<p>Given three images, A, A' and B, You will need to answer: <br>Which candidate (B') out of {C1, C2, C3, C4} is similar to B the same way A' is similar to A?</p>
+<p>To answer it, you'll need to choose a candidate:<ol>
+  <li>(1) understand what is the <u>key difference</u> between A and A'.</li>
+  <li>(2) <u>Map</u> this difference to B.</li>
+  <li>(3) <u>Verify</u>: B → B' has the same difference as A → A'.</li>
+</ol>
+</p>
+<br>
+<p>The main difference between the images, can be one of the semantic roles in the image: (1) verb; (2) agent; (3) item; (4) vehicle; (5) victim; (6) tool; (7) food. </p>
+
+<br>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<h2>Agent examples:</h2>
+<br>
+<p>The agent answers the question "Who is doing something in the image". For example in image A' below, the agent is a <u>cat</u>.</p>
+<br> 
+<h3>Agent - Example 1:</h3>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/11_agent_21326_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A <u>child</u> urinating, changed to <u>cat</u> urinating. <strong>Agent</strong> changed: child → cat.<br>
+	<strong>Map difference to B</strong>: <u>child</u> lying in a hospital bed → <u>cat</u> in a hospital bed.<br>
+	<strong>Answer</strong>: C4 (It contains: <u>cat</u> in a hospital bed).<br>
+	<strong>Additional explaination</strong>: Why difference A, A' is child → cat and not female child → cat? <u>Answer</u>: B should contain the same agent as A. They both contain a <u>child</u>.<br>
+	<br>
+<h3>Agent - Example 2:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/14_agent_6053_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A <u>car</u> drifting, changed to a <u>motorcycle</u> drifting. <strong>Agent</strong> changed: motorcycle → car.<br>
+	<strong>Map difference to B</strong>: <u>car</u> crash → <u>motorcycle</u> crash.<br>
+	<strong>Answer</strong>: C4 (It contains: <u>motorcycle</u> crash).<br>
+	<strong>Additional explaination</strong>: C3 also contain motorcycle. However it doesn't seem to crash, and we need B' to be similar to B except the single change of motorcycle → car, meaning that the answer should contain motorcycle crashing.<br>
+	<br>
+
+<h2>Verb examples:</h2>
+<br>
+<p>The verb answers the question "What activity is described in the image". For example in image A below, the verb is a <u>shivering</u>.</p>
+<br> 
+<h3>Verb - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/2_verb_12666_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A woman <u>shivering</u>, changed to woman <u>smiling</u>. <strong>Verb</strong> changed: shivering → smiling.<br>
+	<strong>Map difference to B</strong>: man <u>shivering</u> → man <u>smiling</u>.<br>
+	<strong>Answer</strong>: C2 (It contains: man <u>smiling</u>).<br>
+	<strong>Additional explaination</strong>: C1 also contain person smiling. However it is not a <u>man</u> like in B. We need B' to be similar to B except the single change of shivering → smiling, meaning that the answer should contain a man smiling.<br>
+	<br>
+<h3>Verb - Example 2:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/8_verb_4579_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A man <u>frowning</u>, changed to man <u>whirling</u>. <strong>Verb</strong> changed: frowning → whirling.<br>
+	<strong>Map difference to B</strong>: girl <u>frowning</u> → girl <u>whirling</u>.<br>
+	<strong>Answer</strong>: C3 (It contains: girl <u>whirling</u>).<br>
+	<br>
+
+<h2>Item examples:</h2>
+<br>
+<p>The item answers the question "What item is being effected / used by the agent". For example in image A below, the item is a <u>horse</u>.</p>
+<br> 
+<h3>Item - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/30_item_12197_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: People whipping a <u>horse</u>, changed to people whipping a <u>man</u>. <strong>Item</strong> changed: horse → man.<br>
+	<strong>Map difference to B</strong>: man patting a <u>horse</u> → man patting a <u>man</u>.<br>
+	<strong>Answer</strong>: C3 (It contains: man patting a <u>man</u>).<br>
+	<br>
+
+<h2>Tool examples:</h2>
+<br>
+<p>The tool answers the question "What tool is being used by the agent". For example in image A below, the tool is a <u>tractor</u>.</p>
+<br> 
+<h3>Tool - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/29_tool_12314_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A <u>tractor</u> harvesting, changed to <u>people's hand</u> harvesting. <strong>Tool</strong> changed: tractor → people's hand.<br>
+	<strong>Map difference to B</strong>: <u>Tractor</u> soiling land → <u>People's hand</u> soiling land.<br>
+	<strong>Answer</strong>: C2 (It contains: <u>People's hand</u> soiling land.).<br>
+		<strong>Additional explaination</strong>: C3 also seem to show people processing land with their hands. How can we be sure that B is <u>soiling</u>? The land in B seem to be empty, before soiling, and there is nothing to harvest in it. The people in C3 seem to <u>harvest</u>. The verb in B should be the same as the verb in B', so if by contrary it would be B'=C3, the difference would be tractor harvesting → people's hand harvesting, which is not the case because the tractor isn't harvesting. If we choose C2 it would make sense: tractor soiling → people's hand soiling.<br>
+	<br>
+
+<h2>Vehicle examples:</h2>
+<br>
+<p>The vehicle is similar to agent. It answers the question "What vehicle is acting in this image". For example in image A below, the vehicle is an <u>airplane</u>.</p>
+<br> 
+<h3>Vehicle - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/43_vehicle_2101_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: People going down from an <u>airplane</u>, changed to people getting down from a <u>helicopter</u>. <strong>Vehicle</strong> changed: airplane → helicopter.<br>
+	<strong>Map difference to B</strong>: People boarding an <u>airplane</u> → People boarding a <u>helicopter</u>.<br>
+	<strong>Answer</strong>: C2 (It contains: People boarding a <u>helicopter</u>).<br>
+		<strong>Additional explaination</strong>: C1 and C4 also shows helicopter, but it includes people getting off from it, not boarding. B actually include single person, not multiple people, but there isn't contradicting candidate, so the option that makes the most sense is C2.<br>
+	<br>
+
+<h2>Victim examples:</h2>
+<br>
+<p>The victim answers the question "Who is the victim in this image". For example in image A below, the victim is a <u>person</u>.</p>
+<br> 
+<h3>Victim - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/60_victim_20050_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A <u>man</u> getting medical care with a bondage, changed to a <u>dog</u> getting medical care with a bondage. <strong>Victim</strong> changed: man → dog.<br>
+	<strong>Map difference to B</strong>: <u>Man</u> lying in a hospital room → <u>Dog</u> lying in a hospital room.<br>
+	<strong>Answer</strong>: C2 (It contains: <u>Dog</u> lying in a hospital room.).<br>
+		<strong>Additional explaination</strong>: A' might look like a toy dog, but there isn't a contradicting candidate (another toy dog) so we may assume it's simple a dog. C1 also seem to include a dog, but the situation of the dog in C2 looks more like the situation of the person in B.<br>
+	<br>
+
+
+<h2>Food examples:</h2>
+<br>
+<p>The food answers the question "What is the food in this image". For example in image A/B below, the food is <u>chicken</u>.</p>
+<br> 
+<h3>Food - Example 1:</h3>
+<p>You can try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/60_food_1772_empty.png?raw=true" alt=""><br>
+	<strong>Difference A,A'</strong>: A <u>chicken</u> fried in a pan, changed to a <u>vegetable</u> getting fried in a pan. <strong>Food</strong> changed: chicken → vegetable.<br>
+	<strong>Map difference to B</strong>: <u>Chicken</u> on a grill → <u>Vegetable</u> on a grill.<br>
+	<strong>Answer</strong>: C2 (It contains: <u>Vegetable</u> on a grill).<br>
+		<strong>Additional explaination</strong>: C3 & C4 also includes vegetables, but fried in a pan, not grilled.<br>
+	<br>
+
+<h1>Harder cases. Try it, it's important!</h1>
+<p>The following cases are harder and are less well-defined. You might need a bit of improvisation and using common-sense.<br>In addition, <strong>as in the real annotation task, we won't provide you with the analogy category, you'll need to infer it yourself.</strong></p>
+
+<h3>Example 1:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/10_agent_10444_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>agent</u>.<br>
+	<strong>Difference A,A'</strong>: A <u>dog</u> tilting his head, changed to a <u>man</u> tilting his head. <strong>Agent</strong> changed: dog → man.<br>
+	<strong>Map difference to B</strong>: <u>Dogs</u> driving a cart → <u>Man</u> driving a cart.<br>
+	<strong>Answer</strong>: C4 (It contains: <u>Man</u> driving a cart).<br>
+		<strong>Additional explaination</strong>: B actually includes dog driving a man, but we focus on the fact that they are causing a cart to move. The only candidate that seem to make a cart move is C4.<br>
+	<br>
+
+<h3>Example 2:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/1_verb_22650_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>verb</u>.<br>
+	<strong>Difference A,A'</strong>: A man <u>running</u>, changed to a man <u>bowing</u>. <strong>Verb</strong> changed: running → bowing.<br>
+	<strong>Map difference to B</strong>: <u>Man</u> running → <u>Man</u> bowing.<br>
+	<strong>Answer</strong>: C4 (It contains: <u>Man</u> bowing).<br>
+		<strong>Additional explaination</strong>: C1 and C2 also include a man bowing. The difference is that C1 and C2 is tagged as "The president of united states" (Barak Obama) instead of "man". We agree that there might be 3 correct answers here, but if we understand that C1 and C2 are unique in that way, we might exclude them and choose C4 correctly.<br>
+	<br>
+
+<h3>Example 3:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/34_item_12229_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>item/vehicle</u>.<br>
+	<strong>Difference A,A'</strong>: A <u>motorcycle</u> crash, changed to a <u>car</u> crash. <strong>Item/vehicle</strong> changed: car → motorcycle.<br>
+	<strong>Map difference to B</strong>: <u>Motorcycle</u> being towed → <u>Car</u> being towed.<br>
+	<strong>Answer</strong>: C3 (It contains: <u>Car</u> being towed).<br>
+		<strong>Additional explaination</strong>: Image A seem to include both motorcycle and a car. In this case the main difference might be a motorcycle. To verify it, we can look at B: It includes a motorcycle. If by contrary we chose another main difference between A and A', it wouldn't make sense with B containing motorcycle.<br>
+	<br>
+
+<h3>Example 4:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/40_vehicle_2307_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>vehicle</u>.<br>
+	<strong>Difference A,A'</strong>: A <u>boat</u> sailing, changed to a <u>ship</u> sailing. <strong>Vehicle</strong> changed: boat → ship.<br>
+	<strong>Map difference to B</strong>: People getting down a <u>boat</u> → People getting down a <u>ship</u>.<br>
+	<strong>Answer</strong>: C4 (It contains: People getting down a <u>ship</u>).<br>
+		<strong>Additional explaination</strong>: Images C1 and C2 also include ships, but the people actions / situation in C4 looks more similar to the action / situation in B.<br>
+	<br>
+
+<h3>Example 5:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/51_victim_4067_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>victim</u>.<br>
+	<strong>Difference A,A'</strong>: A <u>dog</u> getting medical care, changed to a <u>man</u> getting medical care. <strong>Victim</strong> changed: dog → man.<br>
+	<strong>Map difference to B</strong>: A <u>dog</u> getting medical care with a bondage → <u>Man</u> getting medical care with a bondage.<br>
+	<strong>Answer</strong>: C2 (It contains: <u>Man</u> getting medical care with a bondage).<br>
+		<strong>Additional explaination</strong>: Images C3 and C4 also include men getting medical care, but only C2 seem to be with a bondage, as in image B.<br>
+	<br>
+
+<h3>Example 6:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/68_food_1780_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>food</u>.<br>
+	<strong>Difference A,A'</strong>: A <u>X</u> getting grilled, changed to a <u>Y</u> getting grilled. <strong>Food</strong> changed: X → Y.<br>
+	This is a harder case, We don't really see the food in A, and A' contains both vegetables and meat.<br>
+	It might be X=vegetable and Y=meat or vice verca. (The distractors also include vetetable or meat, so it seem to be the case).
+	If X=vegetable, than B also should include vegetable. It seem to include some kind of meat, so it seem to be a contradiction. Let's try X=meat and Y=vegetable. It can work - no contradiction yet.
+	<strong>Food</strong> changed: Meat → Vegetable.<br>
+	<strong>Map difference to B</strong>: A <u>meat</u> being fried in a pan → <u>Vegetable</u> being fried in a pan.<br>
+	<strong>Answer</strong>: C2 (It contains: <u>Vegetable</u> being grilled).<br>
+		<strong>Additional explaination</strong>: Images C3 also include vegetable being grilled, but not fried in a pan like B.<br>
+	<br>
+
+<h3>Example 7:</h3>
+<p>Try solving the analogy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/boundry_examples/23_tool_12290_empty.png?raw=true" alt=""><br>
+	<strong>Analogy category</strong> the main difference between A and A' seem to be the <u>tool</u>.<br>
+	<strong>Difference A,A'</strong>: Women sewing with <u>needles</u>, changed to women sewing with a <u>sweing machine</u>. <strong>Tool</strong> changed: Needle → Sewing machine.<br>
+	<strong>Map difference to B</strong>: Person sewing with a <u>needle</u> → Person sewing with a <u>sewing machine</u>.<br>
+	<strong>Answer</strong>: C2 (It contains: Person sewing with a <u>sewing machine</u>).<br>
+		<strong>Additional explaination</strong>: Image C1 seem to include sewing machine, but C2's situation look more like the situation in B.<br>
+	<br>

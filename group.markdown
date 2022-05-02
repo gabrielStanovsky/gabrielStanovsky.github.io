@@ -72,6 +72,29 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 
 <tr>
 <td style="border-bottom: 0;">
+<h3> Visitors </h3>
+</td>
+</tr>
+{% for member in site.data.visitors %}
+<tr>
+<td style="vertical-align:top; border-bottom: 0; width:5%;">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="60%" style="float: left; margin-right: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
+</td>
+<td style="vertical-align:top; border-bottom: 0;width:85%;">
+  <h3> {{ member.name }} </h3>
+  <p style="font-size:16px;">
+    {{ member.info }}
+  </p>
+</td>
+<td></td>
+</tr>
+<tr></tr>
+{% endfor %}
+
+
+
+<tr>
+<td style="border-bottom: 0;">
 <h3> M.Sc. </h3>
 </td>
 </tr>
@@ -90,7 +113,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 </tr>
 {% endfor %}
 
-
+<!--
 <tr>
 <td style="border-bottom: 0;">
 <h3> B.Sc. </h3>
@@ -110,7 +133,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 <td></td>
 </tr>
 {% endfor %}
-
+-->
 
 <br/>
 
@@ -128,7 +151,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Shahar Levy (2021)
+               Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)
             </font>
         </td>
 </tr>
@@ -141,7 +164,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Koren Lazar (2021)
+               Koren Lazar (2021), Eran Nussinovitch (2022), Sapir Weissbuch (2022)
             </font>
         </td>
 

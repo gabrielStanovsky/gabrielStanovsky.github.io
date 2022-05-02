@@ -1,7 +1,7 @@
 ---
 layout: single
-title: Github tutorial
-permalink: /github
+title: Tutorials
+permalink: /tutorials
 header:
   image: /assets/images/pano_4_crop.png
 ---
@@ -34,4 +34,5 @@ table {
 
 </head>
 
-<script src="https://gist.github.com/saifun/019882b55685e2fb844583a19b08a1ec.js"></script>
+* [terminal](terminal)
+* [git](github)
