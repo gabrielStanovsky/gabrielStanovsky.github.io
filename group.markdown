@@ -70,6 +70,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 <tr></tr>
 {% endfor %}
 
+<!--
 <tr>
 <td style="border-bottom: 0;">
 <h3> Visitors </h3>
@@ -90,6 +91,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 </tr>
 <tr></tr>
 {% endfor %}
+-->
 
 
 
@@ -164,7 +166,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Koren Lazar (2021), Eran Nussinovitch (2022), Sapir Weissbuch (2022)
+               Koren Lazar (2021), Eran Nussinovitch (2022), Sapir Weissbuch (2022), Bar Tamir (2022)
             </font>
         </td>
 
@@ -178,6 +180,21 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
        </td>
 
 </tr>
+
+<tr>
+        <td style="vertical-align:top; border-bottom: 0;width:30%;">
+        <font style="font-size:16px">
+        <b>Visitors:</b>
+        </font>
+        </td>
+        <td style="vertical-align:top; border-bottom: 0;width:30%;">
+             <font style="font-size:16px">
+               Tomasz Limisiewicz (2022)
+            </font>
+        </td>
+
+</tr>
+
 
 
 
