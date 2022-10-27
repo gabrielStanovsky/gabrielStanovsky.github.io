@@ -6,10 +6,6 @@
   photo: eliya_habba_cropped.png
   info: NLP for the Hebrew legal domain. <br/> Coadvised with <a href="https://renanakeydar.huji.ac.il">Renana Keydar</a>.
 
-- name: Gili Lior
-  photo: gili_lior.png
-  info: Gender bias evaluation in NLP models in comparison to humans biases.
-
 - name: Dan Malkin
   photo: dan_malkin.png
   info: Multilingual language models.
