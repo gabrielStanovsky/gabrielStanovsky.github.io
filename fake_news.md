@@ -1,11 +1,3 @@
----
-layout: single
-title: Working with the terminal
-permalink: /terminal
-header:
-  image: /assets/images/pano_4_crop.png
----
-
 <!-- saved from url=(0073)https://chatgpt-static.s3.amazonaws.com/chats/7ri3su8n87d1mfs0yimga9.html -->
 <html class="dark" style="color-scheme: dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>A chat with ChatGPT</title>
