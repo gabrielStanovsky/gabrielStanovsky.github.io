@@ -1,7 +1,3 @@
-- name: Bar Eluz
-  photo: bar_eluz.png
-  info: Reducing gender bias in machine translation.
-
 - name: Eliya Habba
   photo: eliya_habba_cropped.png
   info: NLP for the Hebrew legal domain. <br/> Coadvised with <a href="https://renanakeydar.huji.ac.il">Renana Keydar</a>.
