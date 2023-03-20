@@ -40,9 +40,11 @@ table {
 We develop NLP models which deal with real-world texts and help answer multi-disciplanry research questions in various domains and langauges. We always welcome collaboration, please <a href="mailto:gabriel.stanovsky@mail.huji.ac.il" target="_blank">reach out</a> if interested! <br><br>
 
 Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> for a complete list of open source projects.
-  
-<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/group_photo.jpg" class="img-responsive" width="60%" style="float: center; margin-center: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
 
+<figure>
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/group_photo.jpg" class="img-responsive" width="60%" style="float: center; margin-left: auto; margin-right: auto; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
+<figcaption>Lab meeting, March 2023</figcaption>
+</figure>
   
 </div>
 
