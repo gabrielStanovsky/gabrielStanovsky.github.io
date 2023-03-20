@@ -41,7 +41,7 @@ We develop NLP models which deal with real-world texts and help answer multi-dis
 
 Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> for a complete list of open source projects.
   
-<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/group_photo.png" class="img-responsive" width="60%" style="float: left; margin-right: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
+<img src="{{ site.url }}{{ site.baseurl }}/images/teampic/group_photo.png" class="img-responsive" width="60%" style="float: center; margin-center: 2rem; border-radius: 8px; box-shadow: 5px 5px 5px #ccc;" />
 
   
 </div>
