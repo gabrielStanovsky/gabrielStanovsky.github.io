@@ -10,9 +10,9 @@
   photo: itay_itzhak.jpg
   info: Language models interpretability, biases and evaluation. <br/> Coadvised with <a href="https://www.cs.technion.ac.il/~belinkov/">Yonatan Belinkov</a>.   
 
-- name: Gili Lior
+- name: Gili Lior <a href="https://gililior.github.io/" target="_blank">🏠</a>
   photo: gili_lior.png
-  info: Gender bias evaluation in NLP models in comparison to humans biases.
+  info: Exploring aspects at the intersection of human cognition and natural language processing.
 
 - name: Asaf Yehudai <a href="https://www.semanticscholar.org/author/Asaf-Yehudai/2126416248" target="_blank">🏠</a>
   photo: asaf_yehudai.jpeg
