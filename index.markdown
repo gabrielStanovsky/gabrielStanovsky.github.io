@@ -35,7 +35,7 @@ header:
 
 
 
-I’m interested in developing natural language processing models which deal with real-world texts and
+I’m develop natural language processing models which deal with real-world texts and
 help answer multi-disciplinary research questions, e.g., in archeology, law, medicine, and more.
 See my [group page](group) and [publications](publications) for more details.
 
