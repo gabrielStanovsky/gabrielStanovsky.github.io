@@ -184,6 +184,12 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
             <b>Phd:</b>
         </font>
        </td>
+      <td style="vertical-align:top; border-bottom: 0;width:30%;">
+             <font style="font-size:16px">
+               Yonatan Bitton (2023)
+            </font>
+        </td>
+
 
 </tr>
 
