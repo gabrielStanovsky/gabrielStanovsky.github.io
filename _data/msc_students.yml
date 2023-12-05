@@ -1,3 +1,7 @@
+- name: Noam Dahan
+  photo: noam_dahan.jpeg
+  info: Hebrew NLP in the news domain.
+
 - name: Eliya Habba
   photo: eliya_habba_cropped.png
   info: NLP for the Hebrew legal domain. <br/> Coadvised with <a href="https://renanakeydar.huji.ac.il">Renana Keydar</a>.
@@ -10,6 +14,4 @@
   photo: yarden_yagil_cropped.jpg
   info: Dynamic adaptations to learning behavior, NLP in medical domain.
 
-- name: Noam Dahan
-  photo: noam_dahan.jpeg
-  info: Hebrew NLP in the news domain
+
