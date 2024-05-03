@@ -153,15 +153,17 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 
 <tr>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
-            <font style="font-size:16px">
-              <b>Bsc:</b>
-            </font>
-        </td>
-        <td style="vertical-align:top; border-bottom: 0;width:30%;">
+        <font style="font-size:16px">
+            <b>Phd:</b>
+        </font>
+       </td>
+      <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)
+               Yonatan Bitton (2023)
             </font>
         </td>
+
+
 </tr>
 
 <tr>
@@ -180,18 +182,18 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
 
 <tr>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
-        <font style="font-size:16px">
-            <b>Phd:</b>
-        </font>
-       </td>
-      <td style="vertical-align:top; border-bottom: 0;width:30%;">
-             <font style="font-size:16px">
-               Yonatan Bitton (2023)
+            <font style="font-size:16px">
+              <b>Bsc:</b>
             </font>
         </td>
-
-
+        <td style="vertical-align:top; border-bottom: 0;width:30%;">
+             <font style="font-size:16px">
+               Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)
+            </font>
+        </td>
 </tr>
+
+
 
 <tr>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
