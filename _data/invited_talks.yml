@@ -1,3 +1,23 @@
+- title: On the Brittleness of Evaluation in NLP
+  base: eval
+  image: img.png
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  authors: 2024, Bar-Ilan University, Israel <br> 2024, LREC-COLING Tutorial, Torino, Italy
+  talk: NONE
+  layout: post
+
+
+- title: Multilingual Zero-Shot Transfer in Low-Resource Settings
+  base: zero
+  image: img.png
+  pdf: presentation.pdf
+  pdf-ext: NONE
+  authors: 2023, Keynote at the Workshop on Ancient Language Processing, Bulgaria <br> 2023, Weizmann Insitute, Israel <br> 2022, Charles University, Czech Republic
+  talk: NONE
+  layout: post
+
+
 - title: NLP in the Wild From Akkadian to Biochemistry
   base: akk
   image: img.png
