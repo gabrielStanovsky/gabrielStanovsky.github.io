@@ -1,0 +1,53 @@
+- title: Introduction to Machine Learning
+  base: eval
+  image: img.png
+  pdf: NONE
+  pdf-ext: soon
+  time: 2022-
+  location: Hebrew University
+  level: Undergraduate
+  students: 600+
+  talk: NONE
+  paper: NONE
+  layout: post
+
+- title: Advanced Natural Language Processing
+  base: eval
+  image: img.png
+  pdf: NONE
+  pdf-ext: soon
+  time: 2023-
+  location: Hebrew University
+  level: Graduate
+  students: 60
+  paper: NONE
+  talk: NONE
+  layout: post
+
+- title: "On Language Models and Sentience: A Seminar in Philosophy and NLP"
+  base: eval
+  image: img.png
+  pdf: NONE
+  pdf-ext: soon
+  time: 2022
+  location: Hebrew University
+  level: Graduate
+  students: 20
+  talk: NONE
+  paper: https://arxiv.org/pdf/2403.00499
+  layout: post
+
+- title: "A Seminar in Multilingual NLP"
+  base: eval
+  image: img.png
+  pdf: NONE
+  pdf-ext: soon
+  time: 2021
+  location: Hebrew University
+  level: Graduate
+  paper: https://arxiv.org/pdf/2205.04086
+  students: 20
+  talk: NONE
+  layout: post
+
+

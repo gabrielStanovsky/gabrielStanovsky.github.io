@@ -6,5 +6,7 @@ main:
     url: group
   - title: "Publications"
     url: publications
+  - title: "Teaching"
+    url: teaching
   - title: "Talks"
     url: talks
