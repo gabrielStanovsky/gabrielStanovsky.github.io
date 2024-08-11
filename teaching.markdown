@@ -35,7 +35,7 @@ header:
 
 </head>
 <br>
-I draw a lot of meaning and satisfaction out of teaching, and see it as an important role of my job at academia. I strive for effective communication, and believe that every subject can be made accessible to any audience. I regularly give a meta-presentation about <a href="https://docs.google.com/presentation/d/1LkZF2zVoV9oJYxt4S48uWwy7qwRRAvJyPwDI27UbpKE/edit?usp=sharing">How to Present</a>, my pale spinoff of the legendary <a href="https://youtu.be/Unzc731iCUY?si=uRG9qqFLtq4AMDYn">How to Speak </a> lecture by Prof. Patrick Winston. I won several teaching awards at the Hebrew University.
+I draw a lot of meaning and satisfaction out of teaching, and see it as an important role of my job at academia. I strive for effective communication, and believe that every subject can be made accessible to any audience. I regularly give a meta-presentation about <a href= "https://docs.google.com/presentation/d/1pEYlINlYdTUIBViRKEQrU3-ecGxeO5MQEobAE6ri2iE/edit?usp=sharing">How to Write</a> and <a href="https://docs.google.com/presentation/d/1LkZF2zVoV9oJYxt4S48uWwy7qwRRAvJyPwDI27UbpKE/edit?usp=sharing">How to Present</a>, my pale spinoff of the legendary <a href="https://youtu.be/Unzc731iCUY?si=uRG9qqFLtq4AMDYn">How to Speak </a> lecture by Prof. Patrick Winston. I won several teaching awards at the Hebrew University.
 
 <div id="main">
   <div id="content" class="container">
