@@ -1,7 +1,7 @@
 - name: Noam Dahan
   photo: noam_dahan.jpeg
   info: Hebrew NLP in the news domain.
+
 - name: Niv Eckhaus
-  photo: niv_eckhaus.jpeg
+  photo: niv_eckhaus_cropped.jpeg
   info: Asynchronous communication between LLMs
-  
