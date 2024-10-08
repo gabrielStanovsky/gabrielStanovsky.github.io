@@ -10,7 +10,10 @@
   talk: NONE
   paper: NONE
   layout: post
-
+  slides: https://drive.google.com/drive/folders/1SXGKG0OTEM6rdjmE5s-Iel_2L8PpUrcQ?usp=drive_link
+  details: "An introductory course to the field of machine learning, covering the foundations of statistical learning, and the applicability of machine learning to real world problems.
+We focus on the PAC model, addressing fundamental questions like: What is machine learning? What type of concepts are learnable? How can we learn from data? We build a machine learning toolbox, learning the foundations and implementation of linear regression, various classifiers (SVM, decision trees, logistic regression), unsupervised learning (clustering, dimensionality reduction), ensembles, and deep learning (gradient descent and neural network architectures), as well as overarching concepts such as the bias-variance tradeoff and regularization."
+  
 - title: Advanced Natural Language Processing
   base: eval
   image: img.png
@@ -23,8 +26,12 @@
   paper: NONE
   talk: NONE
   layout: post
+  slides: https://drive.google.com/drive/folders/10tpPlpsm0L-oYihyBV5W1gdOMu4T2H0Z?usp=sharing
+  details: "Brings students up to date with cutting edge topics in NLP research, with special emphasis
+on topics pursued by Roy Schwartz and me, including efficiency, multilingual NLP, evaluation and more.
+Students work on a semester long research projects of their choice under the supervision of the course staff."
 
-- title: "On Language Models and Sentience: A Seminar in Philosophy and NLP"
+- title: "On Language Models and Consciousness: A Seminar in NLP and Philosophy"
   base: eval
   image: img.png
   pdf: NONE
@@ -35,7 +42,10 @@
   students: 20
   talk: NONE
   paper: https://arxiv.org/pdf/2403.00499
+  slides: https://drive.google.com/drive/folders/1s3n39gILCWRrGhCiqX-aHheBswttxjTu?usp=drive_link
   layout: post
+  details: "We read papers interleaving seminal work on the development of language models from Word2Vec to ChatGPT with philosophical examinations of what it means to be conscious, including Turing (1950), Nagle (1974), Searle (1980), and more. See below the complete reading list, and an ACL 2024 publication based on this seminar."
+
 
 - title: "A Seminar in Multilingual NLP"
   base: eval
@@ -49,5 +59,8 @@
   students: 20
   talk: NONE
   layout: post
+  slides: NONE
+  details: "We read papers about the state of multilingual NLP, in terms of tokenizers, language modeling, datasets, and more. See below an outstanding NAACL 2022 paper which begun as part of this seminar."
+
 
 

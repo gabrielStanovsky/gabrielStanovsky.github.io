@@ -37,7 +37,7 @@ header:
 
 I develop natural language processing models which deal with real-world texts and
 help answer multi-disciplinary research questions, e.g., in archaeology, law, medicine, and more.
-See my [group page](group) and [publications](publications) for more details.
+See my [group](group), [publications](publications), and [teaching](teaching) pages for more details.
 
 I did my postdoc with <a href="https://www.cs.washington.edu/people/faculty/lsz" target="_blank">Prof. Luke Zettlemoyer</a> at the University of Washington and with <a href="https://homes.cs.washington.edu/~nasmith/" target="_blank">Prof. Noah Smith</a> at the
                                   <a href="http://allenai.org" target="_blank">Allen Institute for Artificial Intelligence</a> (AI2),
