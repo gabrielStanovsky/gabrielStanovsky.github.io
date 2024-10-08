@@ -40,7 +40,7 @@ I draw a meaning and satisfaction out of teaching, and see it as an important ro
 
 {% for post in site.data.teaching %} 
 ### {{ post.title }} ({{post.time}})
-{{post.level}} level course for {{post.students}} students.
+{{post.level}} level course for {{post.students}} students at {{post.location}}.
 <details>
 <i>{{post.details}}</i><br/>
 
