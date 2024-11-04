@@ -5,3 +5,7 @@
 - name: Niv Eckhaus
   photo: niv_eckhaus_cropped.jpeg
   info: Asynchronous communication between LLMs
+  
+- name: Shahar Levy
+  photo: shahar_levy.jpg
+  info: Interpretability and biases of language models.
