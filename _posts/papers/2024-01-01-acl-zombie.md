@@ -10,9 +10,8 @@ pdf-ext: https://arxiv.org/pdf/2403.00499
 talk: NONE
 code: NONE
 layout: post
-poster: NONE
+poster: poster.pdf
 slides: NONE
-data: NONE
 date: 02-02-2024
 categories: [bias]
 ---
