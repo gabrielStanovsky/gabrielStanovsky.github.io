@@ -2,7 +2,7 @@
 title: "Do Zombies Understand? A Choose-Your-Own-Adventure Exploration of Machine Cognition"
 authors: Ariel Goldstein, <b>Gabriel Stanovsky</b>
 venue: ACL Findings
-base: eco-sem
+base: zombie
 bib: NONE
 bib-ext: NONE
 pdf: NONE
