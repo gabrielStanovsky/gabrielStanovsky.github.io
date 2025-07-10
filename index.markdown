@@ -33,8 +33,6 @@ header:
 
 </head>
 
-
-
 I develop natural language processing models which deal with real-world texts and
 help answer multi-disciplinary research questions, e.g., in archaeology, law, medicine, and more.
 See my [group](group), [publications](publications), and [teaching](teaching) pages for more details.
