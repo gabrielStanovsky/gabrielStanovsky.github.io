@@ -12,7 +12,8 @@ code: NONE
 layout: post
 poster: NONE
 slides: NONE
-data: NONE
+data: https://eliyahabba.github.io/PromptSuite
+data-name: PROJECT
 date: 08-08-2025
 categories: [bias]
 ---
