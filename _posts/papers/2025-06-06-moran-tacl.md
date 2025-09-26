@@ -1,7 +1,7 @@
 ---
 title: "Cooking Up Creativity: A Cognitively-Inspired Approach for Enhancing LLM Creativity through Structured Representations"
 authors: Moran Mizrahi, Chen Shani, <b>Gabriel Stanovsky</b>, Dan Jurafsky, Dafna Shahaf
-venue: TACL
+venue: TACL (@ EMNLP)
 base: eco-sem
 bib: NONE
 bib-ext: NONE
@@ -13,6 +13,6 @@ layout: post
 poster: NONE
 slides: NONE
 data: NONE
-date: 06-06-2025
+date: 09-09-2025
 categories: [bias]
 ---
