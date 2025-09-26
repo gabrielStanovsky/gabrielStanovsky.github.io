@@ -1,7 +1,7 @@
 ---
 title: "ReliableEval: A Recipe for Stochastic LLM Evaluation via Method of Moments"
 authors: Gili Lior, Eliya Habba, Shahar Levy, Avi Caciularu, <b>Gabriel Stanovsky</b>
-venue: Findings of EMNLP
+venue: EMNLP Findings
 base: eco-sem
 bib: NONE
 bib-ext: NONE

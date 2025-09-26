@@ -1,7 +1,7 @@
 ---
 title: "Trust Me, I'm Wrong: High-Certainty Hallucinations in LLMs"
 authors: Adi Simhi, Itay Itzhak, Fazl Barez, <b>Gabriel Stanovsky</b>, Yonatan Belinkov
-venue: Findings of EMNLP
+venue: EMNLP Findings
 base: eco-sem
 bib: NONE
 bib-ext: NONE
