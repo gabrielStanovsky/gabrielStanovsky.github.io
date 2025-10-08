@@ -45,7 +45,26 @@ Find my complete CV [here](assets/docs/cv.pdf){:target="_blank"}.
 I'm also a wannabe <a href="https://letterboxd.com/gabistanovsky/films/diary/" target="_blank">movie buff</a>, <a href="http://www.setlist.fm/concerts/Gabis" target="_blank">concert goer</a>, <a href="https://www.goodreads.com/user/show/24306303-gabriel-stanovsky" target="_blank">book lover</a>, 
 						and <a href="https://tunein.com/user/gabrielsatanovsky/" target="_blank">radio</a> <a href="https://www.mixcloud.com/gabriel-satanovsky/" target="_blank">enthusiast</a>.
 
-Want to talk with me? You can schedule a time <a href="https://calendly.com/gabi-stanovsky/office-hours" target="_blank">here</a>.
+Want to talk with me? You can
+<!-- Google Calendar Appointment Scheduling begin -->
+<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+<script>
+(function() {
+  var target = document.currentScript;
+    window.addEventListener('load', function() {
+        calendar.schedulingButton.load({
+	      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2PNE14sjvRVkTUdcMxbLPujMaUnqSfW6eDgm9gbenY0pID-MO7tVMnj583_jW6Hj6DizJdRJ-c?gv=true',
+	            color: '#039BE5',
+		          label: "schedule a meeting",
+			        target,
+				    });
+				      });
+				      })();
+				      </script>
+				      <!-- end Google Calendar Appointment Scheduling -->
+				      
+<!-- schedule a time <a href="https://calendly.com/gabi-stanovsky/office-hours" target="_blank">here</a>. -->
 
 
 
