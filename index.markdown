@@ -45,7 +45,7 @@ Find my complete CV [here](assets/docs/cv.pdf){:target="_blank"}.
 I'm also a wannabe <a href="https://letterboxd.com/gabistanovsky/films/diary/" target="_blank">movie buff</a>, <a href="http://www.setlist.fm/concerts/Gabis" target="_blank">concert goer</a>, <a href="https://www.goodreads.com/user/show/24306303-gabriel-stanovsky" target="_blank">book lover</a>, 
 						and <a href="https://tunein.com/user/gabrielsatanovsky/" target="_blank">radio</a> <a href="https://www.mixcloud.com/gabriel-satanovsky/" target="_blank">enthusiast</a>.
 
-Want to talk with me? You can schedule a time <a href=https://calendar.app.google/W2sssSbJwg39aCas9 target="_blank">here</a>.
+Want to talk with me? You can schedule a time <a href="https://calendar.app.google/W2sssSbJwg39aCas9" target="_blank">here</a>.
 
 
 
