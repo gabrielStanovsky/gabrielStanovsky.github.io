@@ -6,10 +6,12 @@
   photo: shahar_levy.jpg
   info: Interpretability and biases of language models.
 
+- name: Hoshen Lugasi
+  photo: hoshen_lugasi.jpg
+  info: Timing and social intelligence in LLM agents for the Social Turing Test.
+
 - name: Shahar Spencer
   photo: shahar_spencer_cropped.png
   info: Explainable AI for Ancient Language Processing.
 
-- name: Hoshen Lugasi
-  photo: hoshen_lugasi.jpg
-  info: Timing and social intelligence in LLM agents for the Social Turing Test.
+
