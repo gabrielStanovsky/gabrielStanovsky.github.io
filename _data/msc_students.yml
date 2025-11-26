@@ -1,6 +1,10 @@
 - name: Niv Eckhaus
   photo: niv_eckhaus_cropped.jpeg
   info: Asynchronous communication between LLMs
+
+- name: Orian Dabod
+  photo: orian_dabod_cropped.jpeg
+  info: Language models multilinguality and interpretability
   
 - name: Shahar Levy
   photo: shahar_levy.jpg
