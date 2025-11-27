@@ -174,7 +174,7 @@ Visit our <a href="https://github.com/SLAB-NLP" target="_blank">github page</a> 
         </td>
         <td style="vertical-align:top; border-bottom: 0;width:30%;">
              <font style="font-size:16px">
-               Noam Dahan (2025), Saifun Naveh (2024), Eliya Habba (2024), Yarden Yagil (2023), Bar Eluz (2022), Dan Malkin (2022), Gili Lior (2022), Bar Tamir (2022), Eran Nussinovitch (2022), Sapir Weissbuch (2022), Koren Lazar (2021)
+               Niv Eckhaus (2025), Noam Dahan (2025), Saifun Naveh (2024), Eliya Habba (2024), Yarden Yagil (2023), Bar Eluz (2022), Dan Malkin (2022), Gili Lior (2022), Bar Tamir (2022), Eran Nussinovitch (2022), Sapir Weissbuch (2022), Koren Lazar (2021)
             </font>
         </td>
 

@@ -1,10 +1,6 @@
-- name: Niv Eckhaus
-  photo: niv_eckhaus_cropped.jpeg
-  info: Asynchronous communication between LLMs
-
 - name: Orian Dabod
-  photo: orian_dabod_cropped.jpeg
-  info: Language models multilinguality and interpretability
+  photo: orian_dabod_cropped.jpg
+  info: Multilinguality and interpretability.
   
 - name: Shahar Levy
   photo: shahar_levy.jpg
@@ -12,10 +8,10 @@
 
 - name: Hoshen Lugasi
   photo: hoshen_cropped.jpg
-  info: Timing and social intelligence in LLM agents for the Social Turing Test.
+  info: Timing and social intelligence in LLM agents.
 
 - name: Shahar Spencer
-  photo: shahar_spencer_cropped.png
+  photo: shahar_spencer_cropped.jpg
   info: Explainable AI for Ancient Language Processing.
 
 
