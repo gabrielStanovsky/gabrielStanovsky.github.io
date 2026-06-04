@@ -1,11 +1,7 @@
 - name: Orian Dabod
   photo: orian_dabod_cropped.jpg
   info: Multilinguality and interpretability.
-  
-- name: Shahar Levy
-  photo: shahar_levy.jpg
-  info: Interpretability and biases of language models.
-
+ 
 - name: Hoshen Lugasi
   photo: hoshen_cropped.jpg
   info: Timing and social intelligence in LLM agents.
