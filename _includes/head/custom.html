@@ -1,0 +1,23 @@
+<link id="slab-favicon" rel="icon" type="image/svg+xml" href="/logos/home-logo/1.svg">
+<script>
+  (function () {
+    var homeIcons = [
+      {% assign home_icon_files = site.static_files | sort: "path" %}
+      {% for file in home_icon_files %}
+      {% if file.path contains "/logos/home-logo/" and file.extname == ".svg" %}
+      "{{ file.path }}"{% unless forloop.last %},{% endunless %}
+      {% endif %}
+      {% endfor %}
+    ].filter(Boolean);
+    if (!homeIcons.length) return;
+    var chosen = homeIcons[Math.floor(Math.random() * homeIcons.length)];
+
+    var faviconHref = chosen + "?session=" + encodeURIComponent(chosen.split("/").pop().replace(".svg", ""));
+    document.querySelectorAll("link[rel~='icon'], link[rel='shortcut icon'], #slab-favicon").forEach(function (icon) {
+      icon.setAttribute("href", faviconHref);
+      icon.setAttribute("type", "image/svg+xml");
+    });
+
+    window.slabHomeIcon = chosen;
+  }());
+</script>
