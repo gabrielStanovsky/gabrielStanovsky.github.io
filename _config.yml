@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Gabriel Stanovsky
+title: gabrielstanovsky.github.io
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Academic homepage of Gabriel Stanovsky, assistant professor at the computer science department of the Hebrew University of Jerusalem.
@@ -55,9 +55,15 @@ plugins:
 #   - vendor/ruby/
 
 
+defaults:
+   - scope:
+        path: ""
+     values:
+#        author_profile: true
+
 # Site owner
 author:
-  name: "Gabriel Stanovsky"
+  name: "Gabriel<br>Stanovsky"
   avatar: "/assets/images/bio-photo.jpg"              
   bio: "CS faculty at the Hebrew University"
   links:
