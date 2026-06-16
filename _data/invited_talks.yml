@@ -1,28 +1,14 @@
 - title: On the Brittleness of Evaluation in NLP
-  year: 2025
   base: eval
   image: img.png
   pdf: presentation.pdf
   pdf-ext: NONE
-  authors: 2025, University of Illinois Urbana-Champaign, USA <br>  2024, Bar-Ilan University, Israel <br> 2024, LREC-COLING Tutorial, Torino, Italy
+  authors: 2024, Bar-Ilan University, Israel <br> 2024, LREC-COLING Tutorial, Torino, Italy
   talk: NONE
   layout: post
 
 
-- title: "Beyond Benchmarks: On The False Promise of AI Regulation"
-  year: 2025
-  base: ai-regulation
-  image: img.png
-  pdf: NONE
-  pdf-ext: NONE
-  authors:  2025, The Annual President Chaim Herzog Conference
-   <br>  2025, Israel Academy of Sciences and Humanities
-  talk: https://www.youtube.com/watch?v=zzEddf09JCM
-  layout: post
-
-
 - title: Multilingual Zero-Shot Transfer in Low-Resource Settings
-  year: 2023
   base: zero
   image: img.png
   pdf: presentation.pdf
@@ -33,7 +19,6 @@
 
 
 - title: NLP in the Wild From Akkadian to Biochemistry
-  year: 2021
   base: akk
   image: img.png
   pdf: presentation.pdf
@@ -44,7 +29,6 @@
 
 
 - title: Meaning Representation in Natural Language Tasks
-  year: 2020
   base: job
   image: img.png
   pdf: presentation.pdf
@@ -54,7 +38,6 @@
   layout: post
 
 - title: Proposition Extraction (Formulation, Crowdsourcing and Prediction)
-  year: 2017
   authors: November 2017, Advanced Topics NLP Seminar, Tel-Aviv University, Israel.<br>August 2017, AI2, Seattle, Washington.
   base: propextraction
   image: img.png
@@ -65,7 +48,6 @@
   layout: post
 
 - title: Leveraging External Knowledge in Different Tasks and Various Domains
-  year: 2017
   authors: August 2017, University of Washington NLP seminar, Seattle, Washington.
   base: external
   pdf: presentation.pdf
@@ -75,7 +57,6 @@
   layout: post
 
 - title: Recognizing Mentions of Adverse Drug Reaction in Social Media Using Knowledge-Infused Recurrent Models
-  year: 2017
   authors: June 2017, The Bar-Ilan Symposium on Foundations of Artificial Intelligence (BISFAI), Bar-Ilan University, Israel.
   base: adr
   pdf: presentation.pdf
@@ -84,7 +65,6 @@
   layout: post
 
 - title: Natural Language Knowledge Representation
-  year: 2016
   authors: August 2016, Nuance lab seminar, Sunnyvale, California.
   base: nlkr
   pdf: presentation.pdf
@@ -93,7 +73,6 @@
   layout: post
 
 - title: Finding Better Argument Spans
-  year: 2016
   authors: August 2016, UKP lab, Darmstadt University, Germany.<br> July 2016, University of Washington NLP seminar, Seattle, Washington.<br> July 2016, IBM Research Almaden, San Jose, California.
   base: span
   pdf: presentation.pdf
@@ -102,13 +81,15 @@
   layout: post
 
 - title: Open Information Extraction as Intermediate Structure for Semantic Tasks
-  year: 2015
   authors: August 2015, AI2 seminar, Seattle, Washington.
   base: oie
   pdf: presentation.pdf
   pdf-ext: NONE
   talk: NONE
   layout: post
+
+
+
 
 
 
