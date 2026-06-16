@@ -1,11 +1,23 @@
 - title: On the Brittleness of Evaluation in NLP
-  year: 2024
+  year: 2025
   base: eval
   image: img.png
   pdf: presentation.pdf
   pdf-ext: NONE
-  authors: 2024, Bar-Ilan University, Israel <br> 2024, LREC-COLING Tutorial, Torino, Italy
+  authors: 2025, University of Illinois Urbana-Champaign, USA <br>  2024, Bar-Ilan University, Israel <br> 2024, LREC-COLING Tutorial, Torino, Italy
   talk: NONE
+  layout: post
+
+
+- title: "Beyond Benchmarks: On The False Promise of AI Regulation"
+  year: 2025
+  base: ai-regulation
+  image: img.png
+  pdf: NONE
+  pdf-ext: NONE
+  authors:  2025, The Annual President Chaim Herzog Conference
+   <br>  2025, Israel Academy of Sciences and Humanities
+  talk: https://www.youtube.com/watch?v=zzEddf09JCM
   layout: post
 
 
@@ -97,8 +109,6 @@
   pdf-ext: NONE
   talk: NONE
   layout: post
-
-
 
 
 

@@ -26,7 +26,7 @@ author_profile: false
         <strong>Teaching</strong>
       </a>
       <a href="/talks/" aria-label="Talks" title="Talks" data-label="Talks">
-        <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.png" alt="" aria-hidden="true"></span>
+        <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.svg" alt="" aria-hidden="true"></span>
         <strong>Talks</strong>
       </a>
       <a href="https://calendar.app.google/W2sssSbJwg39aCas9" target="_blank" aria-label="Schedule" title="Schedule" data-label="Schedule">
@@ -47,6 +47,7 @@ author_profile: false
   <section class="pub-workspace">
     <header class="pub-toolbar">
       <h1 id="slab-publications-title">Publications</h1>
+      <button class="pub-search-toggle" type="button" aria-label="Search publications" title="Search publications">Search</button>
       <label class="pub-search">
         <span class="sr-only">Search publications</span>
         <input type="search" id="pub-search-input" placeholder="Search papers, authors, venues, years" autocomplete="off" spellcheck="false">
@@ -138,18 +139,42 @@ author_profile: false
       "{{ file.path }}"{% unless forloop.last %},{% endunless %}
       {% endif %}
       {% endfor %}
-    ].filter(Boolean);
-    if (!homeIcons.length) return;
-    var chosen = window.slabHomeIcon || homeIcons[Math.floor(Math.random() * homeIcons.length)];
-    document.querySelectorAll("[data-random-home-icon]").forEach(function (icon) {
-      icon.setAttribute("src", chosen);
-    });
+	    ].filter(Boolean);
+	    if (!homeIcons.length) return;
+	    var homeIconScales = {
+	      "/logos/home-logo/1.png": 0.94,
+	      "/logos/home-logo/2.png": 1.14,
+	      "/logos/home-logo/3.png": 1.10,
+	      "/logos/home-logo/4.png": 0.90,
+	      "/logos/home-logo/5.png": 1.01,
+	      "/logos/home-logo/6.png": 1.10,
+	      "/logos/home-logo/7.png": 1.08,
+	      "/logos/home-logo/8.png": 0.88,
+	      "/logos/home-logo/9.png": 1.01,
+	      "/logos/home-logo/10.png": 0.90,
+	      "/logos/home-logo/11.png": 1.10,
+	      "/logos/home-logo/12.png": 1.07,
+	      "/logos/home-logo/13.png": 0.90,
+	      "/logos/home-logo/14.png": 1.04,
+	      "/logos/home-logo/15.png": 0.94,
+	      "/logos/home-logo/16.png": 1.02,
+	      "/logos/home-logo/17.png": 0.96,
+	      "/logos/home-logo/18.png": 1.01,
+	      "/logos/home-logo/19.png": 0.94,
+	      "/logos/home-logo/20.png": 0.92
+	    };
+	    var chosen = window.slabHomeIcon || homeIcons[Math.floor(Math.random() * homeIcons.length)];
+	    document.querySelectorAll("[data-random-home-icon]").forEach(function (icon) {
+	      icon.setAttribute("src", chosen);
+	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
+	    });
   }());
 
   (function () {
     var scroller = document.getElementById("pub-scroll");
     var stack = document.getElementById("pub-year-stack");
     var search = document.getElementById("pub-search-input");
+    var searchToggle = document.querySelector(".pub-search-toggle");
     var empty = document.getElementById("pub-empty");
     var results = document.getElementById("pub-search-results");
     var years = Array.prototype.slice.call(document.querySelectorAll(".pub-year"));
@@ -644,6 +669,9 @@ author_profile: false
         }
       });
       search.addEventListener("blur", hideSearch);
+      if (searchToggle) {
+        searchToggle.addEventListener("click", showSearch);
+      }
       scroller.addEventListener("scroll", updateStack, { passive: true });
       stack.addEventListener("click", function (event) {
         var button = event.target.closest("[data-jump-year]");

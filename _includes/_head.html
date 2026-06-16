@@ -42,13 +42,18 @@
 <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
 <!-- 32x32 -->
 <link rel="shortcut icon" href="{{ site.url }}/favicon.png">
-<link id="slab-favicon" rel="icon" type="image/svg+xml" href="{{ site.url }}/logos/home-logo/1.svg">
+<link id="slab-favicon" rel="icon" type="image/png" href="{{ site.url }}/logos/home-logo/1.png">
 <script>
   (function () {
     var homeIcons = [
-      "{{ site.url }}/logos/home-logo/1.svg",
-      "{{ site.url }}/logos/home-logo/2.svg"
-    ];
+      {% assign home_icon_files = site.static_files | sort: "path" %}
+      {% for file in home_icon_files %}
+      {% if file.path contains "/logos/home-logo/" and file.extname == ".png" %}
+      "{{ site.url }}{{ file.path }}"{% unless forloop.last %},{% endunless %}
+      {% endif %}
+      {% endfor %}
+    ].filter(Boolean);
+    if (!homeIcons.length) return;
     var storageKey = "slabHomeIcon";
     var chosen = null;
 
@@ -62,10 +67,10 @@
       chosen = homeIcons[Math.floor(Math.random() * homeIcons.length)];
     }
 
-    var faviconHref = chosen + "?session=" + encodeURIComponent(chosen.split("/").pop().replace(".svg", ""));
+    var faviconHref = chosen + "?session=" + encodeURIComponent(chosen.split("/").pop().replace(".png", ""));
     document.querySelectorAll("link[rel~='icon'], link[rel='shortcut icon'], #slab-favicon").forEach(function (icon) {
       icon.setAttribute("href", faviconHref);
-      icon.setAttribute("type", "image/svg+xml");
+      icon.setAttribute("type", "image/png");
     });
 
     window.slabHomeIcon = chosen.replace(window.location.origin, "");
