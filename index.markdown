@@ -10,35 +10,35 @@ title: "Gabriel Stanovsky"
     <nav class="slab-index" aria-label="Homepage sections">
       <a href="/" aria-label="Home" title="Home" data-label="Home" data-mobile-target="slab-home-top">
         <span class="slab-index__icon slab-index__icon--home"><img src="/logos/home-logo/1.png" alt="" aria-hidden="true" data-random-home-icon></span>
-        <strong>[Home]</strong>
+        <strong><u>Home</u></strong>
       </a>
       <a href="/group/" aria-label="Group" title="Group" data-label="Group" data-mobile-target="mobile-group">
         <span class="slab-index__icon slab-index__icon--group"><img src="/logos/group-logo.svg" alt="" aria-hidden="true"></span>
-        <strong>[Group]</strong>
+        <strong><u>Group</u></strong>
       </a>
       <a href="/publications/" aria-label="Publications" title="Publications" data-label="Publications" data-mobile-target="mobile-publications">
         <span class="slab-index__icon slab-index__icon--publications"><img src="/logos/pub-logo.png" alt="" aria-hidden="true"></span>
-        <strong>[Publications]</strong>
+        <strong><u>Publications</u></strong>
       </a>
       <a href="/teaching" aria-label="Teaching" title="Teaching" data-label="Teaching" data-mobile-target="mobile-teaching">
         <span class="slab-index__icon slab-index__icon--teaching"><img src="/logos/teaching-logo.png" alt="" aria-hidden="true"></span>
-        <strong>[Teaching]</strong>
+        <strong><u>Teaching</u></strong>
       </a>
       <a href="/talks/" aria-label="Talks" title="Talks" data-label="Talks" data-mobile-target="mobile-talks">
         <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.svg" alt="" aria-hidden="true"></span>
-        <strong>[Talks]</strong>
+        <strong><u>Talks</u></strong>
       </a>
       <a href="https://calendar.app.google/W2sssSbJwg39aCas9" target="_blank" aria-label="Schedule" title="Schedule" data-label="Schedule">
         <span class="slab-index__icon slab-index__icon--schedule"><img src="/logos/calendar-logo.png" alt="" aria-hidden="true"></span>
-        <strong>[Schedule]</strong>
+        <strong><u>Schedule</u></strong>
       </a>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.stanovsky@mail.huji.ac.il" target="_blank" aria-label="Contact" title="Contact" data-label="Contact" data-mobile-target="mobile-contact">
         <span class="slab-index__icon slab-index__icon--contact"><img src="/logos/contact-logo.png" alt="" aria-hidden="true"></span>
-        <strong>[Contact]</strong>
+        <strong><u>Contact</u></strong>
       </a>
       <a href="/assets/docs/cv.pdf" target="_blank" aria-label="CV" title="CV" data-label="CV">
         <span class="slab-index__icon slab-index__icon--cv"><img src="/logos/cv-logo.png" alt="" aria-hidden="true"></span>
-        <strong>[CV]</strong>
+        <strong><u>CV</u></strong>
       </a>
     </nav>
   </aside>
@@ -188,7 +188,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 
   (function () {
     var nav = document.querySelector(".slab-home .slab-rail");
-    var mobileQuery = window.matchMedia("(max-width: 760px)");
+    var mobileQuery = window.matchMedia("(max-width: 980px)");
     var lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
     var ticking = false;
 
