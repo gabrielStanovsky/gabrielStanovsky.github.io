@@ -328,6 +328,38 @@ body.slab-home-page::before {
   white-space: nowrap;
 }
 
+@media (min-width: 981px) {
+  .slab-home-page .slab-rail .slab-index a {
+    position: relative;
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.65rem;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .slab-home-page .slab-rail .slab-index__icon {
+    width: 2.05rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-0.25rem);
+    transition: opacity 140ms ease, transform 140ms ease;
+  }
+
+  .slab-home-page .slab-rail .slab-index a:hover,
+  .slab-home-page .slab-rail .slab-index a:focus,
+  .slab-home-page .slab-rail .slab-index a:active {
+    grid-template-columns: 2.15rem minmax(0, 1fr);
+    gap: 0.65rem;
+  }
+
+  .slab-home-page .slab-rail .slab-index a:hover .slab-index__icon,
+  .slab-home-page .slab-rail .slab-index a:focus .slab-index__icon,
+  .slab-home-page .slab-rail .slab-index a:active .slab-index__icon {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media (max-width: 980px) {
   body.slab-home-page::before {
     display: none;

@@ -10,35 +10,35 @@ title: "Gabriel Stanovsky"
     <nav class="slab-index" aria-label="Homepage sections">
       <a href="/" aria-label="Home" title="Home" data-label="Home" data-mobile-target="slab-home-top">
         <span class="slab-index__icon slab-index__icon--home"><img src="/logos/home-logo/1.png" alt="" aria-hidden="true" data-random-home-icon></span>
-        <strong>Home</strong>
+        <strong>[Home]</strong>
       </a>
       <a href="/group/" aria-label="Group" title="Group" data-label="Group" data-mobile-target="mobile-group">
         <span class="slab-index__icon slab-index__icon--group"><img src="/logos/group-logo.svg" alt="" aria-hidden="true"></span>
-        <strong>Group</strong>
+        <strong>[Group]</strong>
       </a>
       <a href="/publications/" aria-label="Publications" title="Publications" data-label="Publications" data-mobile-target="mobile-publications">
         <span class="slab-index__icon slab-index__icon--publications"><img src="/logos/pub-logo.png" alt="" aria-hidden="true"></span>
-        <strong>Publications</strong>
+        <strong>[Publications]</strong>
       </a>
       <a href="/teaching" aria-label="Teaching" title="Teaching" data-label="Teaching" data-mobile-target="mobile-teaching">
         <span class="slab-index__icon slab-index__icon--teaching"><img src="/logos/teaching-logo.png" alt="" aria-hidden="true"></span>
-        <strong>Teaching</strong>
+        <strong>[Teaching]</strong>
       </a>
       <a href="/talks/" aria-label="Talks" title="Talks" data-label="Talks" data-mobile-target="mobile-talks">
         <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.svg" alt="" aria-hidden="true"></span>
-        <strong>Talks</strong>
+        <strong>[Talks]</strong>
       </a>
       <a href="https://calendar.app.google/W2sssSbJwg39aCas9" target="_blank" aria-label="Schedule" title="Schedule" data-label="Schedule">
         <span class="slab-index__icon slab-index__icon--schedule"><img src="/logos/calendar-logo.png" alt="" aria-hidden="true"></span>
-        <strong>Schedule</strong>
+        <strong>[Schedule]</strong>
       </a>
       <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.stanovsky@mail.huji.ac.il" target="_blank" aria-label="Contact" title="Contact" data-label="Contact" data-mobile-target="mobile-contact">
         <span class="slab-index__icon slab-index__icon--contact"><img src="/logos/contact-logo.png" alt="" aria-hidden="true"></span>
-        <strong>Contact</strong>
+        <strong>[Contact]</strong>
       </a>
       <a href="/assets/docs/cv.pdf" target="_blank" aria-label="CV" title="CV" data-label="CV">
         <span class="slab-index__icon slab-index__icon--cv"><img src="/logos/cv-logo.png" alt="" aria-hidden="true"></span>
-        <strong>CV</strong>
+        <strong>[CV]</strong>
       </a>
     </nav>
   </aside>
