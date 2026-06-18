@@ -57,10 +57,16 @@ sitemap: false
         <a class="group-text-link" href="https://github.com/SLAB-NLP" target="_blank">Open-source projects</a>
       </div>
 
+      {% assign fallback_group_photo = site.data.group_photos | first %}
       <figure class="group-photo">
-        <img src="/images/teampic/group_photo.jpg" alt="SLAB members at a lab meeting">
-        <figcaption>Lab meeting, March 2023</figcaption>
+        <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" data-random-group-photo>
+        <figcaption data-random-group-caption>{{ fallback_group_photo.caption }}</figcaption>
       </figure>
+      <div hidden data-group-photo-pool>
+        {% for photo in site.data.group_photos %}
+        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}"></span>
+        {% endfor %}
+      </div>
     </header>
 
     <section class="group-people" aria-labelledby="group-current-title">
@@ -220,5 +226,20 @@ sitemap: false
     });
 
     setNavState();
+  }());
+
+  (function () {
+    var photos = Array.prototype.slice.call(document.querySelectorAll("[data-group-photo-pool] [data-src]"));
+    var image = document.querySelector("[data-random-group-photo]");
+    if (!photos.length || !image) return;
+
+    var chosen = photos[Math.floor(Math.random() * photos.length)].dataset;
+    image.setAttribute("src", chosen.src);
+    image.setAttribute("alt", chosen.alt || "SLAB group photo");
+
+    var caption = document.querySelector("[data-random-group-caption]");
+    if (caption) {
+      caption.textContent = chosen.caption || "";
+    }
   }());
 </script>
