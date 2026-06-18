@@ -292,29 +292,32 @@ body.slab-home-page::before {
   transform-origin: center;
 }
 
-.slab-index__icon--group,
+.slab-index__icon--group {
+  --slab-icon-scale: 1.25;
+}
+
 .slab-index__icon--talks {
-  --slab-icon-scale: 0.82;
+  --slab-icon-scale: 0.97;
 }
 
 .slab-index__icon--publications {
-  --slab-icon-scale: 0.95;
-}
-
-.slab-index__icon--teaching {
   --slab-icon-scale: 1.02;
 }
 
-.slab-index__icon--schedule {
-  --slab-icon-scale: 1.23;
+.slab-index__icon--teaching {
+  --slab-icon-scale: 1.10;
 }
 
-.slab-index__icon--contact {
+.slab-index__icon--schedule {
   --slab-icon-scale: 1.32;
 }
 
+.slab-index__icon--contact {
+  --slab-icon-scale: 1.41;
+}
+
 .slab-index__icon--cv {
-  --slab-icon-scale: 1.19;
+  --slab-icon-scale: 1.28;
 }
 
 .page__content .slab-index a:hover img {
@@ -1322,6 +1325,7 @@ body.slab-group-nav-floating.slab-group-nav-visible .slab-group .slab-rail {
 }
 
 .group-photo {
+  display: block;
   margin: 0;
 }
 
@@ -1329,15 +1333,19 @@ body.slab-group-nav-floating.slab-group-nav-visible .slab-group .slab-rail {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
+  margin-bottom: 0;
   object-fit: cover;
   border-radius: 8px;
 }
 
 .group-photo figcaption {
+  width: 100%;
   margin-top: 0.45rem;
+  margin-bottom: 0;
   color: var(--slab-muted);
   font-family: var(--slab-display);
   font-size: 0.66rem;
+  text-align: right;
 }
 
 .group-people,
