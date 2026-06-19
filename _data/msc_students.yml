@@ -3,7 +3,8 @@
   info: Multilinguality and interpretability.
 
 - name: Adi Gabay
-  photo: 
+  photo: adi_gabay_cropped.jpeg
+  info: Epistemic and logical reasoning in LLMs.
  
 - name: Hoshen Lugasi
   photo: hoshen_cropped.jpg
@@ -12,5 +13,3 @@
 - name: Shahar Spencer
   photo: shahar_spencer_cropped.jpg
   info: Explainable AI for Ancient Language Processing.
-
-
