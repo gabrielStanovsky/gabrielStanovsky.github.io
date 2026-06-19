@@ -1476,6 +1476,7 @@ body.slab-group-nav-floating.slab-group-nav-visible .slab-group .slab-rail {
   aspect-ratio: 16 / 9;
   margin-bottom: 0;
   object-fit: cover;
+  object-position: var(--group-photo-position, center);
   border-radius: 8px;
 }
 

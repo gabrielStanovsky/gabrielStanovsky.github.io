@@ -59,12 +59,12 @@ sitemap: false
 
       {% assign fallback_group_photo = site.data.group_photos | first %}
       <figure class="group-photo">
-        <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" data-random-group-photo>
+        <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" style="--group-photo-position: {{ fallback_group_photo.position | default: 'center' }};" data-random-group-photo>
         <figcaption data-random-group-caption>{{ fallback_group_photo.caption }}</figcaption>
       </figure>
       <div hidden data-group-photo-pool>
         {% for photo in site.data.group_photos %}
-        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}"></span>
+        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
         {% endfor %}
       </div>
     </header>
@@ -236,6 +236,7 @@ sitemap: false
     var chosen = photos[Math.floor(Math.random() * photos.length)].dataset;
     image.setAttribute("src", chosen.src);
     image.setAttribute("alt", chosen.alt || "SLAB group photo");
+    image.style.setProperty("--group-photo-position", chosen.position || "center");
 
     var caption = document.querySelector("[data-random-group-caption]");
     if (caption) {
