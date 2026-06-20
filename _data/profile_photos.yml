@@ -1,0 +1,46 @@
+- src: "/assets/images/bio-photo.jpg"
+  alt: "Gabriel Stanovsky"
+  caption: "Formal profile photo"
+  position: "center 30%"
+
+- src: "/assets/images/profile-photos/laptop.jpeg"
+  alt: "Gabriel Stanovsky working on a laptop"
+  caption: "Laptop mode"
+  position: "72% center"
+
+
+- src: "/assets/images/profile-photos/Thailand, 2024.jpg"
+  alt: "Gabriel Stanovsky in Thailand"
+  caption: "Thailand, 2024"
+  position: "72% center"
+
+
+- src: "/assets/images/profile-photos/Spain, 2023.jpg"
+  alt: "Gabriel Stanovsky in Spain"
+  caption: "Spain, 2023"
+  position: "72% center"
+
+- src: "/assets/images/profile-photos/Oregon, 2020.jpg"
+  alt: "Gabriel Stanovsky in Oregon"
+  caption: "Oregon, 2020"
+  position: "72% center"
+
+
+- src: "/assets/images/profile-photos/Alaska, 2019.jpg"
+  alt: "Gabriel Stanovsky in Alaska"
+  caption: "Alaska, 2019"
+  position: "72% center"
+
+
+- src: "/assets/images/profile-photos/Golden Gate Bridge, 2018.jpg"
+  alt: "Gabriel Stanovsky in California"
+  caption: "Golden Gate Bridge, 2018"
+  position: "50% center"
+
+
+- src: "/assets/images/profile-photos/Glacier, 2018.jpg"
+  alt: "Gabriel Stanovsky in Glacier National Park"
+  caption: "Glacier, 2018"
+  position: "72% center"
+
+

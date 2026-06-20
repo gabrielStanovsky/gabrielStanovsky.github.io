@@ -50,9 +50,18 @@ title: "Gabriel Stanovsky"
         <p class="slab-subtitle">Associate Prof. at HUJI</p>
       </div>
 
+      {% assign default_profile_photo = site.data.profile_photos | first %}
       <figure class="slab-profile-photo">
-        <img src="/assets/images/bio-photo.jpg" alt="Gabriel Stanovsky">
+        <button class="slab-profile-photo__button" type="button" aria-label="Show next profile photo" data-profile-photo-trigger>
+          <img src="{{ default_profile_photo.src }}" alt="{{ default_profile_photo.alt | default: 'Gabriel Stanovsky' }}" style="--slab-profile-photo-position: {{ default_profile_photo.position | default: 'center' }};" data-profile-photo-image>
+        </button>
       </figure>
+
+      <div hidden data-profile-photo-pool>
+        {% for photo in site.data.profile_photos %}
+        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | default: 'Gabriel Stanovsky' | escape }}" data-caption="{{ photo.caption | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
+        {% endfor %}
+      </div>
     </div>
 
     <p>
@@ -142,6 +151,88 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 </section>
 
 <script>
+  (function () {
+    var photoNodes = Array.prototype.slice.call(document.querySelectorAll("[data-profile-photo-pool] [data-src]"));
+    var trigger = document.querySelector("[data-profile-photo-trigger]");
+    var image = document.querySelector("[data-profile-photo-image]");
+    if (!photoNodes.length || !image) return;
+
+    var photos = photoNodes.map(function (node) {
+      return {
+        src: node.getAttribute("data-src"),
+        alt: node.getAttribute("data-alt") || "Gabriel Stanovsky",
+        caption: node.getAttribute("data-caption") || "",
+        position: node.getAttribute("data-position") || "center"
+      };
+    }).filter(function (photo) {
+      return photo.src;
+    });
+    if (!photos.length) return;
+
+    var currentIndex = 0;
+    var loadedPhotos = {};
+
+    function preloadPhoto(index) {
+      var photo = photos[index];
+      if (!photo) return Promise.resolve();
+      if (loadedPhotos[photo.src]) return loadedPhotos[photo.src];
+
+      loadedPhotos[photo.src] = new Promise(function (resolve) {
+        var preload = new Image();
+        preload.onload = function () {
+          if (preload.decode) {
+            preload.decode().then(resolve).catch(resolve);
+            return;
+          }
+          resolve();
+        };
+        preload.onerror = resolve;
+        preload.src = photo.src;
+      });
+      return loadedPhotos[photo.src];
+    }
+
+    function applyPhoto(index) {
+      var photo = photos[index];
+      if (!photo) return;
+
+      currentIndex = index;
+      image.setAttribute("src", photo.src);
+      image.setAttribute("alt", photo.alt);
+      image.style.setProperty("--slab-profile-photo-position", photo.position);
+      if (photo.caption) {
+        image.setAttribute("title", photo.caption);
+      } else {
+        image.removeAttribute("title");
+      }
+    }
+
+    function showPhoto(index) {
+      preloadPhoto(index).then(function () {
+        applyPhoto(index);
+      });
+    }
+
+    applyPhoto(currentIndex);
+    preloadPhoto(currentIndex);
+
+    if (!trigger || photos.length < 2) return;
+
+    trigger.addEventListener("click", function () {
+      showPhoto((currentIndex + 1) % photos.length);
+    });
+
+    trigger.addEventListener("mouseenter", function () {
+      preloadPhoto((currentIndex + 1) % photos.length);
+    });
+
+    window.setTimeout(function () {
+      photos.forEach(function (_photo, index) {
+        preloadPhoto(index);
+      });
+    }, 700);
+  }());
+
   (function () {
     var homeIcons = [
       {% assign home_icon_files = site.static_files | sort: "path" %}

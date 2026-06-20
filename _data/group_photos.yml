@@ -1,14 +1,14 @@
-- src: "/images/group-photos/ACL, Vienna, 2025.jpeg"
-  alt: "ACL, Vienna, 2025"
-  caption: "ACL, Vienna, 2025"
+# - src: "/images/group-photos/ACL, Vienna, 2025.jpeg"
+#   alt: "ACL, Vienna, 2025"
+#   caption: "ACL, Vienna, 2025"
 
 - src: "/images/group-photos/ACL, Vienna, 2025.jpg"
   alt: "ACL, Vienna, 2025"
   caption: "ACL, Vienna, 2025"
 
-- src: "/images/group-photos/ACL, Vienna, 2025b.jpg"
-  alt: "ACL, Vienna, 2025"
-  caption: "ACL, Vienna, 2025"
+# - src: "/images/group-photos/ACL, Vienna, 2025b.jpg"
+#   alt: "ACL, Vienna, 2025"
+#   caption: "ACL, Vienna, 2025"
 
 - src: "/images/group-photos/ACL, Vienna, 2025c.jpg"
   alt: "ACL, Vienna, 2025"
@@ -67,3 +67,7 @@
 - src: "/images/group-photos/ACL 24, Bangkok, Thailand (c).jpg"
   alt: "ACL, Bangkok, Thailand, 2024"
   caption: "ACL, Bangkok, Thailand, 2024"
+
+- src: "/images/group-photos/Graduation, 2025.jpg"
+  alt: "Graduation, 2025"
+  caption: "Graduation, 2025"

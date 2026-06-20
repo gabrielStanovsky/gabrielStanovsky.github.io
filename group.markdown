@@ -59,8 +59,10 @@ sitemap: false
 
       {% assign fallback_group_photo = site.data.group_photos | first %}
       <figure class="group-photo">
-        <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" style="--group-photo-position: {{ fallback_group_photo.position | default: 'center' }};" data-random-group-photo>
-        <figcaption data-random-group-caption>{{ fallback_group_photo.caption }}</figcaption>
+        <button class="group-photo__button" type="button" aria-label="Show next group photo" data-group-photo-trigger>
+          <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" style="--group-photo-position: {{ fallback_group_photo.position | default: 'center' }};" data-group-photo-image>
+        </button>
+        <figcaption data-group-photo-caption aria-live="polite">{{ fallback_group_photo.caption }}</figcaption>
       </figure>
       <div hidden data-group-photo-pool>
         {% for photo in site.data.group_photos %}
@@ -230,17 +232,108 @@ sitemap: false
 
   (function () {
     var photos = Array.prototype.slice.call(document.querySelectorAll("[data-group-photo-pool] [data-src]"));
-    var image = document.querySelector("[data-random-group-photo]");
+    var trigger = document.querySelector("[data-group-photo-trigger]");
+    var image = document.querySelector("[data-group-photo-image]");
     if (!photos.length || !image) return;
 
-    var chosen = photos[Math.floor(Math.random() * photos.length)].dataset;
-    image.setAttribute("src", chosen.src);
-    image.setAttribute("alt", chosen.alt || "SLAB group photo");
-    image.style.setProperty("--group-photo-position", chosen.position || "center");
+    var caption = document.querySelector("[data-group-photo-caption]");
+    var storageKey = "slabGroupPhotoIndex";
+    var loadedPhotos = {};
 
-    var caption = document.querySelector("[data-random-group-caption]");
-    if (caption) {
-      caption.textContent = chosen.caption || "";
+    function getLastPhotoIndex() {
+      try {
+        var stored = window.sessionStorage.getItem(storageKey);
+        var index = parseInt(stored, 10);
+        return isNaN(index) ? -1 : index;
+      } catch (error) {
+        return -1;
+      }
     }
+
+    function rememberPhotoIndex(index) {
+      try {
+        window.sessionStorage.setItem(storageKey, String(index));
+      } catch (error) {
+        return;
+      }
+    }
+
+    function chooseStartIndex() {
+      if (photos.length < 2) return 0;
+
+      var lastIndex = getLastPhotoIndex();
+      var index = Math.floor(Math.random() * photos.length);
+
+      if (index === lastIndex) {
+        index = (index + 1 + Math.floor(Math.random() * (photos.length - 1))) % photos.length;
+      }
+
+      return index;
+    }
+
+    var currentIndex = chooseStartIndex();
+
+    function preloadPhoto(index) {
+      var photo = photos[index].dataset;
+      if (!photo.src) return Promise.resolve(photo);
+      if (loadedPhotos[photo.src]) return loadedPhotos[photo.src];
+
+      loadedPhotos[photo.src] = new Promise(function (resolve) {
+        var preload = new Image();
+
+        function done() {
+          resolve(photo);
+        }
+
+        preload.onload = function () {
+          if (preload.decode) {
+            preload.decode().then(done).catch(done);
+          } else {
+            done();
+          }
+        };
+        preload.onerror = done;
+        preload.src = photo.src;
+      });
+
+      return loadedPhotos[photo.src];
+    }
+
+    function applyPhoto(index) {
+      var photo = photos[index].dataset;
+      image.setAttribute("src", photo.src);
+      image.setAttribute("alt", photo.alt || "SLAB group photo");
+      image.style.setProperty("--group-photo-position", photo.position || "center");
+      rememberPhotoIndex(index);
+
+      if (caption) {
+        caption.textContent = photo.caption || "";
+      }
+    }
+
+    function showPhoto(index) {
+      preloadPhoto(index).then(function () {
+        currentIndex = index;
+        applyPhoto(index);
+      });
+    }
+
+    showPhoto(currentIndex);
+
+    if (!trigger || photos.length < 2) return;
+
+    trigger.addEventListener("click", function () {
+      showPhoto((currentIndex + 1) % photos.length);
+    });
+
+    trigger.addEventListener("mouseenter", function () {
+      preloadPhoto((currentIndex + 1) % photos.length);
+    });
+
+    window.setTimeout(function () {
+      photos.forEach(function (_, index) {
+        preloadPhoto(index);
+      });
+    }, 700);
   }());
 </script>
