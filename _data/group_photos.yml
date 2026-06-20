@@ -17,6 +17,7 @@
 - src: "/images/group-photos/Graduation, 2024b.jpeg"
   alt: "Graduation, 2024"
   caption: "Graduation, 2024"
+  position: "center 20%"
 
 - src: "/images/group-photos/Hackathon, 2025.jpeg"
   alt: "Hackathon, 2025"
