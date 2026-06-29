@@ -54,7 +54,6 @@ sitemap: false
           We develop NLP models for real-world texts and interdisciplinary research questions across domains and languages.
           We welcome collaboration; please <a href="mailto:gabriel.stanovsky@mail.huji.ac.il">reach out</a> if interested.
         </p>
-        <a class="group-text-link" href="https://github.com/SLAB-NLP" target="_blank">Open-source projects</a>
       </div>
 
       {% assign fallback_group_photo = site.data.group_photos | first %}
@@ -187,7 +186,9 @@ sitemap: false
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
 	    });
   }());
+</script>
 
+<script>
   (function () {
     var rail = document.querySelector(".slab-group .slab-rail");
     if (!rail) return;
@@ -301,9 +302,9 @@ sitemap: false
 
     function applyPhoto(index) {
       var photo = photos[index].dataset;
+      image.style.setProperty("--group-photo-position", photo.position || "center");
       image.setAttribute("src", photo.src);
       image.setAttribute("alt", photo.alt || "SLAB group photo");
-      image.style.setProperty("--group-photo-position", photo.position || "center");
       rememberPhotoIndex(index);
 
       if (caption) {

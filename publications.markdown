@@ -47,7 +47,12 @@ author_profile: false
   <section class="pub-workspace">
     <header class="pub-toolbar">
       <h1 id="slab-publications-title">Publications</h1>
-      <button class="pub-search-toggle" type="button" aria-label="Search publications" title="Search publications">Search</button>
+      <div class="pub-toolbar-actions">
+        <a class="pub-scholar-link" href="https://scholar.google.co.il/citations?user=AtkvBFYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar profile" title="Google Scholar profile">
+          <img src="/logos/scholar-logo.png" alt="" aria-hidden="true">
+        </a>
+        <button class="pub-search-toggle" type="button" aria-label="Search publications" title="Search publications">Search</button>
+      </div>
       <label class="pub-search">
         <span class="sr-only">Search publications</span>
         <input type="search" id="pub-search-input" placeholder="Search papers, authors, venues, years" autocomplete="off" spellcheck="false">
@@ -169,7 +174,9 @@ author_profile: false
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
 	    });
   }());
+</script>
 
+<script>
   (function () {
     var scroller = document.getElementById("pub-scroll");
     var stack = document.getElementById("pub-year-stack");

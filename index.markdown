@@ -1,6 +1,6 @@
 ---
 layout: single
-classes: wide slab-home-page
+classes: wide slab-home-page slab-summary-page
 author_profile: false
 title: "Gabriel Stanovsky"
 ---
@@ -8,23 +8,23 @@ title: "Gabriel Stanovsky"
 <section class="slab-home" aria-labelledby="slab-home-title">
   <aside class="slab-rail" aria-label="Homepage navigation">
     <nav class="slab-index" aria-label="Homepage sections">
-      <a href="/" aria-label="Home" title="Home" data-label="Home" data-mobile-target="slab-home-top">
+      <a href="#slab-home-top" aria-label="Home" title="Home" data-label="Home">
         <span class="slab-index__icon slab-index__icon--home"><img src="/logos/home-logo/1.png" alt="" aria-hidden="true" data-random-home-icon></span>
         <strong><u>Home</u></strong>
       </a>
-      <a href="/group/" aria-label="Group" title="Group" data-label="Group" data-mobile-target="mobile-group">
+      <a href="#mobile-group" aria-label="Group" title="Group" data-label="Group">
         <span class="slab-index__icon slab-index__icon--group"><img src="/logos/group-logo.svg" alt="" aria-hidden="true"></span>
         <strong><u>Group</u></strong>
       </a>
-      <a href="/publications/" aria-label="Publications" title="Publications" data-label="Publications" data-mobile-target="mobile-publications">
+      <a href="#mobile-publications" aria-label="Publications" title="Publications" data-label="Publications">
         <span class="slab-index__icon slab-index__icon--publications"><img src="/logos/pub-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Publications</u></strong>
       </a>
-      <a href="/teaching" aria-label="Teaching" title="Teaching" data-label="Teaching" data-mobile-target="mobile-teaching">
+      <a href="#mobile-teaching" aria-label="Teaching" title="Teaching" data-label="Teaching">
         <span class="slab-index__icon slab-index__icon--teaching"><img src="/logos/teaching-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Teaching</u></strong>
       </a>
-      <a href="/talks/" aria-label="Talks" title="Talks" data-label="Talks" data-mobile-target="mobile-talks">
+      <a href="#mobile-talks" aria-label="Talks" title="Talks" data-label="Talks">
         <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.svg" alt="" aria-hidden="true"></span>
         <strong><u>Talks</u></strong>
       </a>
@@ -32,7 +32,7 @@ title: "Gabriel Stanovsky"
         <span class="slab-index__icon slab-index__icon--schedule"><img src="/logos/calendar-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Schedule</u></strong>
       </a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.stanovsky@mail.huji.ac.il" target="_blank" aria-label="Contact" title="Contact" data-label="Contact" data-mobile-target="mobile-contact">
+      <a href="#mobile-contact" aria-label="Contact" title="Contact" data-label="Contact">
         <span class="slab-index__icon slab-index__icon--contact"><img src="/logos/contact-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Contact</u></strong>
       </a>
@@ -70,7 +70,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
     </p>
   </section>
 
-  <section class="slab-mobile-overview" aria-label="Mobile overview">
+  <section class="slab-mobile-overview" aria-label="Homepage overview">
     <section class="slab-mobile-section" id="mobile-group">
       <h2>People</h2>
       <div class="slab-mobile-people">
@@ -197,9 +197,9 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       if (!photo) return;
 
       currentIndex = index;
+      image.style.setProperty("--slab-profile-photo-position", photo.position);
       image.setAttribute("src", photo.src);
       image.setAttribute("alt", photo.alt);
-      image.style.setProperty("--slab-profile-photo-position", photo.position);
       if (photo.caption) {
         image.setAttribute("title", photo.caption);
       } else {
@@ -275,60 +275,5 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 	      icon.setAttribute("src", chosen);
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
 	    });
-  }());
-
-  (function () {
-    var nav = document.querySelector(".slab-home .slab-rail");
-    var mobileQuery = window.matchMedia("(max-width: 980px)");
-    var lastY = window.pageYOffset || document.documentElement.scrollTop || 0;
-    var ticking = false;
-
-    function isMobile() {
-      return mobileQuery.matches;
-    }
-
-    document.querySelectorAll(".slab-home [data-mobile-target]").forEach(function (link) {
-      link.addEventListener("click", function (event) {
-        if (!isMobile()) return;
-        var target = document.getElementById(link.getAttribute("data-mobile-target"));
-        if (!target) return;
-        event.preventDefault();
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-    });
-
-    function updateNav() {
-      if (!nav || !isMobile()) {
-        document.body.classList.remove("slab-home-nav-floating", "slab-home-nav-visible");
-        ticking = false;
-        return;
-      }
-
-      var current = window.pageYOffset || document.documentElement.scrollTop || 0;
-      var delta = current - lastY;
-
-      if (current <= nav.offsetHeight + 24) {
-        document.body.classList.remove("slab-home-nav-floating", "slab-home-nav-visible");
-      } else {
-        document.body.classList.add("slab-home-nav-floating");
-        if (delta < -4) {
-          document.body.classList.add("slab-home-nav-visible");
-        } else if (delta > 4) {
-          document.body.classList.remove("slab-home-nav-visible");
-        }
-      }
-
-      lastY = current;
-      ticking = false;
-    }
-
-    window.addEventListener("scroll", function () {
-      if (!ticking) {
-        window.requestAnimationFrame(updateNav);
-        ticking = true;
-      }
-    }, { passive: true });
-    window.addEventListener("resize", updateNav);
-    updateNav();
   }());
 </script>

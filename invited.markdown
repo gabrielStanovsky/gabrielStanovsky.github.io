@@ -141,7 +141,9 @@ author_profile: false
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
 	    });
   }());
+</script>
 
+<script>
   (function () {
     var scroller = document.getElementById("talks-scroll");
     var stack = document.getElementById("talks-year-stack");
