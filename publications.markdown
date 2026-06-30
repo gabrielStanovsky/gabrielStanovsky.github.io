@@ -190,6 +190,8 @@ author_profile: false
     var venueGroups = [];
     var lastQuery = "";
     var lastScrollTop = scroller ? scroller.scrollTop : 0;
+    var keepSearchOnBlur = false;
+    var keepSearchOnBlurTimer = null;
 
     function showSearch() {
       document.body.classList.add("slab-publications-searching");
@@ -203,6 +205,30 @@ author_profile: false
       applySearch();
       search.setAttribute("tabindex", "-1");
       document.body.classList.remove("slab-publications-searching");
+    }
+
+    function handleSearchBlur(event) {
+      var nextTarget = event.relatedTarget;
+      if (nextTarget && nextTarget.closest && nextTarget.closest(".pub-item a")) return;
+
+      if (keepSearchOnBlur) {
+        keepSearchOnBlur = false;
+        if (keepSearchOnBlurTimer) {
+          window.clearTimeout(keepSearchOnBlurTimer);
+          keepSearchOnBlurTimer = null;
+        }
+        return;
+      }
+      hideSearch();
+    }
+
+    function preserveSearchForResultClick() {
+      keepSearchOnBlur = true;
+      if (keepSearchOnBlurTimer) window.clearTimeout(keepSearchOnBlurTimer);
+      keepSearchOnBlurTimer = window.setTimeout(function () {
+        keepSearchOnBlur = false;
+        keepSearchOnBlurTimer = null;
+      }, 400);
     }
 
     function normalize(value) {
@@ -675,7 +701,11 @@ author_profile: false
           showSearch();
         }
       });
-      search.addEventListener("blur", hideSearch);
+      scroller.addEventListener("pointerdown", function (event) {
+        if (!event.target.closest(".pub-item a")) return;
+        preserveSearchForResultClick();
+      }, true);
+      search.addEventListener("blur", handleSearchBlur);
       if (searchToggle) {
         searchToggle.addEventListener("click", showSearch);
       }
