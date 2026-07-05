@@ -192,6 +192,7 @@ author_profile: false
     var lastScrollTop = scroller ? scroller.scrollTop : 0;
     var keepSearchOnBlur = false;
     var keepSearchOnBlurTimer = null;
+    var searchBlurTimer = null;
 
     function showSearch() {
       document.body.classList.add("slab-publications-searching");
@@ -201,10 +202,23 @@ author_profile: false
     }
 
     function hideSearch() {
+      clearSearchBlurTimer();
       search.value = "";
       applySearch();
       search.setAttribute("tabindex", "-1");
       document.body.classList.remove("slab-publications-searching");
+    }
+
+    function clearSearchBlurTimer() {
+      if (!searchBlurTimer) return;
+      window.clearTimeout(searchBlurTimer);
+      searchBlurTimer = null;
+    }
+
+    function clearKeepSearchOnBlurTimer() {
+      if (!keepSearchOnBlurTimer) return;
+      window.clearTimeout(keepSearchOnBlurTimer);
+      keepSearchOnBlurTimer = null;
     }
 
     function handleSearchBlur(event) {
@@ -213,22 +227,35 @@ author_profile: false
 
       if (keepSearchOnBlur) {
         keepSearchOnBlur = false;
-        if (keepSearchOnBlurTimer) {
-          window.clearTimeout(keepSearchOnBlurTimer);
-          keepSearchOnBlurTimer = null;
-        }
+        clearKeepSearchOnBlurTimer();
         return;
       }
-      hideSearch();
+
+      clearSearchBlurTimer();
+      searchBlurTimer = window.setTimeout(function () {
+        searchBlurTimer = null;
+        if (keepSearchOnBlur) {
+          keepSearchOnBlur = false;
+          clearKeepSearchOnBlurTimer();
+          return;
+        }
+        hideSearch();
+      }, 250);
     }
 
     function preserveSearchForResultClick() {
       keepSearchOnBlur = true;
-      if (keepSearchOnBlurTimer) window.clearTimeout(keepSearchOnBlurTimer);
+      clearSearchBlurTimer();
+      clearKeepSearchOnBlurTimer();
       keepSearchOnBlurTimer = window.setTimeout(function () {
         keepSearchOnBlur = false;
         keepSearchOnBlurTimer = null;
       }, 400);
+    }
+
+    function isPublicationLinkTarget(event) {
+      var target = event.target;
+      return !!(target && target.closest && target.closest(".pub-item a"));
     }
 
     function normalize(value) {
@@ -701,10 +728,12 @@ author_profile: false
           showSearch();
         }
       });
-      scroller.addEventListener("pointerdown", function (event) {
-        if (!event.target.closest(".pub-item a")) return;
-        preserveSearchForResultClick();
-      }, true);
+      ["pointerdown", "mousedown", "touchstart", "click"].forEach(function (eventName) {
+        document.addEventListener(eventName, function (event) {
+          if (!isPublicationLinkTarget(event)) return;
+          preserveSearchForResultClick();
+        }, { capture: true, passive: true });
+      });
       search.addEventListener("blur", handleSearchBlur);
       if (searchToggle) {
         searchToggle.addEventListener("click", showSearch);

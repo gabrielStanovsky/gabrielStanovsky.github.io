@@ -1640,6 +1640,7 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   color: inherit;
+  pointer-events: none;
 }
 
 .pub-item__authors {

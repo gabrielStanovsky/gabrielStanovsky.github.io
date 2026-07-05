@@ -78,7 +78,13 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
         <article>
           <img src="/images/teampic/{{ member.photo }}" alt="{{ member.name | strip_html }}">
           <div>
-            <h3>{{ member.name }}</h3>
+            <h3>
+              {% if member.website %}
+              <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
+              {% else %}
+              {{ member.name }}
+              {% endif %}
+            </h3>
             <p>{{ member.info | strip_html }}</p>
           </div>
         </article>
@@ -87,7 +93,13 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
         <article>
           <img src="/images/teampic/{{ member.photo }}" alt="{{ member.name | strip_html }}">
           <div>
-            <h3>{{ member.name }}</h3>
+            <h3>
+              {% if member.website %}
+              <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
+              {% else %}
+              {{ member.name }}
+              {% endif %}
+            </h3>
             <p>{{ member.info | strip_html }}</p>
           </div>
         </article>
