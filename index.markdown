@@ -82,7 +82,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
               {% if member.website %}
               <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
               {% else %}
-              {{ member.name }}
+              <a href="/group/">{{ member.name }}</a>
               {% endif %}
             </h3>
             <p>{{ member.info | strip_html }}</p>
@@ -97,7 +97,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
               {% if member.website %}
               <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
               {% else %}
-              {{ member.name }}
+              <a href="/group/">{{ member.name }}</a>
               {% endif %}
             </h3>
             <p>{{ member.info | strip_html }}</p>
@@ -113,8 +113,17 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       <div class="slab-mobile-list">
         {% assign paper_posts = site.posts | where_exp: "post", "post.authors" %}
         {% for post in paper_posts limit: 5 %}
+        {% assign pdf_ext = post["pdf-ext"] %}
         <article>
-          <h3>{{ post.title }}</h3>
+          <h3>
+            {% if post.pdf and post.pdf != 'NONE' %}
+            <a href="/assets/papers/{{ post.base }}/{{ post.pdf }}" target="_blank">{{ post.title }}</a>
+            {% elsif pdf_ext and pdf_ext != 'NONE' %}
+            <a href="{{ pdf_ext }}" target="_blank">{{ post.title }}</a>
+            {% else %}
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            {% endif %}
+          </h3>
           <p>{{ post.date | date: "%Y" }} · {{ post.venue }}</p>
         </article>
         {% endfor %}
@@ -127,7 +136,15 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       <div class="slab-mobile-list">
         {% for course in site.data.teaching limit: 4 %}
         <article>
-          <h3>{{ course.title }}</h3>
+          <h3>
+            {% if course.slides and course.slides != 'NONE' %}
+            <a href="{{ course.slides }}" target="_blank">{{ course.title }}</a>
+            {% elsif course.paper and course.paper != 'NONE' %}
+            <a href="{{ course.paper }}" target="_blank">{{ course.title }}</a>
+            {% else %}
+            <a href="/teaching">{{ course.title }}</a>
+            {% endif %}
+          </h3>
           <p>{{ course.time }} · {{ course.level }} · {{ course.students }} students</p>
         </article>
         {% endfor %}
@@ -139,8 +156,19 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       <h2>Recent Talks</h2>
       <div class="slab-mobile-list">
         {% for talk in site.data.invited_talks limit: 4 %}
+        {% assign talk_pdf_ext = talk["pdf-ext"] %}
         <article>
-          <h3>{{ talk.title }}</h3>
+          <h3>
+            {% if talk.pdf and talk.pdf != 'NONE' %}
+            <a href="/assets/invited_talks/{{ talk.base }}/{{ talk.pdf }}" target="_blank">{{ talk.title }}</a>
+            {% elsif talk_pdf_ext and talk_pdf_ext != 'NONE' %}
+            <a href="{{ talk_pdf_ext }}" target="_blank">{{ talk.title }}</a>
+            {% elsif talk.talk and talk.talk != 'NONE' %}
+            <a href="{{ talk.talk }}" target="_blank">{{ talk.title }}</a>
+            {% else %}
+            <a href="/talks/">{{ talk.title }}</a>
+            {% endif %}
+          </h3>
           <p>{{ talk.year }}</p>
         </article>
         {% endfor %}
