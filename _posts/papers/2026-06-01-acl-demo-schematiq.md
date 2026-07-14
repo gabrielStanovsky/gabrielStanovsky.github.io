@@ -12,8 +12,8 @@ code: NONE
 layout: post
 poster: NONE
 slides: NONE
-data: https://www.ScheMatiQ-ai.com
-data-name: PROJECT
+project: https://www.ScheMatiQ-ai.com
+data: NONE
 date: 2026-06-01
 categories: [bias]
 ---

@@ -69,6 +69,9 @@ author_profile: false
       {% assign pdf_ext = post["pdf-ext"] %}
       {% assign bib_ext = post["bib-ext"] %}
       {% assign data_name = post["data-name"] | default: "DATA" %}
+      {% assign demo_name = post["demo-name"] | default: "DEMO" %}
+      {% assign slides_ext = post["slides-ext"] %}
+      {% assign poster_ext = post["poster-ext"] %}
       {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 
       {% if this_year != active_year %}
@@ -100,27 +103,39 @@ author_profile: false
               <p class="pub-item__authors">{{ post.authors }}</p>
 
               <div class="pub-item__links" aria-label="Publication links">
+                {% if post.project and post.project != '' and post.project != 'NONE' %}
+                <a href="{{ post.project }}" target="_blank">PROJECT</a>
+                {% endif %}
                 {% if post.data and post.data != '' and post.data != 'NONE' %}
                 <a href="{{ post.data }}" target="_blank">{{ data_name }}</a>
                 {% endif %}
-                {% unless post.code == 'NONE' %}
+                {% if post.demo and post.demo != '' and post.demo != 'NONE' %}
+                <a href="{{ post.demo }}" target="_blank">{{ demo_name }}</a>
+                {% endif %}
+                {% if post.code and post.code != '' and post.code != 'NONE' %}
                 <a href="{{ post.code }}" target="_blank">CODE</a>
-                {% endunless %}
-                {% unless post.talk == 'NONE' %}
+                {% endif %}
+                {% if post.talk and post.talk != '' and post.talk != 'NONE' %}
                 <a href="{{ post.talk }}" target="_blank">TALK</a>
-                {% endunless %}
-                {% unless post.slides == 'NONE' %}
+                {% endif %}
+                {% if post.slides and post.slides != '' and post.slides != 'NONE' %}
                 <a href="/assets/papers/{{ post.base }}/{{ post.slides }}" target="_blank">SLIDES</a>
-                {% endunless %}
-                {% unless post.poster == 'NONE' %}
+                {% endif %}
+                {% if slides_ext and slides_ext != '' and slides_ext != 'NONE' %}
+                <a href="{{ slides_ext }}" target="_blank">SLIDES</a>
+                {% endif %}
+                {% if post.poster and post.poster != '' and post.poster != 'NONE' %}
                 <a href="/assets/papers/{{ post.base }}/{{ post.poster }}" target="_blank">POSTER</a>
-                {% endunless %}
-                {% unless post.bib == 'NONE' %}
+                {% endif %}
+                {% if poster_ext and poster_ext != '' and poster_ext != 'NONE' %}
+                <a href="{{ poster_ext }}" target="_blank">POSTER</a>
+                {% endif %}
+                {% if post.bib and post.bib != '' and post.bib != 'NONE' %}
                 <a href="/assets/papers/{{ post.base }}/{{ post.bib }}" target="_blank">BIB</a>
-                {% endunless %}
-                {% unless bib_ext == 'NONE' %}
+                {% endif %}
+                {% if bib_ext and bib_ext != '' and bib_ext != 'NONE' %}
                 <a href="{{ bib_ext }}" target="_blank">BIB</a>
-                {% endunless %}
+                {% endif %}
               </div>
             </div>
           </article>

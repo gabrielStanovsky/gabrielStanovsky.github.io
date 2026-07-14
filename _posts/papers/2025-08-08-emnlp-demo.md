@@ -8,12 +8,13 @@ bib-ext: NONE
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2507.14913
 talk: NONE
-code: NONE
+project: https://eliyahabba.github.io/PromptSuite
+demo: https://promptsuite.streamlit.app/
+code: https://github.com/eliyahabba/PromptSuite
 layout: post
 poster: NONE
 slides: NONE
-data: https://eliyahabba.github.io/PromptSuite
-data-name: PROJECT
+data: NONE
 date: 08-08-2025
 categories: [bias]
 ---

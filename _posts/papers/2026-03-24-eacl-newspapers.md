@@ -13,7 +13,7 @@ layout: post
 poster: NONE
 slides: NONE
 data: https://github.com/edahanoam/HebTeaseSum
-data-name: DATA
+data-name: CODE+DATA
 date: 2026-03-24
 categories: [bias]
 ---

@@ -8,7 +8,7 @@ bib-ext: NONE
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2502.12964
 talk: NONE
-code: NONE
+code: https://github.com/technion-cs-nlp/Trust_me_Im_wrong
 layout: post
 poster: NONE
 slides: NONE
