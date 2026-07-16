@@ -6,7 +6,7 @@
 nav:
   group:
     scale: 145
-    y_offset: 5
+    y_offset: 4
   publications:
     scale: 110
     y_offset: 2
