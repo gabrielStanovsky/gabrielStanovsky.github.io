@@ -12,19 +12,19 @@ title: "Gabriel Stanovsky"
         <span class="slab-index__icon slab-index__icon--home"><img src="/logos/home-logo/1.png" alt="" aria-hidden="true" data-random-home-icon></span>
         <strong><u>Home</u></strong>
       </a>
-      <a href="#mobile-group" aria-label="Group" title="Group" data-label="Group">
+      <a href="/group/" aria-label="Group" title="Group" data-label="Group">
         <span class="slab-index__icon slab-index__icon--group"><img src="/logos/group-logo.svg" alt="" aria-hidden="true"></span>
         <strong><u>Group</u></strong>
       </a>
-      <a href="#mobile-publications" aria-label="Publications" title="Publications" data-label="Publications">
+      <a href="/publications/" aria-label="Publications" title="Publications" data-label="Publications">
         <span class="slab-index__icon slab-index__icon--publications"><img src="/logos/pub-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Publications</u></strong>
       </a>
-      <a href="#mobile-teaching" aria-label="Teaching" title="Teaching" data-label="Teaching">
+      <a href="/teaching" aria-label="Teaching" title="Teaching" data-label="Teaching">
         <span class="slab-index__icon slab-index__icon--teaching"><img src="/logos/teaching-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Teaching</u></strong>
       </a>
-      <a href="#mobile-talks" aria-label="Talks" title="Talks" data-label="Talks">
+      <a href="/talks/" aria-label="Talks" title="Talks" data-label="Talks">
         <span class="slab-index__icon slab-index__icon--talks"><img src="/logos/talk-logo.svg" alt="" aria-hidden="true"></span>
         <strong><u>Talks</u></strong>
       </a>
@@ -32,7 +32,7 @@ title: "Gabriel Stanovsky"
         <span class="slab-index__icon slab-index__icon--schedule"><img src="/logos/calendar-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Schedule</u></strong>
       </a>
-      <a href="#mobile-contact" aria-label="Contact" title="Contact" data-label="Contact">
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gabriel.stanovsky@mail.huji.ac.il" target="_blank" aria-label="Contact" title="Contact" data-label="Contact">
         <span class="slab-index__icon slab-index__icon--contact"><img src="/logos/contact-logo.png" alt="" aria-hidden="true"></span>
         <strong><u>Contact</u></strong>
       </a>
@@ -209,7 +209,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
     });
     if (!photos.length) return;
 
-    var currentIndex = 0;
+    var currentIndex = Math.floor(Math.random() * photos.length);
     var loadedPhotos = {};
 
     function preloadPhoto(index) {
@@ -284,26 +284,21 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 	    ].filter(Boolean);
 	    if (!homeIcons.length) return;
 	    var homeIconScales = {
-	      "/logos/home-logo/1.png": 0.94,
-	      "/logos/home-logo/2.png": 1.14,
-	      "/logos/home-logo/3.png": 1.10,
-	      "/logos/home-logo/4.png": 0.90,
-	      "/logos/home-logo/5.png": 1.01,
-	      "/logos/home-logo/6.png": 1.10,
-	      "/logos/home-logo/7.png": 1.08,
-	      "/logos/home-logo/8.png": 0.88,
-	      "/logos/home-logo/9.png": 1.01,
-	      "/logos/home-logo/10.png": 0.90,
-	      "/logos/home-logo/11.png": 1.10,
-	      "/logos/home-logo/12.png": 1.07,
-	      "/logos/home-logo/13.png": 0.90,
-	      "/logos/home-logo/14.png": 1.04,
-	      "/logos/home-logo/15.png": 0.94,
-	      "/logos/home-logo/16.png": 1.02,
-	      "/logos/home-logo/17.png": 0.96,
-	      "/logos/home-logo/18.png": 1.01,
-	      "/logos/home-logo/19.png": 0.94,
-	      "/logos/home-logo/20.png": 0.92
+	      {% assign home_logo_scales = site.data.logo_scales.home %}
+	      {% for file in home_icon_files %}
+	      {% if file.path contains "/logos/home-logo/" and file.extname == ".png" %}
+	      {% assign home_logo_settings = home_logo_scales[file.path] %}
+	      "{{ file.path }}": {{ home_logo_settings.scale | default: home_logo_settings | default: 100 | times: 0.01 }},
+	      {% endif %}
+	      {% endfor %}
+	    };
+	    var homeIconOffsets = {
+	      {% for file in home_icon_files %}
+	      {% if file.path contains "/logos/home-logo/" and file.extname == ".png" %}
+	      {% assign home_logo_settings = home_logo_scales[file.path] %}
+	      "{{ file.path }}": {{ home_logo_settings.y_offset | default: 0 }},
+	      {% endif %}
+	      {% endfor %}
 	    };
 	    var chosen = window.slabHomeIcon || null;
 
@@ -314,6 +309,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 	    document.querySelectorAll("[data-random-home-icon]").forEach(function (icon) {
 	      icon.setAttribute("src", chosen);
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
+	      icon.style.setProperty("--slab-icon-y-offset", (homeIconOffsets[chosen] || 0) + "px");
 	    });
   }());
 </script>

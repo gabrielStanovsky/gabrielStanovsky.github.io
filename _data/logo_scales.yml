@@ -1,0 +1,90 @@
+# Logo controls.
+# scale is in percent: 100 means natural size, 90 is smaller, 115 is larger.
+# y_offset is in pixels: positive moves the logo down, negative moves it up.
+#
+# Fixed top-bar/sidebar logos:
+nav:
+  group:
+    scale: 145
+    y_offset: 5
+  publications:
+    scale: 110
+    y_offset: 2
+  teaching:
+    scale: 110
+    y_offset: 2
+  talks:
+    scale: 88
+    y_offset: 0
+  schedule:
+    scale: 130
+    y_offset: 2
+  contact:
+    scale: 140
+    y_offset: 0
+  cv:
+    scale: 120
+    y_offset: 1
+
+# Random Home logos. Match these filenames to logos/home-logo/*.png.
+home:
+  "/logos/home-logo/1.png":
+    scale: 94
+    y_offset: 0
+  "/logos/home-logo/2.png":
+    scale: 114
+    y_offset: 0
+  "/logos/home-logo/3.png":
+    scale: 110
+    y_offset: 0
+  "/logos/home-logo/4.png":
+    scale: 90
+    y_offset: 0
+  "/logos/home-logo/5.png":
+    scale: 101
+    y_offset: 0
+  "/logos/home-logo/6.png":
+    scale: 110
+    y_offset: 0
+  "/logos/home-logo/7.png":
+    scale: 108
+    y_offset: 0
+  "/logos/home-logo/8.png":
+    scale: 88
+    y_offset: 0
+  "/logos/home-logo/9.png":
+    scale: 101
+    y_offset: 0
+  "/logos/home-logo/10.png":
+    scale: 90
+    y_offset: 0
+  "/logos/home-logo/11.png":
+    scale: 110
+    y_offset: 0
+  "/logos/home-logo/12.png":
+    scale: 107
+    y_offset: 0
+  "/logos/home-logo/13.png":
+    scale: 90
+    y_offset: 0
+  "/logos/home-logo/14.png":
+    scale: 104
+    y_offset: 0
+  "/logos/home-logo/15.png":
+    scale: 94
+    y_offset: 0
+  "/logos/home-logo/16.png":
+    scale: 102
+    y_offset: 0
+  "/logos/home-logo/17.png":
+    scale: 96
+    y_offset: 0
+  "/logos/home-logo/18.png":
+    scale: 101
+    y_offset: 0
+  "/logos/home-logo/19.png":
+    scale: 94
+    y_offset: 0
+  "/logos/home-logo/20.png":
+    scale: 92
+    y_offset: 0

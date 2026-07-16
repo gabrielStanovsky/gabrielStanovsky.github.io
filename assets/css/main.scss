@@ -458,6 +458,7 @@ body.slab-summary-page .page__content {
 
 .slab-index__icon {
   --slab-icon-scale: 1;
+  --slab-icon-y-offset: 0px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -470,37 +471,21 @@ body.slab-summary-page .page__content {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  transform: scale(var(--slab-icon-scale));
+  transform: translateY(var(--slab-icon-y-offset)) scale(var(--slab-icon-scale));
   transform-origin: center;
 }
 
-.slab-index__icon--group {
-  --slab-icon-scale: 1.25;
+{% assign nav_logo_scales = site.data.logo_scales.nav %}
+
+{% for logo in nav_logo_scales %}
+{% assign logo_name = logo[0] %}
+{% assign logo_settings = logo[1] %}
+.slab-index__icon--{{ logo_name }} {
+  --slab-icon-scale: {{ logo_settings.scale | default: logo_settings | default: 100 | times: 0.01 }};
+  --slab-icon-y-offset: {{ logo_settings.y_offset | default: 0 }}px;
 }
 
-.slab-index__icon--talks {
-  --slab-icon-scale: 0.97;
-}
-
-.slab-index__icon--publications {
-  --slab-icon-scale: 1.02;
-}
-
-.slab-index__icon--teaching {
-  --slab-icon-scale: 1.10;
-}
-
-.slab-index__icon--schedule {
-  --slab-icon-scale: 1.32;
-}
-
-.slab-index__icon--contact {
-  --slab-icon-scale: 1.41;
-}
-
-.slab-index__icon--cv {
-  --slab-icon-scale: 1.28;
-}
+{% endfor %}
 
 .page__content .slab-index a:hover img {
   box-shadow: none;
