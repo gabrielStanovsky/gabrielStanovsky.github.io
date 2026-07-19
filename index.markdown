@@ -8,7 +8,7 @@ title: "Gabriel Stanovsky"
 <section class="slab-home" aria-labelledby="slab-home-title">
   <aside class="slab-rail" aria-label="Homepage navigation">
     <nav class="slab-index" aria-label="Homepage sections">
-      <a href="#slab-home-top" aria-label="Home" title="Home" data-label="Home">
+      <a href="/" aria-label="Home" title="Home" data-label="Home">
         <span class="slab-index__icon slab-index__icon--home"><img src="/logos/home-logo/1.png" alt="" aria-hidden="true" data-random-home-icon></span>
         <strong><u>Home</u></strong>
       </a>
