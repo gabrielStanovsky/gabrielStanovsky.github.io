@@ -1542,10 +1542,11 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
   margin: 0;
   padding: 0.55rem 0 0.65rem;
   background: var(--slab-bg);
-  color: var(--slab-muted);
+  color: var(--slab-clay);
   font-family: var(--slab-display);
   font-size: 0.78rem;
-  font-weight: 650;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   line-height: 1.2;
 }
 
@@ -2571,6 +2572,10 @@ body.slab-talks-page::before {
     position: static;
     padding: 0.45rem 0 0.65rem;
     border-bottom: 1px solid rgba(215, 223, 216, 0.72);
+  }
+
+  .pub-year__heading {
+    border-bottom: 0;
   }
 
   .pub-venue-group {
