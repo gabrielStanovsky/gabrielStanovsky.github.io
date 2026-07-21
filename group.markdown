@@ -132,11 +132,11 @@ sitemap: false
         </div>
         <div>
           <dt>M.Sc.</dt>
-          <dd>Shahar Levy (2026), Niv Eckhaus (2025), Noam Dahan (2025), Saifun Naveh (2024), Eliya Habba (2024), Yarden Yagil (2023), Bar Eluz (2022), Dan Malkin (2022), Gili Lior (2022), Bar Tamir (2022), Eran Nussinovitch (2022), Sapir Weissbuch (2022), Koren Lazar (2021)</dd>
+          <dd>Orian Dabod (2026), Shahar Levy (2026), Niv Eckhaus (2025), Noam Dahan (2025), Saifun Naveh (2024), Eliya Habba (2024), Yarden Yagil (2023), Bar Eluz (2022), Dan Malkin (2022), Gili Lior (2022), Bar Tamir (2022), Eran Nussinovitch (2022), Sapir Weissbuch (2022), Koren Lazar (2021)</dd>
         </div>
         <div>
           <dt>B.Sc.</dt>
-          <dd>Liron Naccache (2024), Shahar Spencer (2023), Niv Eckhaus (2023), Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)</dd>
+          <dd>Daniel Nisnevich (2025), Liron Naccache (2024), Shahar Spencer (2023), Niv Eckhaus (2023), Mohr Wenger (2021), Tom Kalir (2021), Shahar Levy (2021)</dd>
         </div>
         <div>
           <dt>Visitors</dt>
