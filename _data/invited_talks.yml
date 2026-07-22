@@ -1,3 +1,14 @@
+- title: "ScheMatiQ: From Research Question to Structured Data"
+  year: 2026
+  base: schematiq
+  image: img.png
+  pdf: NONE
+  pdf-ext: https://docs.google.com/presentation/d/1XEJZ5QNfqC4796NsfpJSisbrLcFucIPxAUqAnl8pWnA/edit?usp=sharing
+  authors: 2026, Ai2, Seattle, Washington
+  talk: NONE
+  layout: post
+
+
 - title: On the Brittleness of Evaluation in NLP
   year: 2025
   base: eval
@@ -109,7 +120,6 @@
   pdf-ext: NONE
   talk: NONE
   layout: post
-
 
 
 

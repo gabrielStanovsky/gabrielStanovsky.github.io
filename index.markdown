@@ -157,6 +157,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       <div class="slab-mobile-list">
         {% for talk in site.data.invited_talks limit: 4 %}
         {% assign talk_pdf_ext = talk["pdf-ext"] %}
+        {% assign recent_talk_appearance = talk.authors | split: "<br>" | first %}
         <article>
           <h3>
             {% if talk.pdf and talk.pdf != 'NONE' %}
@@ -169,7 +170,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
             <a href="/talks/">{{ talk.title }}</a>
             {% endif %}
           </h3>
-          <p>{{ talk.year }}</p>
+          <p>{{ recent_talk_appearance | strip }}</p>
         </article>
         {% endfor %}
       </div>
