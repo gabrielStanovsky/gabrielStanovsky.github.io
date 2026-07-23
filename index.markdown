@@ -82,7 +82,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
               {% if member.website %}
               <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
               {% else %}
-              <a href="/group/">{{ member.name }}</a>
+              {{ member.name }}
               {% endif %}
             </h3>
             <p>{{ member.info }}</p>
@@ -97,7 +97,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
               {% if member.website %}
               <a href="{{ member.website }}" target="_blank">{{ member.name }}</a>
               {% else %}
-              <a href="/group/">{{ member.name }}</a>
+              {{ member.name }}
               {% endif %}
             </h3>
             <p>{{ member.info }}</p>
