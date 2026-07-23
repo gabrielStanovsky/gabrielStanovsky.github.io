@@ -1602,6 +1602,32 @@ html[data-slab-theme="dark"] .slab-teaching .slab-rail,
 html[data-slab-theme="dark"] .slab-talks .slab-rail {
   border-color: var(--slab-line);
   background: var(--slab-topo-bg);
+  isolation: isolate;
+}
+
+html[data-slab-theme="dark"] .slab-home > .slab-rail::before,
+html[data-slab-theme="dark"] .slab-publications .slab-rail::before,
+html[data-slab-theme="dark"] .slab-group .slab-rail::before,
+html[data-slab-theme="dark"] .slab-teaching .slab-rail::before,
+html[data-slab-theme="dark"] .slab-talks .slab-rail::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/topo/negev-topo-cropped.svg") center 38% / 100% auto;
+  content: "";
+  filter: invert(1) grayscale(1) brightness(2.1) contrast(1.25);
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+html[data-slab-theme="dark"] .slab-home > .slab-rail .slab-index,
+html[data-slab-theme="dark"] .slab-publications .slab-rail .slab-index,
+html[data-slab-theme="dark"] .slab-group .slab-rail .slab-index,
+html[data-slab-theme="dark"] .slab-teaching .slab-rail .slab-index,
+html[data-slab-theme="dark"] .slab-talks .slab-rail .slab-index {
+  position: relative;
+  z-index: 1;
 }
 
 html[data-slab-theme="dark"] .slab-index__icon img {
