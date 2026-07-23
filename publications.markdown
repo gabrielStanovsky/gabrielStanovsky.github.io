@@ -146,6 +146,7 @@ author_profile: false
       {% endunless %}
 
       <p class="pub-empty" id="pub-empty" hidden>No matching publications.</p>
+      <div class="pub-quote-slot" data-slab-quote-slot></div>
     </div>
   </section>
 </section>

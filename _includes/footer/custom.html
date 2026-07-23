@@ -1,6 +1,66 @@
+<button class="slab-theme-cycle" type="button" data-slab-theme-cycle>
+  <svg data-slab-theme-icon="monochrome" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v4h4M9 12h6M9 16h6"></path></svg>
+  <svg data-slab-theme-icon="blackwhite" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
+  <svg data-slab-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z"></path></svg>
+</button>
+<script>
+  (function () {
+    var themes = ["monochrome", "dark", "blackwhite"];
+    var themeNames = {
+      monochrome: "Paper & Ink",
+      blackwhite: "Black & White",
+      dark: "Dark"
+    };
+    var button = document.querySelector("[data-slab-theme-cycle]");
+    var icons = Array.prototype.slice.call(document.querySelectorAll("[data-slab-theme-icon]"));
+    var followsSystem = document.documentElement.getAttribute("data-slab-theme-source") !== "saved";
+    if (!button) return;
+
+    function applyTheme(theme) {
+      if (themes.indexOf(theme) === -1) theme = "monochrome";
+      document.documentElement.setAttribute("data-slab-theme", theme);
+      icons.forEach(function (icon) {
+        icon.hidden = icon.getAttribute("data-slab-theme-icon") !== theme;
+      });
+      var nextTheme = themes[(themes.indexOf(theme) + 1) % themes.length];
+      var description = "Current theme: " + themeNames[theme] + ". Switch to " + themeNames[nextTheme] + ".";
+      button.setAttribute("aria-label", description);
+      button.setAttribute("title", description);
+    }
+
+    applyTheme(document.documentElement.getAttribute("data-slab-theme"));
+
+    button.addEventListener("click", function () {
+      var currentTheme = document.documentElement.getAttribute("data-slab-theme");
+      var theme = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
+      followsSystem = false;
+      document.documentElement.setAttribute("data-slab-theme-source", "saved");
+      applyTheme(theme);
+      try {
+        window.localStorage.setItem("slabColorTheme", theme);
+      } catch (error) {}
+    });
+
+    if (window.matchMedia) {
+      var systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+      var handleSystemTheme = function (event) {
+        if (followsSystem) applyTheme(event.matches ? "dark" : "monochrome");
+      };
+      if (systemTheme.addEventListener) systemTheme.addEventListener("change", handleSystemTheme);
+      else if (systemTheme.addListener) systemTheme.addListener(handleSystemTheme);
+    }
+  }());
+</script>
 <div class="goodreads-quote-wrap">
   <div id="gr_quote_body" style="font-size: 10px;"></div>
 </div>
+<script>
+  (function () {
+    var slot = document.querySelector("[data-slab-quote-slot]");
+    var quote = document.querySelector(".goodreads-quote-wrap");
+    if (slot && quote) slot.appendChild(quote);
+  }());
+</script>
 <script src="https://www.goodreads.com/quotes/widget/24306303-gabriel-stanovsky?v=2" type="text/javascript"></script>
 <font size="1">  
 

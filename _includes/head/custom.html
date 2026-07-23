@@ -1,6 +1,24 @@
 <link id="slab-favicon" rel="icon" type="image/png" href="/logos/home-logo/1.png">
 <script>
   (function () {
+    var themes = ["monochrome", "blackwhite", "dark"];
+    var theme = "monochrome";
+    var savedTheme = null;
+    try {
+      savedTheme = window.localStorage.getItem("slabColorTheme");
+    } catch (error) {}
+    if (themes.indexOf(savedTheme) !== -1) {
+      theme = savedTheme;
+      document.documentElement.setAttribute("data-slab-theme-source", "saved");
+    } else {
+      theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "monochrome";
+      document.documentElement.setAttribute("data-slab-theme-source", "system");
+    }
+    document.documentElement.setAttribute("data-slab-theme", theme);
+  }());
+</script>
+<script>
+  (function () {
     var homeIcons = [
       {% assign home_icon_files = site.static_files | sort: "path" %}
       {% for file in home_icon_files %}
