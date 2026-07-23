@@ -1243,7 +1243,7 @@ body.slab-summary-page .page__content {
     padding-top: 1.5rem;
   }
 
-  .slab-heading {
+  .slab-home .slab-heading {
     grid-template-columns: minmax(0, 1fr);
     gap: 1rem;
   }
@@ -1254,6 +1254,7 @@ body.slab-summary-page .page__content {
   }
 
   .slab-home .slab-profile-photo {
+    justify-self: start;
     width: min(100%, 260px);
     min-width: 0;
   }
