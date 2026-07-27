@@ -48,9 +48,6 @@ author_profile: false
     <header class="pub-toolbar">
       <h1 id="slab-publications-title">Publications</h1>
       <div class="pub-toolbar-actions">
-        <a class="pub-scholar-link" href="https://scholar.google.co.il/citations?user=AtkvBFYAAAAJ&hl=en" target="_blank" rel="noopener" aria-label="Google Scholar profile" title="Google Scholar profile">
-          <img src="/logos/scholar-logo.png" alt="" aria-hidden="true">
-        </a>
         <button class="pub-search-toggle" type="button" aria-label="Search publications" title="Search publications">Search</button>
       </div>
       <label class="pub-search">
