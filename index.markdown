@@ -55,6 +55,16 @@ title: "Gabriel Stanovsky"
         <button class="slab-profile-photo__button" type="button" aria-label="Show next profile photo" data-profile-photo-trigger>
           <img src="{{ default_profile_photo.src }}" alt="{{ default_profile_photo.alt | default: 'Gabriel Stanovsky' }}" style="--slab-profile-photo-position: {{ default_profile_photo.position | default: 'center' }};" data-profile-photo-image>
         </button>
+        <figcaption>
+          <nav class="slab-profile-links" aria-label="Social and academic profiles">
+            {% for link in site.author.links %}
+            <a href="{{ link.url }}"{% unless link.url contains "mailto:" %} target="_blank" rel="noopener noreferrer me"{% endunless %} aria-label="{{ link.label }}" title="{{ link.label }}">
+              <i class="{{ link.icon }}" aria-hidden="true"></i>
+              <span class="sr-only">{{ link.label }}</span>
+            </a>
+            {% endfor %}
+          </nav>
+        </figcaption>
       </figure>
 
       <div hidden data-profile-photo-pool>

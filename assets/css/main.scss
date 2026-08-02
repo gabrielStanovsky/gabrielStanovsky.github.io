@@ -602,8 +602,14 @@ body.slab-summary-page .page__content {
 }
 
 .slab-profile-photo {
+  display: block;
   justify-self: end;
   width: 280px;
+  margin: 0;
+}
+
+.slab-profile-photo figcaption {
+  width: 100%;
   margin: 0;
 }
 
@@ -630,6 +636,7 @@ body.slab-summary-page .page__content {
 .slab-profile-photo img {
   display: block;
   width: 100%;
+  margin-bottom: 0;
   aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: var(--slab-profile-photo-position, center);
@@ -637,6 +644,48 @@ body.slab-summary-page .page__content {
   box-shadow: 0 10px 28px rgba(25, 43, 34, 0.12);
   animation: none;
   transition: none;
+}
+
+.slab-profile-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.slab-profile-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 1.75rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  color: var(--slab-muted);
+  font-family: var(--slab-sans);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 150ms ease, background-color 150ms ease, transform 150ms ease;
+}
+
+.slab-profile-links i {
+  width: 1.15em;
+  text-align: center;
+}
+
+.slab-profile-links a:hover,
+.slab-profile-links a:focus-visible {
+  color: var(--slab-sage);
+  background: var(--slab-lead-bg);
+  transform: translateY(-2px);
+}
+
+.slab-profile-links a:focus-visible {
+  outline: 2px solid var(--slab-focus-border);
+  outline-offset: 2px;
 }
 
 .slab-mobile-overview {
