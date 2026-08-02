@@ -56,7 +56,7 @@ author_profile: false
       </label>
     </header>
 
-    <div class="pub-scroll" id="pub-scroll" tabindex="0">
+    <div class="pub-scroll" id="pub-scroll">
       <div class="pub-year-stack" id="pub-year-stack" aria-label="Folded publication years"></div>
       <section class="pub-search-results" id="pub-search-results" aria-label="Search results" hidden></section>
 
@@ -198,7 +198,7 @@ author_profile: false
     var searchIndex = [];
     var venueGroups = [];
     var lastQuery = "";
-    var lastScrollTop = scroller ? scroller.scrollTop : 0;
+    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop || 0;
     var keepSearchOnBlur = false;
     var keepSearchOnBlurTimer = null;
     var searchBlurTimer = null;
@@ -621,13 +621,12 @@ author_profile: false
     }
 
     function updateCompactHeader() {
-      var isScrolled = scroller && scroller.scrollTop > 12;
+      var isScrolled = (window.pageYOffset || document.documentElement.scrollTop || 0) > 12;
       document.body.classList.toggle("slab-publications-compact", !!isScrolled);
     }
 
     function updateNavVisibility() {
-      if (!scroller) return;
-      var current = scroller.scrollTop;
+      var current = window.pageYOffset || document.documentElement.scrollTop || 0;
       var delta = current - lastScrollTop;
 
       if (current <= 12) {
@@ -653,10 +652,11 @@ author_profile: false
       }
 
       var complete = [];
+      var stackRect = stack.getBoundingClientRect();
+      var foldLine = stackRect.top + stack.offsetHeight + 16;
       years.forEach(function (year) {
         if (year.hidden) return;
-        var bottom = year.offsetTop + year.offsetHeight;
-        if (bottom < scroller.scrollTop + stack.offsetHeight + 16) {
+        if (year.getBoundingClientRect().bottom < foldLine) {
           complete.push(year.getAttribute("data-year"));
         }
       });
@@ -669,9 +669,9 @@ author_profile: false
 
     function jumpToYear(year) {
       var target = document.querySelector('.pub-year[data-year="' + year + '"]');
-      if (!target || !scroller) return;
-      scroller.scrollTo({
-        top: Math.max(0, target.offsetTop - stack.offsetHeight),
+      if (!target) return;
+      window.scrollTo({
+        top: Math.max(0, target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - stack.offsetHeight - 72),
         behavior: "smooth"
       });
     }
@@ -720,7 +720,7 @@ author_profile: false
 
       empty.hidden = visibleCount !== 0;
       if (normalize(lastQuery) !== normalizedQuery) {
-        scroller.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: "auto" });
         lastQuery = query;
       }
       updateStack();
@@ -747,7 +747,7 @@ author_profile: false
       if (searchToggle) {
         searchToggle.addEventListener("click", showSearch);
       }
-      scroller.addEventListener("scroll", updateStack, { passive: true });
+      window.addEventListener("scroll", updateStack, { passive: true });
       stack.addEventListener("click", function (event) {
         var button = event.target.closest("[data-jump-year]");
         if (!button) return;
