@@ -188,7 +188,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
     </section>
 
     <section class="slab-mobile-section" id="mobile-contact">
-      <h2>Contact &amp; CV &amp; Scheduling </h2>
+      <h2>Contact, CV, Scheduling </h2>
       <p class="slab-mobile-copy">
         For collaboration, advising, or speaking invitations, email me at
         <a href="mailto:gabriel.stanovsky@mail.huji.ac.il">gabriel.stanovsky@mail.huji.ac.il</a>.
