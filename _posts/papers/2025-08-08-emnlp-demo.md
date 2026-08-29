@@ -4,7 +4,7 @@ authors: Eliya Habba, Noam Dahan, Gili Lior, <b>Gabriel Stanovsky</b>
 venue: EMNLP Demo
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/HabbaDLS25.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2507.14913
 talk: NONE

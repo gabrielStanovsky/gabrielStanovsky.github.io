@@ -6,7 +6,7 @@ base: gender
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2109.03858
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/LevyLS21.bib
 code: https://github.com/slab-nlp/bug
 talk: NONE
 data: NONE

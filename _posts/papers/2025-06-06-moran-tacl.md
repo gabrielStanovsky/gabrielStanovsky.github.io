@@ -4,7 +4,7 @@ authors: Moran Mizrahi, Chen Shani, <b>Gabriel Stanovsky</b>, Dan Jurafsky, Dafn
 venue: TACL (@ EMNLP)
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/journals/tacl/MizrahiSSJS26.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2504.20643
 talk: NONE

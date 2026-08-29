@@ -4,7 +4,7 @@ authors: Ariel Goldstein, <b>Gabriel Stanovsky</b>
 venue: ACL Findings
 base: zombie
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/acl/GoldsteinS24.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2403.00499
 talk: NONE

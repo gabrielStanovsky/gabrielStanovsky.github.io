@@ -6,7 +6,7 @@ base: gender
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2109.04513.pdf
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/LazarSYHWS21.bib
 code: https://github.com/slab-nlp/akk
 talk: NONE
 data: NONE

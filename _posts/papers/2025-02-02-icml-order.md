@@ -4,7 +4,7 @@ authors: Daria Lioubashevski, Tomer Schlank, <b>Gabriel Stanovsky</b>, Ariel Gol
 venue: ICML
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/icml/LioubashevskiSS25.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/abs/2410.20210
 talk: NONE

@@ -4,7 +4,7 @@ authors: Adi Simhi, Itay Itzhak, Fazl Barez, <b>Gabriel Stanovsky</b>, Yonatan B
 venue: EMNLP Findings
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/SimhiIBSB25.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2502.12964
 talk: NONE

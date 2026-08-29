@@ -4,7 +4,7 @@ authors: Gili Lior, Eliya Habba, Shahar Levy, Avi Caciularu, <b>Gabriel Stanovsk
 venue: EMNLP Findings
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/LiorHLCS25.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2505.22169
 talk: NONE

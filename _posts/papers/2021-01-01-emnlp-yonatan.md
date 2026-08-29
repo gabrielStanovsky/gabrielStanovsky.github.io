@@ -6,7 +6,7 @@ base: gender
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2109.02040
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/emnlp/BittonES021.bib
 code: https://github.com/yonatanbitton/data_efficient_masked_language_modeling_for_vision_and_language
 talk: NONE
 data: NONE

@@ -4,7 +4,7 @@ authors: Noam Dahan, Omer Kidron, <b>Gabriel Stanovsky</b>
 venue: EACL Findings
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/eacl/DahanKS26.bib
 pdf: NONE
 pdf-ext: https://aclanthology.org/2026.findings-eacl.278.pdf
 talk: NONE

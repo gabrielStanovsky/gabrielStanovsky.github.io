@@ -4,7 +4,7 @@ authors: Itay Itzhak, Eliya Habba, <b>Gabriel Stanovsky</b>, Yonatan Belinkov
 venue: COLM
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/journals/corr/abs-2604-14137.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2604.14137
 talk: NONE

@@ -1,0 +1,8 @@
+@inproceedings{gabay2026beyond,
+  title = {Beyond Memorization: Distinguishing Between Pattern-Based and Epistemic Reasoning in {LLM}s Using Epistemic Puzzles},
+  author = {Adi Gabay and Gabriel Stanovsky and Liat Peterfreund},
+  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  year = {2026},
+  publisher = {Association for Computational Linguistics},
+  url = {https://arxiv.org/abs/2603.21350}
+}

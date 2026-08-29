@@ -4,7 +4,7 @@ authors: Uri Berger, Lea Frermann, <b>Gabriel Stanovsky</b>, Omri Abend
 venue: EACL Findings
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/eacl/BergerFSA23.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2302.04811.pdf
 talk: NONE

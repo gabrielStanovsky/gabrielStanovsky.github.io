@@ -4,7 +4,7 @@ authors: Eliya Habba, Itay Itzhak, Asaf Yehudai, Yotam Perlitz, Elron Bandel, Mi
 venue: COLM
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/journals/corr/abs-2604-12843.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2604.12843
 talk: NONE

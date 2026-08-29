@@ -4,7 +4,7 @@ authors: Shahar Levy, Eliya Habba, Reshef Mintz, Barak Raveh, Renana Keydar, <b>
 venue: ACL Demo
 base: eco-sem
 bib: NONE
-bib-ext: NONE
+bib-ext: https://dblp.org/rec/conf/acl/LevyHMRKS26.bib
 pdf: NONE
 pdf-ext: https://arxiv.org/pdf/2604.09237
 talk: https://www.youtube.com/watch?v=VILym_Ch0hg
