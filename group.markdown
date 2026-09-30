@@ -128,7 +128,7 @@ sitemap: false
       <dl class="group-alumni-list">
         <div>
           <dt>Ph.D.</dt>
-          <dd>Yonatan Bitton (2023)</dd>
+          <dd>Uri Berger (2026), Yonatan Bitton (2023)</dd>
         </div>
         <div>
           <dt>M.Sc.</dt>
