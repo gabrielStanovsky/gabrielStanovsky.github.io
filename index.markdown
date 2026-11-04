@@ -74,6 +74,15 @@ title: "Gabriel Stanovsky"
       </div>
     </div>
 
+    <aside class="slab-intro-callout" aria-label="ISCOL 2026 announcement">
+      <div class="slab-intro-callout__body">
+        <p class="slab-intro-callout__text">
+          We are hosting <a href="https://iscol-meeting.github.io/iscol2026/" target="_blank" rel="noopener">ISCOL 2026</a> at HUJI this year!
+        </p>
+      </div>
+      <a class="slab-intro-callout__cta" href="https://openreview.net/group?id=ISCOL/2026/Seminar" target="_blank" rel="noopener">Submit your work here &rarr;</a>
+    </aside>
+
     <p>
       I develop AI models that help experts tackle real-world research questions across domains such as law, medicine, archaeology, and beyond. I also head <a href="https://www.cs.huji.ac.il/page/10931/" target="_blank">HUJI's BSc. program in AI</a>.
 Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/films/diary/" target="_blank">movie buff</a>, <a href="http://www.setlist.fm/concerts/Gabis" target="_blank">concert goer</a>, <a href="https://www.goodreads.com/user/show/24306303-gabriel-stanovsky" target="_blank">book lover</a>, and <a href="https://tunein.com/user/gabrielsatanovsky/" target="_blank">radio</a> <a href="https://www.mixcloud.com/gabriel-satanovsky/" target="_blank">enthusiast</a>.

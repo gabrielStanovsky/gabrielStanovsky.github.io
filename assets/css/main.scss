@@ -602,6 +602,105 @@ body.slab-summary-page .page__content {
   color: var(--slab-lead-ink);
 }
 
+.slab-intro-callout {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1.12rem;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid var(--slab-line);
+  border-left: 4px solid var(--slab-moss);
+  border-radius: 8px;
+  background:
+    var(--slab-topo-overlay),
+    url("/topo/negev-topo-cropped.svg"),
+    var(--slab-topo-bg);
+  background-blend-mode: lighten, normal, normal;
+  background-position: center, center 62%, center;
+  background-size: auto, 100% auto, auto;
+  box-shadow: var(--slab-shadow);
+}
+
+.slab-intro-callout__body,
+.slab-intro-callout__cta {
+  position: relative;
+  z-index: 1;
+}
+
+.slab-intro-callout__body {
+  min-width: 0;
+}
+
+.slab-intro-callout p.slab-intro-callout__text {
+  margin: 0;
+  color: var(--slab-ink);
+  font-family: var(--slab-display);
+  font-size: 1.05rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.slab-intro-callout__text a {
+  color: var(--slab-blue);
+  font-weight: 750;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.16em;
+}
+
+.slab-intro-callout__text a:hover,
+.slab-intro-callout__text a:focus-visible {
+  color: var(--slab-moss);
+}
+
+.slab-intro-callout__cta {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0.42rem 0.82rem;
+  border: 1px solid var(--slab-sage);
+  border-radius: 6px;
+  background: var(--slab-sage);
+  color: var(--slab-bg) !important;
+  font-family: var(--slab-display);
+  font-size: 0.82rem;
+  font-weight: 650;
+  line-height: 1.2;
+  text-decoration: none !important;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+}
+
+.slab-intro-callout__cta:hover,
+.slab-intro-callout__cta:focus-visible {
+  border-color: var(--slab-moss);
+  background: var(--slab-moss);
+  color: var(--slab-bg) !important;
+  transform: translateY(-1px);
+}
+
+html[data-slab-theme="dark"] .slab-intro-callout {
+  border-color: var(--slab-line);
+  border-left-color: var(--slab-moss);
+  background: var(--slab-topo-bg);
+}
+
+html[data-slab-theme="dark"] .slab-intro-callout::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("/topo/negev-topo-cropped.svg") center 62% / 100% auto;
+  content: "";
+  filter: invert(1) grayscale(1) brightness(2.1) contrast(1.25);
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .slab-profile-photo {
   display: block;
   justify-self: end;
