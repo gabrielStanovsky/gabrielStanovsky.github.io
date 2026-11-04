@@ -37,14 +37,19 @@
       document.documentElement.setAttribute("data-slab-theme-source", "saved");
       applyTheme(theme);
       try {
-        window.localStorage.setItem("slabColorTheme", theme);
+        window.sessionStorage.setItem("slabColorTheme", theme);
       } catch (error) {}
     });
 
     if (window.matchMedia) {
       var systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
       var handleSystemTheme = function (event) {
-        if (followsSystem) applyTheme(event.matches ? "dark" : "monochrome");
+        followsSystem = true;
+        document.documentElement.setAttribute("data-slab-theme-source", "system");
+        try {
+          window.sessionStorage.removeItem("slabColorTheme");
+        } catch (error) {}
+        applyTheme(event.matches ? "dark" : "monochrome");
       };
       if (systemTheme.addEventListener) systemTheme.addEventListener("change", handleSystemTheme);
       else if (systemTheme.addListener) systemTheme.addListener(handleSystemTheme);

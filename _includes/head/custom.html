@@ -2,16 +2,16 @@
 <script>
   (function () {
     var themes = ["monochrome", "blackwhite", "dark"];
-    var theme = "monochrome";
+    var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "monochrome";
     var savedTheme = null;
     try {
-      savedTheme = window.localStorage.getItem("slabColorTheme");
+      window.localStorage.removeItem("slabColorTheme");
+      savedTheme = window.sessionStorage.getItem("slabColorTheme");
     } catch (error) {}
     if (themes.indexOf(savedTheme) !== -1) {
       theme = savedTheme;
       document.documentElement.setAttribute("data-slab-theme-source", "saved");
     } else {
-      theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "monochrome";
       document.documentElement.setAttribute("data-slab-theme-source", "system");
     }
     document.documentElement.setAttribute("data-slab-theme", theme);
