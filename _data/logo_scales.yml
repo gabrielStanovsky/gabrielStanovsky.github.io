@@ -5,16 +5,16 @@
 # Fixed top-bar/sidebar logos:
 nav:
   group:
-    scale: 145
-    y_offset: 4t
+    scale: 126
+    y_offset: 1
   publications:
-    scale: 110
-    y_offset: 2
+    scale: 108
+    y_offset: 1
   teaching:
-    scale: 110
-    y_offset: 2
+    scale: 108
+    y_offset: 1
   talks:
-    scale: 88
+    scale: 92
     y_offset: 0
   schedule:
     scale: 130
