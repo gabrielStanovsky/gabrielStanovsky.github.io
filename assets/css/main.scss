@@ -1584,19 +1584,14 @@ html[data-slab-theme="dark"] .slab-intro-callout::before {
   padding-top: 0;
 }
 
+.slab-publications,
 .slab-talks {
-  height: 100vh;
-  transition: gap 180ms ease, grid-template-rows 180ms ease;
-}
-
-.slab-publications {
   min-height: 100vh;
   grid-template-rows: auto auto;
 }
 
 .slab-group,
-.slab-teaching,
-.slab-talks {
+.slab-teaching {
   min-height: 100vh;
 }
 
@@ -2096,9 +2091,7 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
 }
 
 .pub-year__heading {
-  position: sticky;
-  top: calc(var(--pub-stack-top) + var(--pub-stack-height) + 0.4rem);
-  z-index: 7;
+  position: static;
   grid-column: 1;
   margin: 0;
   padding: 0.55rem 0 0.65rem;
@@ -2148,8 +2141,7 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
 }
 
 .pub-venue-heading {
-  position: sticky;
-  top: calc(var(--pub-stack-top) + var(--pub-stack-height) + 2.35rem);
+  position: static;
   margin: 0;
   padding-top: 0.08rem;
   color: var(--slab-muted);
@@ -2681,11 +2673,11 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
 .talks-workspace {
   width: min(100% - 2rem, 1120px);
   min-width: 0;
-  height: 100%;
+  height: auto;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  overflow: hidden;
+  grid-template-rows: auto auto;
+  overflow: visible;
   color: var(--slab-ink);
 }
 
@@ -2731,21 +2723,10 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
   position: relative;
   min-height: 0;
   margin-top: 0;
-  overflow-y: auto;
-  padding-right: 0.95rem;
+  overflow: visible;
+  padding-right: 0;
   scroll-padding-top: 3rem;
   background: var(--slab-bg);
-}
-
-.talks-scroll::before {
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  display: block;
-  height: 0.18rem;
-  margin-bottom: -0.18rem;
-  background: var(--slab-bg);
-  content: "";
 }
 
 .talks-scroll:focus {
@@ -2753,8 +2734,7 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
 }
 
 .talks-year-stack {
-  width: 9rem;
-  margin-left: 0;
+  display: none;
 }
 
 .talk-year {
@@ -2765,9 +2745,7 @@ body.slab-talks-nav-hidden .slab-talks .slab-rail {
 }
 
 .talk-year__heading {
-  position: sticky;
-  top: 0;
-  z-index: 7;
+  position: static;
   align-self: start;
   margin: 0;
   padding: 0.55rem 0 0.65rem;
@@ -2987,7 +2965,7 @@ body.slab-talks-page::before {
 
   .pub-workspace {
     width: min(100% - 2rem, 760px);
-    height: calc(100vh - 5rem);
+    height: auto;
     margin: 0 auto;
   }
 
@@ -3031,7 +3009,7 @@ body.slab-talks-page::before {
 
   .talks-workspace {
     width: min(100% - 2rem, 760px);
-    height: calc(100vh - 5rem);
+    height: auto;
   }
 
   .group-hero {

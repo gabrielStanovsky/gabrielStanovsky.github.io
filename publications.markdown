@@ -45,7 +45,6 @@ author_profile: false
     </header>
 
     <div class="pub-scroll" id="pub-scroll">
-      <div class="pub-year-stack" id="pub-year-stack" aria-label="Folded publication years"></div>
       <section class="pub-search-results" id="pub-search-results" aria-label="Search results" hidden></section>
 
       {% assign paper_posts = site.posts | where_exp: "post", "post.authors" %}
@@ -176,7 +175,6 @@ author_profile: false
 <script>
   (function () {
     var scroller = document.getElementById("pub-scroll");
-    var stack = document.getElementById("pub-year-stack");
     var search = document.getElementById("pub-search-input");
     var searchToggle = document.querySelector(".pub-search-toggle");
     var empty = document.getElementById("pub-empty");
@@ -628,40 +626,9 @@ author_profile: false
       lastScrollTop = current;
     }
 
-    function updateStack() {
+    function handleScroll() {
       updateCompactHeader();
       updateNavVisibility();
-      if (!scroller || !stack || search.value.trim()) {
-        if (stack) {
-          stack.innerHTML = "";
-          scroller.style.setProperty("--pub-stack-height", "0px");
-        }
-        return;
-      }
-
-      var complete = [];
-      var stackRect = stack.getBoundingClientRect();
-      var foldLine = stackRect.top + stack.offsetHeight + 16;
-      years.forEach(function (year) {
-        if (year.hidden) return;
-        if (year.getBoundingClientRect().bottom < foldLine) {
-          complete.push(year.getAttribute("data-year"));
-        }
-      });
-
-      stack.innerHTML = complete.slice().reverse().map(function (year) {
-        return '<button class="pub-year-chip" type="button" data-jump-year="' + year + '" aria-label="Jump to ' + year + '">' + year + '</button>';
-      }).join("");
-      scroller.style.setProperty("--pub-stack-height", stack.offsetHeight + "px");
-    }
-
-    function jumpToYear(year) {
-      var target = document.querySelector('.pub-year[data-year="' + year + '"]');
-      if (!target) return;
-      window.scrollTo({
-        top: Math.max(0, target.getBoundingClientRect().top + (window.pageYOffset || document.documentElement.scrollTop || 0) - stack.offsetHeight - 72),
-        behavior: "smooth"
-      });
     }
 
     function applySearch() {
@@ -711,10 +678,10 @@ author_profile: false
         window.scrollTo({ top: 0, behavior: "auto" });
         lastQuery = query;
       }
-      updateStack();
+      handleScroll();
     }
 
-    if (scroller && stack && search) {
+    if (scroller && search) {
       search.setAttribute("tabindex", "-1");
       buildSearchIndex();
       groupByVenue();
@@ -735,17 +702,12 @@ author_profile: false
       if (searchToggle) {
         searchToggle.addEventListener("click", showSearch);
       }
-      window.addEventListener("scroll", updateStack, { passive: true });
-      stack.addEventListener("click", function (event) {
-        var button = event.target.closest("[data-jump-year]");
-        if (!button) return;
-        jumpToYear(button.getAttribute("data-jump-year"));
-      });
+      window.addEventListener("scroll", handleScroll, { passive: true });
       search.addEventListener("input", applySearch);
       search.addEventListener("search", applySearch);
       search.addEventListener("keyup", applySearch);
-      window.addEventListener("resize", updateStack);
-      updateStack();
+      window.addEventListener("resize", handleScroll);
+      handleScroll();
     }
   }());
 </script>

@@ -39,8 +39,7 @@ author_profile: false
       <p>A selection of invited talks, tutorials, keynotes, and seminars.</p>
     </header>
 
-    <div class="talks-scroll" id="talks-scroll" tabindex="0">
-      <div class="pub-year-stack talks-year-stack" id="talks-year-stack" aria-label="Folded talk years"></div>
+    <div class="talks-scroll" id="talks-scroll">
       {% assign active_year = "" %}
       {% for talk in site.data.invited_talks %}
       {% if talk.year != active_year %}
@@ -124,69 +123,5 @@ author_profile: false
 	      icon.style.setProperty("--slab-icon-scale", homeIconScales[chosen] || 1);
 	      icon.style.setProperty("--slab-icon-y-offset", (homeIconOffsets[chosen] || 0) + "px");
 	    });
-  }());
-</script>
-
-<script>
-  (function () {
-    var scroller = document.getElementById("talks-scroll");
-    var stack = document.getElementById("talks-year-stack");
-    var years = Array.prototype.slice.call(document.querySelectorAll(".talk-year"));
-    var lastScrollTop = scroller ? scroller.scrollTop : 0;
-    if (!scroller || !stack || !years.length) return;
-
-    function updateCompactHeader() {
-      var isScrolled = scroller.scrollTop > 12;
-      document.body.classList.toggle("slab-talks-compact", !!isScrolled);
-    }
-
-    function updateNavVisibility() {
-      var current = scroller.scrollTop;
-      var delta = current - lastScrollTop;
-
-      if (current <= 12) {
-        document.body.classList.remove("slab-talks-nav-hidden");
-      } else if (delta > 4) {
-        document.body.classList.add("slab-talks-nav-hidden");
-      } else if (delta < -4) {
-        document.body.classList.remove("slab-talks-nav-hidden");
-      }
-
-      lastScrollTop = current;
-    }
-
-    function updateStack() {
-      updateCompactHeader();
-      updateNavVisibility();
-      var complete = [];
-      years.forEach(function (year) {
-        var bottom = year.offsetTop + year.offsetHeight;
-        if (bottom < scroller.scrollTop + stack.offsetHeight + 16) {
-          complete.push(year.getAttribute("data-year"));
-        }
-      });
-
-      stack.innerHTML = complete.slice().reverse().map(function (year) {
-        return '<button class="pub-year-chip" type="button" data-jump-year="' + year + '" aria-label="Jump to ' + year + '">' + year + '</button>';
-      }).join("");
-    }
-
-    function jumpToYear(year) {
-      var target = document.querySelector('.talk-year[data-year="' + year + '"]');
-      if (!target) return;
-      scroller.scrollTo({
-        top: Math.max(0, target.offsetTop - stack.offsetHeight),
-        behavior: "smooth"
-      });
-    }
-
-    scroller.addEventListener("scroll", updateStack, { passive: true });
-    stack.addEventListener("click", function (event) {
-      var button = event.target.closest("[data-jump-year]");
-      if (!button) return;
-      jumpToYear(button.getAttribute("data-jump-year"));
-    });
-    window.addEventListener("resize", updateStack);
-    updateStack();
   }());
 </script>
