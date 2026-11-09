@@ -1,0 +1,9 @@
+@article{lior2026computation,
+  title = {Computation or Weight Adaptation? Rethinking the Role of Plasticity in Learning},
+  author = {Gili Lior and Yuval Shalev and Gabriel Stanovsky and Ariel Goldstein},
+  journal = {Cognitive Science},
+  year = {2026},
+  pages = {e70271},
+  doi = {10.1111/cogs.70271},
+  url = {https://onlinelibrary.wiley.com/doi/10.1111/cogs.70271}
+}
