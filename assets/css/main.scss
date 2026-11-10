@@ -627,9 +627,17 @@ body.slab-summary-page .page__content {
 }
 
 .slab-intro-callout__body,
+.slab-intro-callout__actions,
 .slab-intro-callout__cta {
   position: relative;
   z-index: 1;
+}
+
+.slab-intro-callout__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .slab-intro-callout__body {
@@ -665,14 +673,14 @@ body.slab-summary-page .page__content {
   padding: 0.42rem 0.82rem;
   border: 1px solid var(--slab-sage);
   border-radius: 6px;
-  background: var(--slab-sage);
-  color: var(--slab-bg) !important;
+  background: color-mix(in srgb, var(--slab-panel) 88%, transparent);
+  color: var(--slab-ink) !important;
   font-family: var(--slab-display);
   font-size: 0.82rem;
   font-weight: 650;
   line-height: 1.2;
   text-decoration: none !important;
-  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease;
+  transition: transform 140ms ease, background-color 140ms ease, border-color 140ms ease, color 140ms ease;
 }
 
 .slab-intro-callout__cta:hover,

@@ -68,7 +68,10 @@ title: "Gabriel Stanovsky"
           We are hosting <a href="https://iscol-meeting.github.io/iscol2026/" target="_blank" rel="noopener">ISCOL 2026</a> at HUJI this year!
         </p>
       </div>
-      <a class="slab-intro-callout__cta" href="https://openreview.net/group?id=ISCOL/2026/Seminar" target="_blank" rel="noopener">Submit your work here &rarr;</a>
+      <div class="slab-intro-callout__actions">
+        <a class="slab-intro-callout__cta" href="https://openreview.net/group?id=ISCOL/2026/Seminar" target="_blank" rel="noopener">Submit your work &rarr;</a>
+        <a class="slab-intro-callout__cta" href="https://reg.eventact.com//welcome?Form=i9aEAAA&c=iGAo&Event=iEpkAAA&lang=en" target="_blank" rel="noopener">Register here &rarr;</a>
+      </div>
     </aside>
 
     <p>
