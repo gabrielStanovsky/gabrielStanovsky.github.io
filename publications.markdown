@@ -426,6 +426,10 @@ author_profile: false
       else if (normalized.indexOf("nllp") !== -1) group = "NLLP";
       else if (normalized.indexOf("wmt") !== -1 || normalized.indexOf("machine translation") !== -1) group = "WMT";
       else if (normalized.indexOf("communications of the acm") !== -1) group = "CACM";
+      else if (normalized.indexOf("book chapter") !== -1) {
+        group = "Book Chapter";
+        note = value.replace(/^book chapter:\s*/i, "").trim();
+      }
       else if (normalized.indexOf("arxiv") !== -1) group = "arXiv";
 
       if (normalized.indexOf("findings") !== -1) note = "Findings";
