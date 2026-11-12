@@ -62,17 +62,19 @@ title: "Gabriel Stanovsky"
       </div>
     </div>
 
-    <aside class="slab-intro-callout" aria-label="ISCOL 2026 announcement">
-      <div class="slab-intro-callout__body">
-        <p class="slab-intro-callout__text">
-          We are hosting <a href="https://iscol-meeting.github.io/iscol2026/" target="_blank" rel="noopener">ISCOL 2026</a> at HUJI this year!
-        </p>
-      </div>
-      <div class="slab-intro-callout__actions">
-        <a class="slab-intro-callout__cta" href="https://openreview.net/group?id=ISCOL/2026/Seminar" target="_blank" rel="noopener">Submit your work &rarr;</a>
-        <a class="slab-intro-callout__cta" href="https://reg.eventact.com//welcome?Form=i9aEAAA&c=iGAo&Event=iEpkAAA&lang=en" target="_blank" rel="noopener">Register here &rarr;</a>
-      </div>
-    </aside>
+<aside class="slab-intro-callout" aria-label="ISCOL 2026 announcement"
+       style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; text-align: center;">
+  <div class="slab-intro-callout__body">
+    <p class="slab-intro-callout__text" style="margin: 0;">
+      We are hosting <a href="https://iscol-meeting.github.io/iscol2026/" target="_blank" rel="noopener">ISCOL 2026</a> at HUJI on Dec. 23rd!
+    </p>
+  </div>
+  <div class="slab-intro-callout__actions"
+       style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+    <a class="slab-intro-callout__cta" href="https://openreview.net/group?id=ISCOL/2026/Seminar" target="_blank" rel="noopener">Submit your work &rarr;</a>
+    <a class="slab-intro-callout__cta" href="https://reg.eventact.com//welcome?Form=i9aEAAA&c=iGAo&Event=iEpkAAA&lang=en" target="_blank" rel="noopener">Register here &rarr;</a>
+  </div>
+</aside>
 
     <p>
       I develop AI models that help experts tackle real-world research questions across domains such as law, medicine, archaeology, and beyond. I also head <a href="https://www.cs.huji.ac.il/page/10931/" target="_blank">HUJI's BSc. program in AI</a>.
