@@ -1,9 +1,18 @@
 <!-- 1996 Professor Homepage Chrome (only displayed when html[data-slab-theme="old"]) -->
+<style>
+  html:not([data-slab-theme="old"]) .old-prof-banner,
+  html:not([data-slab-theme="old"]) .old-prof-footer,
+  html:not([data-slab-theme="old"]) .old-guestbook-backdrop,
+  html:not([data-slab-theme="old"]) .slab-theme-cycle__old-label {
+    display: none !important;
+  }
+</style>
 <div class="old-prof-banner" id="old-prof-banner" aria-label="1996 Department Browser Bar">
   <div class="old-win-titlebar">
     <span class="old-win-titlebar__text">
       <img src="/assets/old/netscape-cube.svg" alt="" width="16" height="16" aria-hidden="true">
-      Netscape Navigator 3.01 Gold - [The Hebrew University of Jerusalem :: ~gabis]
+      <span class="old-win-titlebar__full">Netscape Navigator 3.01 Gold - [The Hebrew University of Jerusalem :: ~gabis]</span>
+      <span class="old-win-titlebar__compact">Netscape 3.01 - [cs.huji.ac.il/~gabis]</span>
     </span>
     <span class="old-win-titlebar__controls" aria-hidden="true">
       <button type="button" class="old-win-btn" data-old-win-gag="minimize" title="Minimize">_</button>
@@ -70,9 +79,10 @@
       E-mail Prof. Stanovsky:
       <a href="mailto:gabriel.stanovsky@mail.huji.ac.il">gabriel.stanovsky@mail.huji.ac.il</a>
     </span>
-    <span class="old-status-piece">
-      <strong>Updated:</strong> 11/25/1996 <small>(ok fine, 2026)</small>,
-      Office Status: <span class="old-status-pill" id="old-office-status">&#9679; Probably in a meeting</span>
+    <span class="old-status-piece old-status-piece--meta">
+      <span><strong>Updated:</strong> 11/25/1996 <small>(ok fine, 2026)</small></span>
+      <span class="old-status-sep" aria-hidden="true">&middot;</span>
+      <span>Office Status: <span class="old-status-pill" id="old-office-status">&#9679; Probably in a meeting</span></span>
     </span>
     <span class="old-status-piece">
       <button type="button" class="old-bevel-btn" data-old-guestbook-open>&#9998; Sign my Guestbook (that would be great)</button>

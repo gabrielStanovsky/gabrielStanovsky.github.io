@@ -38,6 +38,8 @@ html[data-slab-theme="old"] {
 
 html[data-slab-theme="old"] body {
   min-width: 0;
+  padding-bottom: 48px;
+  overflow-x: hidden;
   background: #d4d0c8 url("/assets/old/bg-tile.svg") repeat;
   color: #000000;
   font-family: "Times New Roman", Times, Georgia, serif;
@@ -1078,9 +1080,11 @@ html[data-slab-theme="old"] .pub-item__title {
   font-family: "Times New Roman", Times, serif;
   font-size: 16.5px;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 html[data-slab-theme="old"] .pub-item__venue {
+  display: inline;
   margin-left: 6px;
   padding: 1px 5px;
   border: 1px solid #808080;
@@ -1089,12 +1093,22 @@ html[data-slab-theme="old"] .pub-item__venue {
   font-family: "Courier New", Courier, monospace;
   font-size: 11px;
   font-weight: 700;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+html[data-slab-theme="old"] .pub-item__venue:empty,
+html[data-slab-theme="old"] .pub-item__venue[hidden] {
+  display: none;
 }
 
 html[data-slab-theme="old"] .pub-item__authors {
   color: #222222;
   font-family: "Times New Roman", Times, serif;
   font-size: 14.5px;
+  overflow-wrap: anywhere;
 }
 
 html[data-slab-theme="old"] .pub-item__links a,
@@ -1595,16 +1609,50 @@ html[data-slab-theme="old"] .old-guestbook-actions {
   margin-top: 2px;
 }
 
+html[data-slab-theme="old"] .old-win-titlebar__compact {
+  display: none;
+}
+
 // -----------------------------------------------------------------------------
 // Responsive Support (Even 1996 Should Work on Mobile!)
 // -----------------------------------------------------------------------------
 @media (max-width: 760px) {
+  html[data-slab-theme="old"] .old-prof-banner,
+  html[data-slab-theme="old"] .slab-home-page #main,
+  html[data-slab-theme="old"] body.slab-summary-page #main,
+  html[data-slab-theme="old"] .slab-home-page .page__footer {
+    width: calc(100% - 12px);
+    max-width: calc(100% - 12px);
+  }
+
+  html[data-slab-theme="old"] .slab-summary-page .slab-intro,
+  html[data-slab-theme="old"] .slab-summary-page .slab-mobile-overview,
+  html[data-slab-theme="old"] .group-workspace,
+  html[data-slab-theme="old"] .pub-workspace,
+  html[data-slab-theme="old"] .teaching-workspace,
+  html[data-slab-theme="old"] .talks-workspace {
+    padding: 12px 10px;
+  }
+
   html[data-slab-theme="old"] .slab-heading {
     grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px;
+  }
+
+  html[data-slab-theme="old"] .slab-heading > div::before {
+    padding: 4px 28px;
+    background-size: 20px 20px, 20px 20px, auto;
+    font-size: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  html[data-slab-theme="old"] .slab-intro h1 {
+    font-size: 1.9rem;
   }
 
   html[data-slab-theme="old"] .slab-profile-photo {
-    width: min(100%, 260px);
+    width: min(100%, 250px);
     justify-self: center;
   }
 
@@ -1615,7 +1663,62 @@ html[data-slab-theme="old"] .old-guestbook-actions {
   html[data-slab-theme="old"] .slab-talks .slab-index {
     flex-wrap: wrap;
     width: 100%;
+    padding: 6px;
     gap: 6px;
+  }
+
+  html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index a,
+  html[data-slab-theme="old"] .slab-publications .slab-index a,
+  html[data-slab-theme="old"] .slab-group .slab-index a,
+  html[data-slab-theme="old"] .slab-teaching .slab-index a,
+  html[data-slab-theme="old"] .slab-talks .slab-index a {
+    padding: 4px 7px;
+    gap: 4px;
+  }
+
+  html[data-slab-theme="old"] .slab-index strong,
+  html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index strong,
+  html[data-slab-theme="old"] .slab-publications .slab-index strong,
+  html[data-slab-theme="old"] .slab-group .slab-index strong,
+  html[data-slab-theme="old"] .slab-teaching .slab-index strong,
+  html[data-slab-theme="old"] .slab-talks .slab-index strong {
+    font-size: 12px;
+  }
+
+  html[data-slab-theme="old"] .slab-summary-page .slab-mobile-people {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html[data-slab-theme="old"] .old-bevel-btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  html[data-slab-theme="old"] .old-prof-footer {
+    padding: 12px 10px 16px;
+  }
+
+  html[data-slab-theme="old"] .old-status-piece {
+    max-width: 100%;
+  }
+
+  html[data-slab-theme="old"] .old-status-piece--meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  html[data-slab-theme="old"] .old-status-sep {
+    display: none;
+  }
+
+  html[data-slab-theme="old"] .old-guestbook-backdrop:not([hidden]) {
+    padding: 8px;
+  }
+
+  html[data-slab-theme="old"] .old-guestbook-window {
+    max-height: 92vh;
   }
 
   html[data-slab-theme="old"] .old-guestbook-row {
@@ -1623,7 +1726,57 @@ html[data-slab-theme="old"] .old-guestbook-actions {
   }
 
   html[data-slab-theme="old"] .old-construction-strip {
+    display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  html[data-slab-theme="old"] .old-win-titlebar__full {
+    display: none;
+  }
+
+  html[data-slab-theme="old"] .old-win-titlebar__compact {
+    display: inline;
+  }
+
+  html[data-slab-theme="old"] .old-win-titlebar {
+    font-size: 11px;
+  }
+
+  html[data-slab-theme="old"] .old-win-locationbar {
+    gap: 5px;
+    padding: 5px 6px;
+  }
+
+  html[data-slab-theme="old"] .old-win-locationbar__url {
+    flex: 1 1 180px;
+    font-size: 11px;
+  }
+
+  html[data-slab-theme="old"] .old-win-locationbar__actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  html[data-slab-theme="old"] .slab-theme-cycle {
+    right: 6px;
+    bottom: 6px;
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  html[data-slab-theme="old"] .slab-intro-callout {
+    padding: 10px;
+  }
+
+  html[data-slab-theme="old"] .slab-intro-callout p.slab-intro-callout__text {
+    font-size: 15.5px;
+  }
+
+  html[data-slab-theme="old"] .old-badges {
+    gap: 4px;
   }
 }
