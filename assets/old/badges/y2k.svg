@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" shape-rendering="crispEdges">
+  <rect width="88" height="31" fill="#000000"/>
+  <rect x="1" y="1" width="86" height="29" fill="#ffff00"/>
+  <rect x="2" y="2" width="84" height="4" fill="#000000"/>
+  <rect x="2" y="25" width="84" height="4" fill="#000000"/>
+  <rect x="6" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="18" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="30" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="42" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="54" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="66" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="78" y="2" width="6" height="4" fill="#ffff00"/>
+  <rect x="12" y="25" width="6" height="4" fill="#ffff00"/>
+  <rect x="24" y="25" width="6" height="4" fill="#ffff00"/>
+  <rect x="36" y="25" width="6" height="4" fill="#ffff00"/>
+  <rect x="48" y="25" width="6" height="4" fill="#ffff00"/>
+  <rect x="60" y="25" width="6" height="4" fill="#ffff00"/>
+  <rect x="72" y="25" width="6" height="4" fill="#ffff00"/>
+  <text x="44" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#cc0000">Y2K READY*</text>
+  <text x="44" y="23" text-anchor="middle" font-family="Courier New, monospace" font-size="6.8" font-weight="bold" fill="#000000">*PROBABLY</text>
+</svg>

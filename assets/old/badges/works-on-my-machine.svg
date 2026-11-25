@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" shape-rendering="crispEdges">
+  <rect width="88" height="31" fill="#c0c0c0"/>
+  <rect x="0" y="0" width="88" height="1" fill="#ffffff"/>
+  <rect x="0" y="0" width="1" height="31" fill="#ffffff"/>
+  <rect x="0" y="30" width="88" height="1" fill="#404040"/>
+  <rect x="87" y="0" width="1" height="31" fill="#404040"/>
+  <rect x="2" y="2" width="19" height="27" fill="#006600"/>
+  <!-- Crisp pixel checkmark -->
+  <rect x="6" y="15" width="2" height="2" fill="#ffff00"/>
+  <rect x="8" y="17" width="2" height="2" fill="#ffff00"/>
+  <rect x="10" y="15" width="2" height="2" fill="#ffff00"/>
+  <rect x="12" y="13" width="2" height="2" fill="#ffff00"/>
+  <rect x="14" y="11" width="2" height="2" fill="#ffff00"/>
+  <rect x="16" y="9" width="2" height="2" fill="#ffff00"/>
+  <rect x="22" y="2" width="64" height="27" fill="#003300"/>
+  <text x="54" y="13" text-anchor="middle" font-family="Courier New, monospace" font-size="7.5" font-weight="bold" fill="#ccffcc">WORKS ON</text>
+  <text x="54" y="24" text-anchor="middle" font-family="Courier New, monospace" font-size="8" font-weight="bold" fill="#ffff66">MY MACHINE</text>
+</svg>

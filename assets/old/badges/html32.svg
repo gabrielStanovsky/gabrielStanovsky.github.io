@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" shape-rendering="crispEdges">
+  <rect width="88" height="31" fill="#ffcc00"/>
+  <rect x="0" y="0" width="88" height="1" fill="#ffff99"/>
+  <rect x="0" y="0" width="1" height="31" fill="#ffff99"/>
+  <rect x="0" y="30" width="88" height="1" fill="#806600"/>
+  <rect x="87" y="0" width="1" height="31" fill="#806600"/>
+  <rect x="2" y="2" width="28" height="27" fill="#ffffff"/>
+  <text x="16" y="19" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#005a9c">W3C</text>
+  <text x="16" y="27" text-anchor="middle" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" fill="#008000">OK!</text>
+  <rect x="31" y="2" width="55" height="27" fill="#ffdd33"/>
+  <text x="58" y="13" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#000000">HTML 3.2</text>
+  <text x="58" y="24" text-anchor="middle" font-family="Courier New, monospace" font-size="7.5" font-weight="bold" fill="#990000">VALIDATED</text>
+</svg>

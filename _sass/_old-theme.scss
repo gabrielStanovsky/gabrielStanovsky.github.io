@@ -1,0 +1,1629 @@
+// =============================================================================
+// OLD-SCHOOL 1996 CS PROFESSOR THEME (html[data-slab-theme="old"])
+// Completely scoped so modern themes (monochrome/paper, dark, blackwhite/white)
+// remain 100% untouched.
+// =============================================================================
+
+.old-prof-banner,
+.old-prof-footer,
+.old-guestbook-backdrop,
+.slab-theme-cycle__old-label {
+  display: none;
+}
+
+html[data-slab-theme="old"] {
+  --slab-ink: #000000;
+  --slab-muted: #333333;
+  --slab-bg: #d4d0c8;
+  --slab-panel: #ffffff;
+  --slab-line: #808080;
+  --slab-sage: #000080;
+  --slab-moss: #008080;
+  --slab-clay: #0000ee;
+  --slab-blue: #0000ee;
+  --slab-focus-border: #000080;
+  --slab-shadow: 4px 4px 0 #404040;
+  --slab-topo-bg: #c0c0c0;
+  --slab-topo-overlay: none;
+  --slab-masthead-bg: #c0c0c0;
+  --slab-lead-bg: #ffffff;
+  --slab-lead-border: #808080;
+  --slab-lead-ink: #000000;
+  --slab-serif: "Times New Roman", Times, Georgia, serif;
+  --slab-display: "Times New Roman", Times, Georgia, serif;
+  --slab-sans: "Times New Roman", Times, Georgia, serif;
+  --slab-mono: "Courier New", Courier, monospace;
+  background: #d4d0c8 url("/assets/old/bg-tile.svg") repeat;
+}
+
+html[data-slab-theme="old"] body {
+  min-width: 0;
+  background: #d4d0c8 url("/assets/old/bg-tile.svg") repeat;
+  color: #000000;
+  font-family: "Times New Roman", Times, Georgia, serif;
+}
+
+html[data-slab-theme="old"] body.slab-home-page::before {
+  display: none;
+}
+
+html[data-slab-theme="old"] a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+html[data-slab-theme="old"] a:visited {
+  color: #551a8b;
+}
+
+html[data-slab-theme="old"] a:hover,
+html[data-slab-theme="old"] a:active {
+  color: #ff0000;
+}
+
+// -----------------------------------------------------------------------------
+// Theme Cycle Button in 1996 Mode -> Win95 3D Beveled Button
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-theme-cycle [data-slab-theme-icon="old"] {
+  display: block;
+}
+
+html[data-slab-theme="old"] .slab-theme-cycle {
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  gap: 6px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #000000;
+  border-radius: 0;
+  background: #c0c0c0;
+  box-shadow: 2px 2px 0 #404040;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+html[data-slab-theme="old"] .slab-theme-cycle:hover {
+  border-color: #ffffff;
+  background: #ffffcc;
+  color: #000080;
+}
+
+html[data-slab-theme="old"] .slab-theme-cycle:active {
+  border-style: inset;
+  transform: translate(1px, 1px);
+}
+
+html[data-slab-theme="old"] .slab-theme-cycle__old-label {
+  display: inline;
+  white-space: nowrap;
+}
+
+// -----------------------------------------------------------------------------
+// Shared 90s Win95 / Netscape Controls
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .old-bevel-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000 !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+html[data-slab-theme="old"] .old-bevel-btn:hover {
+  background: #dfdfdf;
+  color: #000080 !important;
+}
+
+html[data-slab-theme="old"] .old-bevel-btn:active,
+html[data-slab-theme="old"] .old-bevel-btn[aria-pressed="true"] {
+  border-style: inset;
+  background: #ffffcc;
+  color: #800000 !important;
+}
+
+// -----------------------------------------------------------------------------
+// Top 1996 Netscape 3.01 Browser Chrome + Marquee Ticker
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .old-prof-banner {
+  display: block;
+  width: min(100% - 16px, 940px);
+  margin: 10px auto 0;
+  border: 3px outset #ffffff;
+  outline: 1px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 4px 4px 0 #404040;
+  font-family: "MS Sans Serif", Arial, Helvetica, sans-serif;
+}
+
+html[data-slab-theme="old"] .old-win-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 3px 6px;
+  background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+html[data-slab-theme="old"] .old-win-titlebar__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-slab-theme="old"] .old-win-titlebar__text img {
+  display: block;
+  flex: 0 0 auto;
+  image-rendering: pixelated;
+}
+
+html[data-slab-theme="old"] .old-win-titlebar__controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+
+html[data-slab-theme="old"] .old-win-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 16px;
+  padding: 0;
+  border: 2px outset #ffffff;
+  background: #c0c0c0;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+html[data-slab-theme="old"] .old-win-btn:active {
+  border-style: inset;
+}
+
+html[data-slab-theme="old"] .old-win-locationbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #808080;
+  background: #c0c0c0;
+  font-size: 12px;
+}
+
+html[data-slab-theme="old"] .old-win-locationbar__label {
+  color: #000000;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .old-win-locationbar__url {
+  flex: 1 1 260px;
+  min-width: 0;
+  padding: 2px 6px;
+  border: 2px inset #808080;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+html[data-slab-theme="old"] .old-win-locationbar__actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+html[data-slab-theme="old"] .old-win-gag-toast {
+  padding: 5px 10px;
+  border-top: 1px solid #808080;
+  background: #ffffcc;
+  color: #800000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .old-marquee-bar {
+  overflow: hidden;
+  border-top: 2px inset #808080;
+  background: #000066;
+  color: #ffff00;
+  padding: 4px 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+html[data-slab-theme="old"] .old-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  will-change: transform;
+  animation: old-prof-marquee 34s linear infinite;
+}
+
+html[data-slab-theme="old"] .old-marquee-bar:hover .old-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes old-prof-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html[data-slab-theme="old"] .old-marquee-track {
+    animation: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Layout Container & Navigation Rail -> Classic 1996 Motif Toolbar
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-home-page #main,
+html[data-slab-theme="old"] body.slab-summary-page #main {
+  width: min(100% - 16px, 940px);
+  max-width: 940px;
+  margin: 10px auto 14px;
+  padding: 0;
+}
+
+html[data-slab-theme="old"] .slab-home,
+html[data-slab-theme="old"] .slab-group,
+html[data-slab-theme="old"] .slab-publications,
+html[data-slab-theme="old"] .slab-teaching,
+html[data-slab-theme="old"] .slab-talks {
+  width: 100%;
+  min-height: 0;
+  gap: 12px;
+  padding: 0;
+  background: transparent;
+}
+
+html[data-slab-theme="old"] .slab-home > .slab-rail,
+html[data-slab-theme="old"] .slab-publications .slab-rail,
+html[data-slab-theme="old"] .slab-group .slab-rail,
+html[data-slab-theme="old"] .slab-teaching .slab-rail,
+html[data-slab-theme="old"] .slab-talks .slab-rail {
+  position: static;
+  max-height: none;
+  border: 3px ridge #808080;
+  background: #c0c0c0;
+  box-shadow: 3px 3px 0 #404040;
+  isolation: auto;
+}
+
+html[data-slab-theme="old"] .slab-home > .slab-rail::before,
+html[data-slab-theme="old"] .slab-publications .slab-rail::before,
+html[data-slab-theme="old"] .slab-group .slab-rail::before,
+html[data-slab-theme="old"] .slab-teaching .slab-rail::before,
+html[data-slab-theme="old"] .slab-talks .slab-rail::before {
+  display: none;
+  content: none;
+}
+
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index,
+html[data-slab-theme="old"] .slab-publications .slab-index,
+html[data-slab-theme="old"] .slab-group .slab-index,
+html[data-slab-theme="old"] .slab-teaching .slab-index,
+html[data-slab-theme="old"] .slab-talks .slab-index {
+  width: 100%;
+  max-width: none;
+  padding: 8px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  overflow: visible;
+}
+
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index a,
+html[data-slab-theme="old"] .slab-publications .slab-index a,
+html[data-slab-theme="old"] .slab-group .slab-index a,
+html[data-slab-theme="old"] .slab-teaching .slab-index a,
+html[data-slab-theme="old"] .slab-talks .slab-index a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 0;
+  padding: 4px 11px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #d4d0c8;
+  color: #0000ee;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+  transform: none;
+}
+
+html[data-slab-theme="old"] .slab-index a::before,
+html[data-slab-theme="old"] .slab-index a::after,
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index a::before,
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index a::after,
+html[data-slab-theme="old"] .slab-publications .slab-index a::before,
+html[data-slab-theme="old"] .slab-publications .slab-index a::after,
+html[data-slab-theme="old"] .slab-group .slab-index a::before,
+html[data-slab-theme="old"] .slab-group .slab-index a::after,
+html[data-slab-theme="old"] .slab-teaching .slab-index a::before,
+html[data-slab-theme="old"] .slab-teaching .slab-index a::after,
+html[data-slab-theme="old"] .slab-talks .slab-index a::before,
+html[data-slab-theme="old"] .slab-talks .slab-index a::after {
+  display: none !important;
+  content: none !important;
+}
+
+html[data-slab-theme="old"] .slab-index strong,
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index strong,
+html[data-slab-theme="old"] .slab-publications .slab-index strong,
+html[data-slab-theme="old"] .slab-group .slab-index strong,
+html[data-slab-theme="old"] .slab-teaching .slab-index strong,
+html[data-slab-theme="old"] .slab-talks .slab-index strong {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: nowrap;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+html[data-slab-theme="old"] .slab-index strong::before {
+  content: "[ ";
+  color: #404040;
+  text-decoration: none;
+}
+
+html[data-slab-theme="old"] .slab-index strong::after {
+  content: " ]";
+  color: #404040;
+  text-decoration: none;
+}
+
+html[data-slab-theme="old"] .slab-index__icon,
+html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index__icon,
+html[data-slab-theme="old"] .slab-publications .slab-index__icon,
+html[data-slab-theme="old"] .slab-group .slab-index__icon,
+html[data-slab-theme="old"] .slab-teaching .slab-index__icon,
+html[data-slab-theme="old"] .slab-talks .slab-index__icon {
+  width: 20px;
+  height: 20px;
+}
+
+html[data-slab-theme="old"] .slab-index__icon img {
+  filter: contrast(1.25) saturate(0.8);
+  opacity: 1;
+}
+
+html[data-slab-theme="old"] .slab-index a:hover,
+html[data-slab-theme="old"] .slab-index a:focus {
+  background: #ffff00;
+  color: #ff0000;
+}
+
+html[data-slab-theme="old"] .slab-index a[aria-current="page"] {
+  border-style: inset;
+  background: #ffffcc;
+  color: #800000;
+  text-decoration: none;
+}
+
+// -----------------------------------------------------------------------------
+// Main Page Paper Sheet Frame (Home + All Subpages)
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-summary-page .slab-intro,
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-overview,
+html[data-slab-theme="old"] .group-workspace,
+html[data-slab-theme="old"] .pub-workspace,
+html[data-slab-theme="old"] .teaching-workspace,
+html[data-slab-theme="old"] .talks-workspace {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 18px 20px;
+  border: 4px ridge #808080;
+  border-radius: 0;
+  background: #f8f8f0;
+  box-shadow: 4px 4px 0 #404040;
+}
+
+// -----------------------------------------------------------------------------
+// Homepage Hero (.slab-intro)
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-heading {
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .slab-heading > div::before {
+  display: block;
+  margin-bottom: 8px;
+  padding: 4px 36px;
+  border: 2px ridge #000080;
+  background:
+    url("/assets/old/globe-spin.svg") 6px center / 24px 24px no-repeat,
+    url("/assets/old/coffee-steam.svg") calc(100% - 6px) center / 24px 24px no-repeat,
+    #e8eef8;
+  color: #800000;
+  content: "~ WELCOME TO THE HOME PAGE OF ~";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .slab-intro h1 {
+  margin: 0 0 6px;
+  color: #000080;
+  font-family: "Times New Roman", Times, Georgia, serif;
+  font-size: 2.45rem;
+  font-weight: 700;
+  line-height: 1.05;
+  text-shadow: 2px 2px 0 #d0d8e8;
+}
+
+html[data-slab-theme="old"] .slab-subtitle {
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+html[data-slab-theme="old"] .slab-subtitle::after {
+  display: block;
+  margin-top: 4px;
+  color: #333333;
+  content: "Institute of Computer Science · C505 Rothberg Bldg · E-mail: gabis@cs.huji.ac.il";
+  font-size: 11.5px;
+  font-weight: 400;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo {
+  width: 260px;
+  padding: 6px;
+  border: 4px ridge #999999;
+  background: #ecece4;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo__button {
+  border-radius: 0;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo img {
+  border: 2px inset #808080;
+  border-radius: 0;
+  box-shadow: none;
+  filter: contrast(1.06) saturate(0.92);
+}
+
+html[data-slab-theme="old"] .slab-profile-photo figcaption::before {
+  display: block;
+  margin: 5px 0 4px;
+  color: #444444;
+  content: "Click image for next 256-color JPEG (14.4k friendly!)";
+  font-family: "Comic Sans MS", "Chalkboard SE", "Courier New", cursive;
+  font-size: 10.5px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .slab-profile-links {
+  gap: 5px;
+  margin-top: 6px;
+}
+
+html[data-slab-theme="old"] .slab-profile-links a {
+  width: 28px;
+  height: 26px;
+  flex: 0 0 28px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000080;
+  font-size: 14px;
+  text-decoration: none;
+  transition: none;
+}
+
+html[data-slab-theme="old"] .slab-profile-links a:hover,
+html[data-slab-theme="old"] .slab-profile-links a:focus-visible {
+  background: #ffff00;
+  color: #ff0000;
+  transform: none;
+}
+
+// ISCOL 2026 Announcement -> Classic Department Bulletin Box
+html[data-slab-theme="old"] .slab-intro-callout {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 3px ridge #cc0000;
+  border-radius: 0;
+  background: #ffffcc;
+  box-shadow: 3px 3px 0 #808080;
+  gap: 10px !important;
+}
+
+html[data-slab-theme="old"] .slab-intro-callout::before {
+  display: none;
+  content: none;
+}
+
+html[data-slab-theme="old"] .slab-intro-callout p.slab-intro-callout__text {
+  color: #800000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .slab-intro-callout p.slab-intro-callout__text::before {
+  display: inline-block;
+  width: 38px;
+  height: 16px;
+  margin-right: 7px;
+  vertical-align: -2px;
+  background: url("/assets/old/new-blink.svg") center / contain no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] .slab-intro-callout__text a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+html[data-slab-theme="old"] .slab-intro-callout__cta {
+  padding: 4px 11px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #000000;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000 !important;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: none;
+}
+
+html[data-slab-theme="old"] .slab-intro-callout__cta:hover,
+html[data-slab-theme="old"] .slab-intro-callout__cta:focus-visible {
+  border-color: #ffffff;
+  background: #ffff00;
+  color: #cc0000 !important;
+  transform: none;
+}
+
+// Bio Paragraph -> Inset Paper Cell with Header Strip
+html[data-slab-theme="old"] .slab-home .slab-intro > p {
+  margin-bottom: 0;
+  padding: 0;
+  border: 2px inset #808080;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16.5px;
+  line-height: 1.55;
+  overflow: hidden;
+}
+
+html[data-slab-theme="old"] .slab-home .slab-intro > p::before {
+  display: block;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-bottom: 2px solid #808080;
+  background: #000080;
+  color: #ffffff;
+  content: "== RESEARCH STATEMENT & PERSONAL INTERESTS ==";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+html[data-slab-theme="old"] .slab-home .slab-intro > p {
+  padding: 0 0 12px;
+}
+
+html[data-slab-theme="old"] .slab-home .slab-intro > p > a,
+html[data-slab-theme="old"] .slab-home .slab-intro > p {
+  text-indent: 0;
+}
+
+// Give inner text comfortable side padding while keeping the full-bleed navy ::before header
+html[data-slab-theme="old"] .slab-home .slab-intro > p {
+  padding: 0 14px 12px;
+}
+
+html[data-slab-theme="old"] .slab-home .slab-intro > p::before {
+  margin: 0 -14px 10px;
+}
+
+// -----------------------------------------------------------------------------
+// Homepage Overview Sections -> Bordered 1996 HTML Table Modules
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-overview {
+  gap: 18px;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-section {
+  border: 3px ridge #808080;
+  background: #ffffff;
+  padding: 0 14px 14px;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-section::before {
+  display: block;
+  height: 6px;
+  margin: -18px -14px 12px;
+  background: url("/assets/old/rainbow-hr.svg") center / 100% 6px no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-section:first-child::before {
+  display: none;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-section h2 {
+  margin: 0 -14px 12px;
+  padding: 5px 12px;
+  border-bottom: 2px solid #404040;
+  background: #000080;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-section h2::before {
+  content: "\25AA  ";
+  color: #ffff00;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-people {
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-people article {
+  margin-bottom: 0;
+  padding: 8px;
+  border: 2px ridge #b0b0a8;
+  background: #fafaf4;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-people img {
+  border: 2px inset #808080;
+  border-radius: 0;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-list article {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 0 0 8px 20px;
+  border-bottom: 1px dashed #808080;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-list article::before {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: url("/assets/old/bullet-orb.svg") center / contain no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] #mobile-publications article:first-child h3::after {
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+  margin-left: 7px;
+  vertical-align: -1px;
+  background: url("/assets/old/new-blink.svg") center / contain no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-overview h3 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-overview p {
+  color: #333333;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-copy {
+  max-width: none;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 15.5px;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-more {
+  padding: 3px 10px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+html[data-slab-theme="old"] .slab-summary-page .slab-mobile-more:hover {
+  background: #ffff00;
+  color: #cc0000;
+}
+
+// -----------------------------------------------------------------------------
+// Subpage: /group/ (SLAB)
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .group-hero {
+  margin-bottom: 18px;
+  padding: 14px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .group-kicker,
+html[data-slab-theme="old"] .slab-page-kicker {
+  color: #800000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+html[data-slab-theme="old"] .group-hero h1,
+html[data-slab-theme="old"] .teaching-hero h1,
+html[data-slab-theme="old"] .talks-hero h1,
+html[data-slab-theme="old"] .pub-toolbar h1 {
+  color: #000080;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 #d0d8e8;
+}
+
+html[data-slab-theme="old"] .group-photo {
+  padding: 6px;
+  border: 4px ridge #999999;
+  background: #ecece4;
+}
+
+html[data-slab-theme="old"] .group-photo img,
+html[data-slab-theme="old"] .group-member img {
+  border: 2px inset #808080;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+html[data-slab-theme="old"] .group-photo figcaption {
+  margin-top: 6px;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .group-section-heading,
+html[data-slab-theme="old"] .teaching-section-heading {
+  display: block;
+  margin: 18px 0 12px;
+  padding: 5px 10px;
+  border: 2px ridge #404040;
+  background: #000080;
+}
+
+html[data-slab-theme="old"] .group-section-heading .group-kicker,
+html[data-slab-theme="old"] .group-section-heading span,
+html[data-slab-theme="old"] .teaching-section-heading span {
+  display: none;
+}
+
+html[data-slab-theme="old"] .group-section-heading h2,
+html[data-slab-theme="old"] .teaching-section-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+html[data-slab-theme="old"] .group-role h3 {
+  position: static;
+  padding: 4px 8px;
+  border: 2px outset #ffffff;
+  background: #c0c0c0;
+  color: #000080;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .group-member {
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 2px ridge #a0a098;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .group-member:nth-child(even) {
+  background: #f4f4ea;
+}
+
+html[data-slab-theme="old"] .group-alumni-list {
+  border: 2px ridge #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .group-alumni-list div {
+  padding: 8px 12px;
+  border-bottom: 1px solid #808080;
+}
+
+html[data-slab-theme="old"] .group-alumni-list dt {
+  color: #000080;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+
+// -----------------------------------------------------------------------------
+// Subpage: /publications/
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .pub-toolbar {
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .pub-toolbar::after {
+  display: none;
+}
+
+html[data-slab-theme="old"] .pub-toolbar h1::after {
+  display: block;
+  margin-top: 4px;
+  color: #333333;
+  content: "Note: Papers are in Adobe PDF format (Acrobat Reader 3.0+). PostScript (.ps.gz) available upon polite fax request.";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+html[data-slab-theme="old"] .pub-search {
+  display: inline-flex;
+  align-items: center;
+}
+
+html[data-slab-theme="old"] .pub-search-toggle {
+  display: none;
+}
+
+html[data-slab-theme="old"] .pub-search input {
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 2px inset #808080;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12.5px;
+}
+
+html[data-slab-theme="old"] .pub-scroll {
+  background: transparent;
+}
+
+html[data-slab-theme="old"] .pub-year-stack {
+  background: #d4d0c8;
+  border: 2px ridge #808080;
+}
+
+html[data-slab-theme="old"] .pub-year-stack:not(:empty) {
+  padding: 6px 8px;
+  margin-bottom: 12px;
+  box-shadow: none;
+}
+
+html[data-slab-theme="old"] .pub-year-chip {
+  padding: 2px 7px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000080;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .pub-year {
+  display: block;
+  margin-bottom: 18px;
+  border: 3px ridge #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .pub-year__heading {
+  position: static;
+  margin: 0;
+  padding: 5px 12px;
+  border-bottom: 2px solid #404040;
+  background: #000080;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .pub-year__heading::before {
+  content: "=== ";
+  color: #ffff00;
+}
+
+html[data-slab-theme="old"] .pub-year__heading::after {
+  content: " ===";
+  color: #ffff00;
+}
+
+html[data-slab-theme="old"] .pub-year__items {
+  padding: 8px 14px;
+}
+
+html[data-slab-theme="old"] .pub-venue-heading {
+  position: static;
+  color: #800000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .pub-item {
+  position: relative;
+  padding: 8px 0 10px 20px;
+  border-bottom: 1px dashed #808080;
+}
+
+html[data-slab-theme="old"] .pub-item::before {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: url("/assets/old/bullet-orb.svg") center / contain no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] .pub-year:first-of-type .pub-item:first-of-type .pub-item__title::after {
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+  margin-left: 7px;
+  vertical-align: -1px;
+  background: url("/assets/old/new-blink.svg") center / contain no-repeat;
+  content: "";
+}
+
+html[data-slab-theme="old"] .pub-item__title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16.5px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .pub-item__venue {
+  margin-left: 6px;
+  padding: 1px 5px;
+  border: 1px solid #808080;
+  background: #ffffcc;
+  color: #800000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .pub-item__authors {
+  color: #222222;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14.5px;
+}
+
+html[data-slab-theme="old"] .pub-item__links a,
+html[data-slab-theme="old"] .teaching-course__links a,
+html[data-slab-theme="old"] .talk-item__links a {
+  padding: 2px 6px;
+  border: 2px outset #ffffff;
+  outline: 1px solid #404040;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #0000ee;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+html[data-slab-theme="old"] .pub-item__links a:hover,
+html[data-slab-theme="old"] .teaching-course__links a:hover,
+html[data-slab-theme="old"] .talk-item__links a:hover {
+  background: #ffff00;
+  color: #ff0000;
+}
+
+// -----------------------------------------------------------------------------
+// Subpages: /teaching & /talks/
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .teaching-hero,
+html[data-slab-theme="old"] .talks-hero {
+  margin-bottom: 16px;
+  padding: 14px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .teaching-hero::after {
+  display: block;
+  margin-top: 8px;
+  color: #006600;
+  content: "* Office hours: knock twice at C505 Rothberg Bldg or send electronic mail via Pine. Chalk dust not included.";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+}
+
+html[data-slab-theme="old"] .talks-hero::after {
+  display: block;
+  margin-top: 8px;
+  color: #006600;
+  content: "* Overhead projector transparencies & 35mm carousel slides available upon request.";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+}
+
+html[data-slab-theme="old"] .teaching-course {
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  border: 2px ridge #a0a098;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .teaching-course:nth-child(even) {
+  background: #fffff2;
+}
+
+html[data-slab-theme="old"] .teaching-course__time {
+  color: #800000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .teaching-course__details summary {
+  color: #0000ee;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+html[data-slab-theme="old"] .talks-scroll {
+  background: transparent;
+}
+
+html[data-slab-theme="old"] .talk-year {
+  display: block;
+  margin-bottom: 16px;
+  border: 3px ridge #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .talk-year__heading {
+  position: static;
+  margin: 0;
+  padding: 5px 12px;
+  border-bottom: 2px solid #404040;
+  background: #000080;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .talk-year__items {
+  padding: 8px 14px;
+}
+
+html[data-slab-theme="old"] .talk-item {
+  position: relative;
+  padding: 8px 0 10px 20px;
+  border-bottom: 1px dashed #808080;
+}
+
+html[data-slab-theme="old"] .talk-item::before {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: url("/assets/old/bullet-orb.svg") center / contain no-repeat;
+  content: "";
+}
+
+// -----------------------------------------------------------------------------
+// Footer: Goodreads Quote + 1996 Professor Footer
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .slab-home-page .page__footer {
+  width: min(100% - 16px, 940px);
+  margin: 0 auto 24px;
+  background: transparent;
+  color: #000000;
+}
+
+html[data-slab-theme="old"] .slab-home-page .page__footer footer {
+  padding: 0;
+}
+
+html[data-slab-theme="old"] .slab-home-page .goodreads-quote-wrap,
+html[data-slab-theme="old"] .slab-publications-page .goodreads-quote-wrap,
+html[data-slab-theme="old"] .slab-group-page .goodreads-quote-wrap,
+html[data-slab-theme="old"] .slab-teaching-page .goodreads-quote-wrap,
+html[data-slab-theme="old"] .slab-talks-page .goodreads-quote-wrap {
+  width: 100%;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border: 3px ridge #808080;
+  background: #fffff0;
+  box-shadow: 3px 3px 0 #404040;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html[data-slab-theme="old"] .goodreads-quote-wrap::before {
+  display: block;
+  margin-bottom: 6px;
+  color: #800000;
+  content: "\2605  PROF. STANOVSKY'S QUOTE OF THE DAY  \2605";
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .old-prof-footer {
+  display: block;
+  margin: 12px 0 0;
+  padding: 14px 16px 18px;
+  border: 4px ridge #808080;
+  background: #ecece4;
+  box-shadow: 4px 4px 0 #404040;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .old-rainbow-hr {
+  width: 100%;
+  height: 6px;
+  margin-bottom: 14px;
+  background: url("/assets/old/rainbow-hr.svg") center / 100% 6px no-repeat;
+}
+
+html[data-slab-theme="old"] .old-construction-strip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding: 7px 14px;
+  border: 2px solid #000000;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffcc00,
+    #ffcc00 8px,
+    #ffdd44 8px,
+    #ffdd44 16px
+  );
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+html[data-slab-theme="old"] .old-construction-strip img {
+  display: block;
+  flex: 0 0 auto;
+  image-rendering: pixelated;
+}
+
+html[data-slab-theme="old"] .old-counter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+html[data-slab-theme="old"] .old-odometer {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px 5px;
+  border: 2px inset #808080;
+  background: #000000;
+}
+
+html[data-slab-theme="old"] .old-odometer span {
+  display: inline-block;
+  min-width: 16px;
+  padding: 1px 3px;
+  border: 1px solid #003300;
+  background: #001a00;
+  color: #33ff33;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+html[data-slab-theme="old"] .old-status-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 14.5px;
+}
+
+html[data-slab-theme="old"] .old-status-piece {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+html[data-slab-theme="old"] .old-status-piece img {
+  display: inline-block;
+  vertical-align: middle;
+  image-rendering: pixelated;
+}
+
+html[data-slab-theme="old"] .old-status-pill {
+  display: inline-block;
+  padding: 1px 8px;
+  border: 2px inset #808080;
+  background: #ffffff;
+  color: #006600;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+// Computational Linguistics WebRing
+html[data-slab-theme="old"] .old-webring {
+  max-width: 760px;
+  margin: 0 auto 14px;
+  border: 3px ridge #008080;
+  background: #e6f2f2;
+}
+
+html[data-slab-theme="old"] .old-webring__title {
+  padding: 4px 8px;
+  background: #008080;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .old-webring__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 10px;
+  font-size: 13.5px;
+}
+
+html[data-slab-theme="old"] .old-webring__btns {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+html[data-slab-theme="old"] .old-webring__note {
+  color: #444444;
+  font-style: italic;
+}
+
+// 88x31 Classic Micro-Badges
+html[data-slab-theme="old"] .old-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+html[data-slab-theme="old"] .old-badges img {
+  display: block;
+  width: 88px;
+  height: 31px;
+  border: 1px solid #404040;
+  image-rendering: pixelated;
+}
+
+html[data-slab-theme="old"] .old-colophon {
+  margin: 0;
+  color: #222222;
+  font-family: "Comic Sans MS", "Chalkboard SE", "Times New Roman", serif;
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+html[data-slab-theme="old"] .old-colophon img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  image-rendering: pixelated;
+}
+
+// -----------------------------------------------------------------------------
+// Win95 Guestbook Modal
+// -----------------------------------------------------------------------------
+html[data-slab-theme="old"] .old-guestbook-backdrop:not([hidden]) {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+html[data-slab-theme="old"] .old-guestbook-window {
+  width: min(100%, 660px);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  border: 3px outset #ffffff;
+  outline: 1px solid #000000;
+  background: #c0c0c0;
+  box-shadow: 6px 6px 0 #000000;
+  color: #000000;
+  font-family: "Times New Roman", Times, serif;
+}
+
+html[data-slab-theme="old"] .old-guestbook-body {
+  padding: 12px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+html[data-slab-theme="old"] .old-guestbook-intro {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+html[data-slab-theme="old"] .old-guestbook-archive {
+  margin-bottom: 10px;
+  padding: 6px 8px;
+  border: 2px ridge #808080;
+  background: #ecece4;
+}
+
+html[data-slab-theme="old"] .old-guestbook-archive summary {
+  color: #000080;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+html[data-slab-theme="old"] .old-guestbook-entries {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 8px;
+  padding: 8px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .old-guestbook-giscus {
+  color-scheme: light;
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px inset #808080;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .old-guestbook-giscus iframe.giscus-frame {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: #ffffff;
+}
+
+html[data-slab-theme="old"] .old-guestbook-loading {
+  margin: 0;
+  color: #444444;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+html[data-slab-theme="old"] .old-gb-entry {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #808080;
+}
+
+html[data-slab-theme="old"] .old-gb-entry:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+html[data-slab-theme="old"] .old-gb-entry__meta {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 11.5px;
+  color: #000080;
+  margin-bottom: 3px;
+}
+
+html[data-slab-theme="old"] .old-gb-entry__date {
+  color: #666666;
+}
+
+html[data-slab-theme="old"] .old-gb-entry__msg {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+html[data-slab-theme="old"] .old-guestbook-form {
+  display: grid;
+  gap: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+html[data-slab-theme="old"] .old-guestbook-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+html[data-slab-theme="old"] .old-guestbook-form label {
+  display: grid;
+  gap: 3px;
+}
+
+html[data-slab-theme="old"] .old-guestbook-form input,
+html[data-slab-theme="old"] .old-guestbook-form textarea {
+  width: 100%;
+  padding: 4px 6px;
+  border: 2px inset #808080;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12.5px;
+}
+
+html[data-slab-theme="old"] .old-guestbook-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+// -----------------------------------------------------------------------------
+// Responsive Support (Even 1996 Should Work on Mobile!)
+// -----------------------------------------------------------------------------
+@media (max-width: 760px) {
+  html[data-slab-theme="old"] .slab-heading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html[data-slab-theme="old"] .slab-profile-photo {
+    width: min(100%, 260px);
+    justify-self: center;
+  }
+
+  html[data-slab-theme="old"] .slab-home > .slab-rail .slab-index,
+  html[data-slab-theme="old"] .slab-publications .slab-index,
+  html[data-slab-theme="old"] .slab-group .slab-index,
+  html[data-slab-theme="old"] .slab-teaching .slab-index,
+  html[data-slab-theme="old"] .slab-talks .slab-index {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 6px;
+  }
+
+  html[data-slab-theme="old"] .old-guestbook-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  html[data-slab-theme="old"] .old-construction-strip {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

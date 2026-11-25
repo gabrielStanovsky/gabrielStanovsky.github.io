@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" shape-rendering="crispEdges">
+  <rect width="88" height="31" fill="#4b3a78"/>
+  <rect x="0" y="0" width="88" height="1" fill="#a899d6"/>
+  <rect x="0" y="0" width="1" height="31" fill="#a899d6"/>
+  <rect x="0" y="30" width="88" height="1" fill="#21183b"/>
+  <rect x="87" y="0" width="1" height="31" fill="#21183b"/>
+  <polygon points="14,5 23,15.5 14,26 5,15.5" fill="#ff9900" stroke="#ffffff" stroke-width="1"/>
+  <text x="14" y="18" text-anchor="middle" font-family="Courier New, monospace" font-size="7" font-weight="bold" fill="#000000">Sun</text>
+  <text x="56" y="13" text-anchor="middle" font-family="Courier New, monospace" font-size="7" font-weight="bold" fill="#ffffff">HOSTED ON</text>
+  <text x="56" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#ffcc33">SunOS 4.1</text>
+</svg>

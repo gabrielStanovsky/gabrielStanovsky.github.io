@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="31" viewBox="0 0 88 31" shape-rendering="crispEdges">
+  <rect width="88" height="31" fill="#c0c0c0"/>
+  <rect x="0" y="0" width="88" height="1" fill="#ffffff"/>
+  <rect x="0" y="0" width="1" height="31" fill="#ffffff"/>
+  <rect x="0" y="30" width="88" height="1" fill="#404040"/>
+  <rect x="87" y="0" width="1" height="31" fill="#404040"/>
+  <rect x="2" y="2" width="84" height="27" fill="#008080"/>
+  <rect x="4" y="4" width="80" height="23" fill="none" stroke="#ffffff" stroke-width="1"/>
+  <text x="44" y="14" text-anchor="middle" font-family="Courier New, monospace" font-size="7.5" font-weight="bold" fill="#ffffff">NO FRAMES!</text>
+  <text x="44" y="24" text-anchor="middle" font-family="Courier New, monospace" font-size="7.2" font-weight="bold" fill="#ffff00">100% TABLES</text>
+</svg>

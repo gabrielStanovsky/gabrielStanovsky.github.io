@@ -1,14 +1,36 @@
 <link id="slab-favicon" rel="icon" type="image/png" href="/logos/home-logo/1.png">
 <script>
   (function () {
-    var themes = ["monochrome", "blackwhite", "dark"];
+    var themes = ["monochrome", "blackwhite", "dark", "old"];
+    var aliases = {
+      paper: "monochrome",
+      white: "blackwhite",
+      dark: "dark",
+      old: "old",
+      "90s": "old",
+      "1996": "old",
+      monochrome: "monochrome",
+      blackwhite: "blackwhite"
+    };
     var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "monochrome";
     var savedTheme = null;
+    var queryTheme = null;
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get("theme") || "").toLowerCase();
+      if (aliases[raw]) queryTheme = aliases[raw];
+    } catch (error) {}
     try {
       window.localStorage.removeItem("slabColorTheme");
       savedTheme = window.sessionStorage.getItem("slabColorTheme");
     } catch (error) {}
-    if (themes.indexOf(savedTheme) !== -1) {
+    if (queryTheme && themes.indexOf(queryTheme) !== -1) {
+      theme = queryTheme;
+      document.documentElement.setAttribute("data-slab-theme-source", "saved");
+      try {
+        window.sessionStorage.setItem("slabColorTheme", theme);
+      } catch (error) {}
+    } else if (themes.indexOf(savedTheme) !== -1) {
       theme = savedTheme;
       document.documentElement.setAttribute("data-slab-theme-source", "saved");
     } else {
