@@ -1,16 +1,15 @@
 <link id="slab-favicon" rel="icon" type="image/png" href="/logos/home-logo/1.png">
 <script>
   (function () {
-    var themes = ["monochrome", "blackwhite", "dark", "old"];
+    var themes = ["monochrome", "dark", "old"];
     var aliases = {
       paper: "monochrome",
-      white: "blackwhite",
+      light: "monochrome",
       dark: "dark",
       old: "old",
       "90s": "old",
       "1996": "old",
-      monochrome: "monochrome",
-      blackwhite: "blackwhite"
+      monochrome: "monochrome"
     };
     var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "monochrome";
     var savedTheme = null;

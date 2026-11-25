@@ -1,17 +1,15 @@
 <button class="slab-theme-cycle" type="button" data-slab-theme-cycle>
   <svg data-slab-theme-icon="monochrome" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l3 3v15H6z"></path><path d="M15 3v4h4M9 12h6M9 16h6"></path></svg>
-  <svg data-slab-theme-icon="blackwhite" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>
   <svg data-slab-theme-icon="dark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2z"></path></svg>
   <svg data-slab-theme-icon="old" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"></rect><path d="M8 20h8M12 16v4M7 8h4M7 11h6"></path></svg>
   <span class="slab-theme-cycle__old-label" aria-hidden="true">1996 [Switch]</span>
 </button>
 <script>
   (function () {
-    var themes = ["monochrome", "dark", "blackwhite", "old"];
+    var themes = ["monochrome", "dark", "old"];
     var themeNames = {
       monochrome: "Paper",
       dark: "Dark",
-      blackwhite: "White",
       old: "Old-School (1996)"
     };
     var button = document.querySelector("[data-slab-theme-cycle]");
