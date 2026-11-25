@@ -7,7 +7,9 @@
 .old-prof-banner,
 .old-prof-footer,
 .old-guestbook-backdrop,
-.slab-theme-cycle__old-label {
+.slab-theme-cycle__old-label,
+.slab-profile-photo__old-tooltip,
+.group-photo__old-tooltip {
   display: none;
 }
 
@@ -545,8 +547,47 @@ html[data-slab-theme="old"] .slab-profile-photo {
   background: #ecece4;
 }
 
-html[data-slab-theme="old"] .slab-profile-photo__button {
+html[data-slab-theme="old"] .slab-profile-photo__button,
+html[data-slab-theme="old"] .group-photo__button {
+  position: relative;
   border-radius: 0;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo__old-tooltip,
+html[data-slab-theme="old"] .group-photo__old-tooltip {
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  z-index: 15;
+  display: block;
+  padding: 5px 7px;
+  border: 1px solid #000000;
+  background: #ffffe1;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.55);
+  color: #000000;
+  font-family: "MS Sans Serif", Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.32;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 90ms ease;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo__button:hover .slab-profile-photo__old-tooltip,
+html[data-slab-theme="old"] .slab-profile-photo__button:focus-visible .slab-profile-photo__old-tooltip,
+html[data-slab-theme="old"] .group-photo__button:hover .group-photo__old-tooltip,
+html[data-slab-theme="old"] .group-photo__button:focus-visible .group-photo__old-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+html[data-slab-theme="old"] .slab-profile-photo__old-tooltip:empty,
+html[data-slab-theme="old"] .group-photo__old-tooltip:empty {
+  display: none;
 }
 
 html[data-slab-theme="old"] .slab-profile-photo img {

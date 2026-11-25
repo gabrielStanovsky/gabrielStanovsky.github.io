@@ -42,6 +42,7 @@ title: "Gabriel Stanovsky"
       <figure class="slab-profile-photo">
         <button class="slab-profile-photo__button" type="button" aria-label="Show next profile photo" data-profile-photo-trigger>
           <img src="{{ default_profile_photo.src }}" alt="{{ default_profile_photo.alt | default: 'Gabriel Stanovsky' }}" style="--slab-profile-photo-position: {{ default_profile_photo.position | default: 'center' }};" data-profile-photo-image>
+          <span class="slab-profile-photo__old-tooltip" data-profile-photo-old-tooltip aria-hidden="true">{{ default_profile_photo.old_joke }}</span>
         </button>
         <figcaption>
           <nav class="slab-profile-links" aria-label="Social and academic profiles">
@@ -57,7 +58,7 @@ title: "Gabriel Stanovsky"
 
       <div hidden data-profile-photo-pool>
         {% for photo in site.data.profile_photos %}
-        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | default: 'Gabriel Stanovsky' | escape }}" data-caption="{{ photo.caption | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
+        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | default: 'Gabriel Stanovsky' | escape }}" data-caption="{{ photo.caption | escape }}" data-old-joke="{{ photo.old_joke | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
         {% endfor %}
       </div>
     </div>
@@ -209,6 +210,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
     var photoNodes = Array.prototype.slice.call(document.querySelectorAll("[data-profile-photo-pool] [data-src]"));
     var trigger = document.querySelector("[data-profile-photo-trigger]");
     var image = document.querySelector("[data-profile-photo-image]");
+    var oldTooltip = document.querySelector("[data-profile-photo-old-tooltip]");
     if (!photoNodes.length || !image) return;
 
     var photos = photoNodes.map(function (node) {
@@ -216,6 +218,7 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
         src: node.getAttribute("data-src"),
         alt: node.getAttribute("data-alt") || "Gabriel Stanovsky",
         caption: node.getAttribute("data-caption") || "",
+        oldJoke: node.getAttribute("data-old-joke") || "",
         position: node.getAttribute("data-position") || "center"
       };
     }).filter(function (photo) {
@@ -225,6 +228,21 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
 
     var currentIndex = Math.floor(Math.random() * photos.length);
     var loadedPhotos = {};
+
+    function syncPhotoCaption(photo) {
+      if (!photo) return;
+      var isOld = document.documentElement.getAttribute("data-slab-theme") === "old";
+      if (oldTooltip) {
+        oldTooltip.textContent = photo.oldJoke || photo.caption || "";
+      }
+      if (isOld) {
+        image.removeAttribute("title");
+      } else if (photo.caption) {
+        image.setAttribute("title", photo.caption);
+      } else {
+        image.removeAttribute("title");
+      }
+    }
 
     function preloadPhoto(index) {
       var photo = photos[index];
@@ -254,12 +272,12 @@ Outside work, I’m a wannabe <a href="https://letterboxd.com/gabistanovsky/film
       image.style.setProperty("--slab-profile-photo-position", photo.position);
       image.setAttribute("src", photo.src);
       image.setAttribute("alt", photo.alt);
-      if (photo.caption) {
-        image.setAttribute("title", photo.caption);
-      } else {
-        image.removeAttribute("title");
-      }
+      syncPhotoCaption(photo);
     }
+
+    window.addEventListener("slabThemeChange", function () {
+      syncPhotoCaption(photos[currentIndex]);
+    });
 
     function showPhoto(index) {
       preloadPhoto(index).then(function () {

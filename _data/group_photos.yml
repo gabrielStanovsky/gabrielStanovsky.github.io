@@ -1,76 +1,93 @@
 - src: "/images/group-photos/ACL, Vienna, 2025.jpg"
   alt: "ACL, Vienna, 2025"
   caption: "ACL, Vienna, 2025"
+  old_joke: "Everyone nailed the 'serious NLP boyband' pose except the advisor, who got distracted."
 
 - src: "/images/group-photos/ACL, Vienna, 2025c.jpg"
   alt: "ACL, Vienna, 2025"
   caption: "ACL, Vienna, 2025"
+  old_joke: "SLAB + friends in Vienna. Collective h-index: classified."
 
 - src: "/images/group-photos/EMNLP, China, 2025.jpeg"
   alt: "EMNLP, China, 2025"
   caption: "EMNLP, China, 2025"
+  old_joke: "Out-of-distribution testing: trying to order dinner without a translation model."
 
 - src: "/images/group-photos/Graduation, 2024.jpeg"
   alt: "Graduation, 2024"
   caption: "Graduation, 2024"
+  old_joke: "Dress code was 'academic regalia.' I brought my finest grey t-shirt."
 
 - src: "/images/group-photos/Graduation, 2024b.jpeg"
   alt: "Graduation, 2024"
   caption: "Graduation, 2024"
+  old_joke: "Hands firmly in pockets — someone has to make sure nobody loses a hat to gravity."
   position: "center 20%"
 
 - src: "/images/group-photos/Hackathon, 2025.jpeg"
   alt: "Hackathon, 2025"
   caption: "Hackathon, 2025"
+  old_joke: "Four hours into the hackathon: 6 laptops, 47 open tabs, 1 working script."
 
 - src: "/images/group-photos/Hackathon, 2025b.jpeg"
   alt: "Hackathon, 2025"
   caption: "Hackathon, 2025"
+  old_joke: "Rarely documented moment when two researchers actually agree on a baseline."
 
 - src: "/images/group-photos/IBM conference, 2025.jpg"
   alt: "IBM conference, 2025"
   caption: "IBM conference, 2025"
+  old_joke: "Toasting with 2oz conference cups to a clean 0.4% F1 improvement."
 
 - src: "/images/group-photos/Lab meeting, 2023.jpg"
   alt: "Lab meeting, 2023"
   caption: "Lab meeting, 2023"
+  old_joke: "Season 1 promo shot for the hit 90s sitcom 'Friends (Who Read arXiv)'."
 
 - src: "/images/group-photos/NLP Retreat, 2025.jpeg"
   alt: "NLP Retreat, 2025"
   caption: "NLP Retreat, 2025"
+  old_joke: "Annual NLP Retreat: zero GPUs, maximum sunscreen, 100% desert."
 
 - src: "/images/group-photos/NLP Retreat, 2025.jpg"
   alt: "NLP Retreat, 2025"
   caption: "NLP Retreat, 2025"
+  old_joke: "We came to discuss language models, stayed for the dramatic sunset album cover."
 
 - src: "/images/group-photos/University of Vienna, 2025.jpg"
   alt: "University of Vienna, 2025"
   caption: "University of Vienna, 2025"
-
+  old_joke: "Hand-written masking-tape nametag + upside-down lobby TV = peak academic conference."
 
 - src: "/images/group-photos/ACL 24, Bangkok, Thailand.jpg"
   alt: "ACL, Bangkok, Thailand, 2024"
   caption: "ACL, Bangkok, Thailand, 2024"
+  old_joke: "Poster #127: asking 'State of What Art?' loudly enough to make benchmark authors nervous."
   position: "center 25%"
 
 - src: "/images/group-photos/ACL 24, Bangkok, Thailand (c).jpg"
   alt: "ACL, Bangkok, Thailand, 2024"
   caption: "ACL, Bangkok, Thailand, 2024"
+  old_joke: "Our newest Ph.D. applicant in the back. Strong publication record, slightly aggressive during Q&A."
 
 - src: "/images/group-photos/Graduation, 2025.jpg"
   alt: "Graduation, 2025"
   caption: "Graduation, 2025"
+  old_joke: "Successfully compiled another thesis without a single Overfull \\hbox (allegedly)."
 
 - src: "/images/group-photos/acl-2026-1.jpeg"
   alt: "ACL, San Diego, USA, 2026"
   caption: "ACL, San Diego, USA, 2026"
+  old_joke: "ACL 2026 San Diego: proving you can bring cargo shorts to a Tier-1 venue."
   position: "center 20%"
 
 - src: "/images/group-photos/ACL 26, 2.jpeg"
   alt: "ACL, San Diego, USA, 2026"
   caption: "ACL, San Diego, USA, 2026"
+  old_joke: "Poster D5: smiling calmly while praying the live demo doesn't crash on the screen behind us."
   position: "center 40%"
 
 - src: "/images/group-photos/acl3.png"
   alt: "ACL, San Diego, USA, 2026"
   caption: "ACL, San Diego, USA, 2026"
+  old_joke: "The real reason anyone submits to a California conference: In-N-Out Animal Style."

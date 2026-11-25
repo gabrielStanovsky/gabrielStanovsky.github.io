@@ -1,50 +1,52 @@
 - src: "/assets/images/bio-photo.jpg"
   alt: "Gabriel Stanovsky"
   caption: "Formal profile photo"
+  old_joke: "Taken for the 1998 faculty directory. Still technically resembles me if you squint."
   position: "center 30%"
 
 - src: "/assets/images/profile-photos/laptop.jpeg"
   alt: "Gabriel Stanovsky working on a laptop"
   caption: "Laptop mode"
+  old_joke: "Pointing at the exact sentence Reviewer #2 clearly did not read."
   position: "72% center"
 
 - src: "/images/group-photos/ACL 24, Bangkok, Thailand (b).jpg"
   alt: "ACL, Bangkok, Thailand, 2024"
   caption: "ACL, Bangkok, Thailand, 2024"
-
+  old_joke: "Poster #116: explaining why the zombie LLM is not sentient (while waving for help)."
 
 - src: "/assets/images/profile-photos/Thailand, 2024.jpg"
   alt: "Gabriel Stanovsky in Thailand"
   caption: "Thailand, 2024"
+  old_joke: "Rare footage of a CS professor outdoors. The fountain represents my unread emails."
   position: "72% center"
-
 
 - src: "/assets/images/profile-photos/Spain, 2023.jpg"
   alt: "Gabriel Stanovsky in Spain"
   caption: "Spain, 2023"
+  old_joke: "My strictest co-author (zero patience for weak baselines)."
   position: "72% center"
 
 - src: "/assets/images/profile-photos/Oregon, 2020.jpg"
   alt: "Gabriel Stanovsky in Oregon"
   caption: "Oregon, 2020"
+  old_joke: "Staring into the Pacific, wondering if this paper really needs an appendix."
   position: "72% center"
-
 
 - src: "/assets/images/profile-photos/Alaska, 2019.jpg"
   alt: "Gabriel Stanovsky in Alaska"
   caption: "Alaska, 2019"
+  old_joke: "No Wi-Fi for 80 miles. Briefly achieved inner peace, then worried about my inbox."
   position: "72% center"
-
 
 - src: "/assets/images/profile-photos/Golden Gate Bridge, 2018.jpg"
   alt: "Gabriel Stanovsky in California"
   caption: "Golden Gate Bridge, 2018"
+  old_joke: "Looking suspiciously at Silicon Valley from a safe academic distance."
   position: "50% center"
-
 
 - src: "/assets/images/profile-photos/Glacier, 2018.jpg"
   alt: "Gabriel Stanovsky in Glacier National Park"
   caption: "Glacier, 2018"
+  old_joke: "Searching for the global minimum. Still stuck on a local ridge."
   position: "72% center"
-
-

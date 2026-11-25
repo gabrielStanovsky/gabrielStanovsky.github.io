@@ -48,12 +48,13 @@ sitemap: false
       <figure class="group-photo">
         <button class="group-photo__button" type="button" aria-label="Show next group photo" data-group-photo-trigger>
           <img src="{{ fallback_group_photo.src }}" alt="{{ fallback_group_photo.alt }}" style="--group-photo-position: {{ fallback_group_photo.position | default: 'center' }};" data-group-photo-image>
+          <span class="group-photo__old-tooltip" data-group-photo-old-tooltip aria-hidden="true">{{ fallback_group_photo.old_joke }}</span>
         </button>
         <figcaption data-group-photo-caption aria-live="polite">{{ fallback_group_photo.caption }}</figcaption>
       </figure>
       <div hidden data-group-photo-pool>
         {% for photo in site.data.group_photos %}
-        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
+        <span data-src="{{ photo.src | escape }}" data-alt="{{ photo.alt | escape }}" data-caption="{{ photo.caption | escape }}" data-old-joke="{{ photo.old_joke | escape }}" data-position="{{ photo.position | default: 'center' | escape }}"></span>
         {% endfor %}
       </div>
     </header>
@@ -222,6 +223,7 @@ sitemap: false
     if (!photos.length || !image) return;
 
     var caption = document.querySelector("[data-group-photo-caption]");
+    var oldTooltip = document.querySelector("[data-group-photo-old-tooltip]");
     var storageKey = "slabGroupPhotoIndex";
     var loadedPhotos = {};
 
@@ -293,6 +295,9 @@ sitemap: false
 
       if (caption) {
         caption.textContent = photo.caption || "";
+      }
+      if (oldTooltip) {
+        oldTooltip.textContent = photo.oldJoke || photo.caption || "";
       }
     }
 
